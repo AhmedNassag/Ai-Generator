@@ -5,14 +5,27 @@
     :titlePage="$t('department.Departments')" v-permission:index>
     <div v-permission:update v-permission:destroy></div>
     <template #datatable>
-      <DataTable ref="table" id="example-table" :tableClass="'table table-striped table-bordered'"
-        :columns="tableColumns" :api="api" :apiParams="apiParams" :editItem="editItem" :openForm="openForm"
-        :filters="departmentFilters">
-        <template #name="{ item }">
-          <template v-if="item?.name">
-            <a class="btn text-bold" @click="openModal(item)">{{ item?.name }}</a>
-          </template>
-
+      <DataTable
+        ref="table"
+        id="example-table"
+        :tableClass="'table table-striped table-bordered'"
+        :columns="tableColumns"
+        :api="api"
+        :apiParams="apiParams"
+        :editItem="editItem"
+        :openForm="openForm"
+        :filters="departmentFilters"
+      >
+        <template #view="{ item }">
+           <a
+            v-permission:show
+            href="javascript:void(0)"
+            @click="openModal(item)"
+            class="view_button dropdown-item"
+          >
+            <i class="icofont icofont-eye-alt me-5"></i>
+            {{ $t("common.view") }}
+          </a>
         </template>
         <!-- Customizing the display of the 'Name' column in the table -->
         <template #created="{ item }">
@@ -28,8 +41,12 @@
 
         <template #children="{ item }">
           <template v-if="item?.children">
-            <span v-if="item.children.length >= 0" class="cursor-pointer" @click="openChildrenModal(item.children)"
-              style="cursor: pointer">
+            <span
+              v-if="item.children.length >= 0"
+              class="cursor-pointer"
+              @click="openChildrenModal(item.children)"
+              style="cursor: pointer"
+            >
               <span class="badge bg-info">
                 {{ item.children[0]?.name }}
               </span>
@@ -41,7 +58,6 @@
           <div class="text-center">
             {{ item.number_of_employees ? item.number_of_employees : "" }}
           </div>
-
         </template>
         <template #actual_number_of_employees="{ item }">
           <div class="text-center">
@@ -58,28 +74,39 @@
 
     <!-- Slot for rendering the form -->
     <template #form>
-      <Form :schema="fromFields" :newItem="newItem" :api="api" :closeForm="closeForm" :formData="true">
+      <Form
+        :schema="fromFields"
+        :newItem="newItem"
+        :api="api"
+        :closeForm="closeForm"
+        :formData="true"
+      >
         <template #color_id="{ item }">
           <div class="col-lg-6">
             <div>
               <div class="form-group mt-0">
                 <label for="color_id">{{ $t("department.color") }}</label>
-                <LazySelectField 
-                      
-                name="color_id" v-model="newItem.color_id" options="Color" option-label="name"
-                  option-value="id" placeholder="please select">
+                <LazySelectField
+                  name="color_id"
+                  v-model="newItem.color_id"
+                  options="Color"
+                  option-label="name"
+                  option-value="id"
+                  placeholder="please select"
+                >
                   <!-- CUSTOM OPTION SLOT -->
                   <template #option="{ name, hexcolor }">
                     <div style="display: flex; align-items: center">
-                      <span :style="{
-                        display: 'inline-block',
-                        width: '16px',
-                        height: '16px',
-                        backgroundColor: hexcolor,
-                        marginRight: '8px',
-                        marginLeft: '8px',
-
-                      }"></span>
+                      <span
+                        :style="{
+                          display: 'inline-block',
+                          width: '16px',
+                          height: '16px',
+                          backgroundColor: hexcolor,
+                          marginRight: '8px',
+                          marginLeft: '8px',
+                        }"
+                      ></span>
                       <span>{{ name }}</span>
                     </div>
                   </template>
@@ -87,12 +114,14 @@
                   <!-- OPTIONAL: selected item view -->
                   <template #selected-option="{ name, hexcolor }">
                     <div style="display: flex; align-items: center; gap: 6px">
-                      <span :style="{
-                        width: '12px',
-                        height: '12px',
-                        backgroundColor: hexcolor,
-                        display: 'inline-block',
-                      }"></span>
+                      <span
+                        :style="{
+                          width: '12px',
+                          height: '12px',
+                          backgroundColor: hexcolor,
+                          display: 'inline-block',
+                        }"
+                      ></span>
                       <span>{{ name }}</span>
                     </div>
                   </template>
@@ -111,21 +140,38 @@
             <div class="form-group">
               <label for="job_ids">{{ $t("department.job_ids") }}</label>
 
-              <LazySelectField 
-                    
-              name="job_ids" v-model="newItem.job_ids" options="Job" option-label="name"
-                option-value="id" multiple clearable placeholder="please select"
-                :showBadge="false" :onUpdate="handleJobSelection">
+              <LazySelectField
+                name="job_ids"
+                v-model="newItem.job_ids"
+                options="Job"
+                option-label="name"
+                option-value="id"
+                multiple
+                clearable
+                placeholder="please select"
+                :showBadge="false"
+                :onUpdate="handleJobSelection"
+              >
                 <!-- 🔹 Customize dropdown option -->
                 <template #option="{ name, is_manager }">
-                  <div style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              width: 100%;">
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 100%;
+                    "
+                  >
                     <span>{{ name }}</span>
-                    <span v-if="is_manager" class="badge bg-success"
-                      style="font-size: 10px; padding: 2px 8px; margin-left: 8px">
+                    <span
+                      v-if="is_manager"
+                      class="badge bg-success"
+                      style="
+                        font-size: 10px;
+                        padding: 2px 8px;
+                        margin-left: 8px;
+                      "
+                    >
                       Manager
                     </span>
                   </div>
@@ -135,7 +181,11 @@
                 <template #selected-option="{ name, is_manager }">
                   <div style="display: flex; align-items: center; gap: 4px">
                     <span>{{ name }}</span>
-                    <span v-if="is_manager" class="badge bg-success" style="font-size: 9px; padding: 1px 6px">
+                    <span
+                      v-if="is_manager"
+                      class="badge bg-success"
+                      style="font-size: 9px; padding: 1px 6px"
+                    >
                       M
                     </span>
                   </div>
@@ -154,119 +204,184 @@
 
   <!-- Modal -->
   <div v-if="isModalOpen" class="modal-overlay">
-    <div class="modal-content overflow-x-auto">
-      <div class="modal-header text-primary">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ $t("department.view") }}
-        </h5>
-        <span class="close" @click="closeModal">&times;</span>
-
-        <!-- Fixed: Added closing tag -->
+    <div class="modern-modal-content">
+      <!-- Enhanced Header -->
+      <div class="modern-modal-header">
+        <div class="header-content">
+          <div class="header-icon">
+            <i class="mdi mdi-domain"></i>
+          </div>
+          <div class="header-text">
+            <h3 class="modal-title">{{ selectedItem.name }}</h3>
+            <p class="modal-subtitle">Department Details</p>
+          </div>
+        </div>
+        <button class="modern-close-btn" @click="closeModal">
+          <i class="mdi mdi-close"></i>
+        </button>
       </div>
-      <div class="modal-body bg-white p-3 rounded-3">
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.name") }}:</label>
-            <p class="text-bold">
-              {{ selectedItem.name }}
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.type") }}:</label>
-            <p class="text-bold">
-              {{ selectedItem.type }}
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.parent") }}:</label>
-            <p class="text-bold">
-              {{ selectedItem?.parent?.name ?? "N/A" }}
-            </p>
-          </div>
-          <div v-show="selectedItem?.children?.length > 0" class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.children") }}:</label>
-            <p class="text-bold">
-              <span v-for="child in selectedItem.children" class="badge badge-primary">{{ child?.name }}</span>
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.manager") }}:</label>
-            <p class="text-bold">
-              {{ selectedItem?.manager?.name ?? "N/A" }}
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.actual_number_of_employees") }}:</label>
-            <p class="text-bold">
-              {{
-                selectedItem?.users.length == 0
-                  ? "No Employees"
-                  : selectedItem?.users.length
-              }}
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.number_of_employees") }}:</label>
-            <p class="text-bold">
-              {{
-                selectedItem.number_of_employees
-                  ? selectedItem.number_of_employees
-                  : "N/A"
-              }}
-            </p>
-          </div>
 
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.code") }}</label>
-            <p class="text-bold">
-              {{ selectedItem?.code }}
-            </p>
+      <!-- Enhanced Body -->
+      <div class="modern-modal-body">
+        <!-- Key Information Cards -->
+        <div class="info-cards-grid">
+          <div class="info-card primary-card">
+            <div class="card-icon">
+              <i class="mdi mdi-tag"></i>
+            </div>
+            <div class="card-content">
+              <span class="card-label">Department Type</span>
+              <span class="card-value">{{ selectedItem.type || 'N/A' }}</span>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.vision") }}:</label>
-            <p class="text-bold">
-              {{ extractText(selectedItem?.vision) }}
-            </p>
+          
+          <div class="info-card secondary-card">
+            <div class="card-icon">
+              <i class="mdi mdi-code-tags"></i>
+            </div>
+            <div class="card-content">
+              <span class="card-label">Department Code</span>
+              <span class="card-value">{{ selectedItem.code || 'N/A' }}</span>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.message") }}:</label>
-            <p class="text-bold message">
-              {{ extractText(selectedItem?.message) }}
-            </p>
+          
+          <div class="info-card accent-card">
+            <div class="card-icon">
+              <i class="mdi mdi-account-supervisor"></i>
+            </div>
+            <div class="card-content">
+              <span class="card-label">Position of Manager</span>
+              <span class="card-value">{{ selectedItem?.manager?.name || 'N/A' }}</span>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.mission") }}:</label>
-            <p class="text-bold">
-              {{ extractText(selectedItem?.mission) }}
-            </p>
+          
+          <div class="info-card success-card">
+            <div class="card-icon">
+              <i class="mdi mdi-account-group"></i>
+            </div>
+            <div class="card-content">
+              <span class="card-label">Number of Employees</span>
+              <span class="card-value">{{ selectedItem.number_of_employees || selectedItem?.users?.length || 'N/A' }}</span>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.objectives") }}:</label>
-            <p class="text-bold message">
-              {{ extractText(selectedItem?.objectives) }}
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">{{ $t("department.responsibilities") }}:</label>
-            <p class="text-bold message">
-              {{ extractText(selectedItem?.responsibilities) }}
-            </p>
-          </div>
+        </div>
 
-          <div v-show="selectedItem?.jobs?.length > 0" class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <label class="form-label">Jobs</label>
-            <p class="text-bold">
-              <span v-for="job in selectedItem.jobs" class="badge badge-primary">{{ job?.name }}</span>
-            </p>
+        <!-- Department Structure -->
+        <div class="section-container">
+          <h4 class="section-title">
+            <i class="mdi mdi-sitemap"></i>
+            Department Structure
+          </h4>
+          <div class="structure-grid">
+            <div class="structure-item" v-if="selectedItem?.parent">
+              <div class="structure-label">Parent Department</div>
+              <div class="structure-badge parent-badge">
+                <i class="mdi mdi-arrow-up"></i>
+                {{ selectedItem.parent.name }}
+              </div>
+            </div>
+            
+            <div class="structure-item" v-if="selectedItem?.children?.length > 0">
+              <div class="structure-label">Child Departments</div>
+              <div class="children-badges">
+                <span 
+                  v-for="child in selectedItem.children" 
+                  :key="child.id"
+                  class="structure-badge child-badge"
+                >
+                  <i class="mdi mdi-arrow-down"></i>
+                  {{ child.name }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="section-container">
+          <h4 class="section-title">
+            <i class="mdi mdi-bullseye-arrow"></i>
+            Vision & Mission
+          </h4>
+          <div class="vision-mission-grid">
+            <div class="vm-item" v-if="selectedItem?.vision">
+              <div class="vm-header">
+                <i class="mdi mdi-eye"></i>
+                <span>Vision</span>
+              </div>
+              <p class="vm-content">{{ extractText(selectedItem.vision) }}</p>
+            </div>
+            
+            <div class="vm-item" v-if="selectedItem?.mission">
+              <div class="vm-header">
+                <i class="mdi mdi-target"></i>
+                <span>Mission</span>
+              </div>
+              <p class="vm-content">{{ extractText(selectedItem.mission) }}</p>
+            </div>
+            
+            <div class="vm-item" v-if="selectedItem?.message">
+              <div class="vm-header">
+                <i class="mdi mdi-message-text"></i>
+                <span>Message</span>
+              </div>
+              <p class="vm-content">{{ extractText(selectedItem.message) }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objectives & Responsibilities -->
+        <div class="section-container">
+          <h4 class="section-title">
+            <i class="mdi mdi-clipboard-list"></i>
+            Objectives & Responsibilities
+          </h4>
+          <div class="objectives-responsibilities">
+            <div class="obj-resp-item" v-if="selectedItem?.objectives">
+              <div class="obj-resp-header">
+                <i class="mdi mdi-checkbox-marked-circle"></i>
+                <span>Objectives</span>
+              </div>
+              <p class="obj-resp-content">{{ extractText(selectedItem.objectives) }}</p>
+            </div>
+            
+            <div class="obj-resp-item" v-if="selectedItem?.responsibilities">
+              <div class="obj-resp-header">
+                <i class="mdi mdi-account-check"></i>
+                <span>Responsibilities</span>
+              </div>
+              <p class="obj-resp-content">{{ extractText(selectedItem.responsibilities) }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jobs Section -->
+        <div class="section-container" v-if="selectedItem?.jobs?.length > 0">
+          <h4 class="section-title">
+            <i class="mdi mdi-briefcase"></i>
+            Associated Jobs
+          </h4>
+          <div class="jobs-grid">
+            <span 
+              v-for="job in selectedItem.jobs" 
+              :key="job.id"
+              class="job-badge"
+            >
+              <i class="mdi mdi-briefcase-outline"></i>
+              {{ job.name }}
+            </span>
           </div>
         </div>
       </div>
-      <div class="modal-footer"></div>
     </div>
   </div>
 
   <!-- Children Modal -->
-  <div v-if="isChildrenModalOpen" class="modal-overlay" @click.self="closeChildrenModal">
+  <div
+    v-if="isChildrenModalOpen"
+    class="modal-overlay"
+    @click.self="closeChildrenModal"
+  >
     <div class="children-modal-container">
       <div class="children-modal-header">
         <h5 class="children-modal-title">Children</h5>
@@ -275,7 +390,11 @@
         </button>
       </div>
       <div class="children-modal-body">
-        <div v-for="child in selectedChildren" :key="child.id" class="bg-info child-item">
+        <div
+          v-for="child in selectedChildren"
+          :key="child.id"
+          class="bg-info child-item"
+        >
           <span class="child-name">{{ child?.name }}</span>
         </div>
       </div>
@@ -301,7 +420,7 @@ export default {
     MainPage, // Main page layout component
     Form, // Form component for adding/editing items
     DataTable, // DataTable component for displaying tabular data
-    LazySelectField
+    LazySelectField,
   },
 
   setup() {
@@ -346,9 +465,8 @@ export default {
     // console.log("******************fromFieldsMounted******************");
     // setTimeout(() => {
     //   console.log(this.$refs.table.data);
-    // }, 1000); 
+    // }, 1000);
     // console.log("******************fromFieldsMounted******************");
-
   },
   data() {
     return {
@@ -403,7 +521,6 @@ export default {
           filterType: "filter", // Default filter type
         },
       ],
-
     };
   },
 
@@ -501,7 +618,10 @@ export default {
         description: this.$t("department.description_parent"),
         col: 6,
         options: "Department",
-        apiParams: { select: "id|name|parent_id", filter: `id|${this.newItem.id}-string|!=` },
+        apiParams: {
+          select: "id|name|parent_id",
+          filter: `id|${this.newItem.id}-string|!=`,
+        },
       },
       // {
       //   optionLabel: "name",
@@ -784,8 +904,8 @@ export default {
 }
 
 .bg-info {
-  background-color: #D0B5E3 !important;
-  color: #6E3894 !important;
+  background-color: #d0b5e3 !important;
+  color: #6e3894 !important;
   font-weight: 500;
   padding: 4px 8px;
   border-radius: 10px;
@@ -793,7 +913,6 @@ export default {
   font-size: 10px;
   font-weight: 500;
 }
-
 
 .form-label {
   font-weight: 500;
@@ -813,11 +932,11 @@ export default {
   color: rgb(33, 37, 41, 0.9) !important;
   /* no wrap */
   white-space: nowrap;
-  
 }
 
 .message {
   color: #6e3894 !important;
+  white-space: nowrap;
 }
 
 /* Modal Styling */
@@ -827,22 +946,432 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 20px;
 }
 
-.modal-content {
-  background: #f8f8f8;
-  padding: 16px;
-  border-radius: 10px;
-  width: 80%;
-  min-height: 480px;
-  height: 50%;
+.modern-modal-content {
+  background: white;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: modalSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
-  animation: fadeIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modern-modal-header {
+  background: linear-gradient(135deg, var(--pk-main-500) 0%, var(--pk-main-700) 100%);
+  padding: 32px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-modal-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: translate(50px, -50px);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.header-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 400;
+}
+
+.modern-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 24px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.modern-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg) scale(1.1);
+}
+
+.modern-modal-body {
+  padding: 40px;
+  max-height: calc(90vh - 120px);
+  overflow-y: auto;
+  background: #fafbfc;
+}
+
+.modern-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modern-modal-body::-webkit-scrollbar-track {
+  background: #f1f3f4;
+  border-radius: 10px;
+}
+
+.modern-modal-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--pk-main-500), var(--pk-main-700));
+  border-radius: 10px;
+}
+
+/* Info Cards Grid */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(68, 35, 92, 0.15);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.primary-card .card-icon {
+  background: linear-gradient(135deg, var(--pk-main-500), var(--pk-main-700));
+}
+
+.secondary-card .card-icon {
+  background: linear-gradient(135deg, var(--pk-yellow-500), var(--pk-yellow-600));
+}
+
+.accent-card .card-icon {
+  background: linear-gradient(135deg, var(--pk-secondary-300), var(--pk-secondary-400));
+}
+
+.success-card .card-icon {
+  background: linear-gradient(135deg, var(--pk-green-500), var(--pk-green-600));
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.card-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  word-break: break-word;
+}
+
+/* Section Containers */
+.section-container {
+  margin-bottom: 32px;
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.section-title i {
+  color: var(--pk-main-500);
+  font-size: 24px;
+}
+
+/* Structure Grid */
+.structure-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.structure-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.structure-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.structure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.parent-badge {
+  background: linear-gradient(135deg, var(--pk-main-500), var(--pk-main-700));
+  color: white;
+}
+
+.child-badge {
+  background: linear-gradient(135deg, var(--pk-secondary-300), var(--pk-secondary-400));
+  color: var(--pk-main-900);
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.children-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Vision & Mission */
+.vision-mission-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.vm-item {
+  padding: 24px;
+  background: linear-gradient(135deg, var(--pk-secondary-50), var(--pk-secondary-100));
+  border-radius: 16px;
+  border-left: 4px solid var(--pk-main-500);
+}
+
+.vm-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.vm-header i {
+  color: var(--pk-main-500);
+  font-size: 20px;
+}
+
+.vm-content {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Objectives & Responsibilities */
+.objectives-responsibilities {
+  display: grid;
+  gap: 24px;
+}
+
+.obj-resp-item {
+  padding: 24px;
+  background: linear-gradient(135deg, var(--pk-secondary-50), var(--pk-secondary-100));
+  border-radius: 16px;
+  border-left: 4px solid var(--pk-main-600);
+}
+
+.obj-resp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.obj-resp-header i {
+  color: var(--pk-main-600);
+  font-size: 20px;
+}
+
+.obj-resp-content {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Jobs Grid */
+.jobs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.job-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, var(--pk-main-500), var(--pk-main-700));
+  color: white;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.job-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(68, 35, 92, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modern-modal-content {
+    margin: 10px;
+    max-width: calc(100vw - 20px);
+    border-radius: 16px;
+  }
+  
+  .modern-modal-header {
+    padding: 24px 20px;
+  }
+  
+  .modern-modal-body {
+    padding: 20px;
+  }
+  
+  .info-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .section-container {
+    padding: 20px;
+  }
+  
+  .header-content {
+    gap: 12px;
+  }
+  
+  .header-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+  
+  .modal-title {
+    font-size: 22px;
+  }
 }
 
 /* Children Modal - Smaller Size */
@@ -959,12 +1488,12 @@ export default {
 }
 
 .children-modal-body::-webkit-scrollbar-thumb {
-  background: #667eea;
+  background: var(--pk-main-500);
   border-radius: 10px;
 }
 
 .children-modal-body::-webkit-scrollbar-thumb:hover {
-  background: #764ba2;
+  background: var(--pk-main-700);
 }
 
 .children-list {
@@ -1055,5 +1584,4 @@ export default {
 .modal-header {
   justify-content: space-between;
 }
-
 </style>

@@ -500,109 +500,99 @@ export default class API  extends APIService{
           transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         `;
 
-      
-        /* start translate */
-        const i18n = typeof getI18n === "function" ? getI18n() : undefined;
-        const t = i18n?.global?.t ?? ((key: string) => key);
-        const titleText = t("common.delete_confirm_title"); //Are You Sure You Want To Delete This Item?
-        const descriptionText = t("common.delete_confirm_body"); //This Action Cannot Be Undone. The Selected Item Will Be Permanently Removed From The System
-        const cancelText = t("common.cancel"); //Cancel
-        const deleteText = t("common.delete"); //Delete
-        /* end translate */
+      modal.innerHTML = `
+          <button id="closeBtn" style="
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: black;
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          ">✕</button>
 
-        modal.innerHTML = `
-            <button id="closeBtn" style="
-              position: absolute;
-              top: 20px;
-              right: 20px;
-              background: none;
-              border: none;
-              font-size: 24px;
-              color: black;
-              cursor: pointer;
-              padding: 0;
-              width: 32px;
-              height: 32px;
+          <div style="text-align: center; margin-bottom: 24px;">
+            <div style="
+              width: 80px;
+              height: 80px;
+              margin: 0 auto 20px;
+              background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.2));
+              border-radius: 50%;
               display: flex;
               align-items: center;
               justify-content: center;
-            ">✕</button>
-
-            <div style="text-align: center; margin-bottom: 24px;">
+            ">
               <div style="
-                width: 80px;
-                height: 80px;
-                margin: 0 auto 20px;
-                background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.2));
+                width: 60px;
+                height: 60px;
+                background: rgba(220, 53, 69, 0.15);
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
               ">
-                <div style="
-                  width: 60px;
-                  height: 60px;
-                  background: rgba(220, 53, 69, 0.15);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                ">
-                <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="4.16675" y="4.16663" width="50" height="50" rx="25" fill="#E2B6B6"/>
-                  <rect x="4.16675" y="4.16663" width="50" height="50" rx="25" stroke="#EED3D3" stroke-width="8.33333"/>
-                  <path d="M29.1668 34.3752H29.1772M29.1668 26.0418V30.2085M27.3856 20.6877L18.5626 35.4168C18.3807 35.7319 18.2845 36.089 18.2835 36.4528C18.2824 36.8166 18.3767 37.1743 18.5568 37.4903C18.737 37.8063 18.9967 38.0697 19.3102 38.2542C19.6238 38.4387 19.9801 38.5378 20.3439 38.5418H37.9897C38.3535 38.5378 38.7098 38.4387 39.0234 38.2542C39.3369 38.0697 39.5966 37.8063 39.7768 37.4903C39.9569 37.1743 40.0512 36.8166 40.0501 36.4528C40.0491 36.089 39.9529 35.7319 39.771 35.4168L30.948 20.6877C30.7624 20.3815 30.5009 20.1284 30.1889 19.9528C29.8769 19.7771 29.5249 19.6848 29.1668 19.6848C28.8087 19.6848 28.4567 19.7771 28.1447 19.9528C27.8327 20.1284 27.5712 20.3815 27.3856 20.6877Z" stroke="#A92525" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                </div>
+              <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4.16675" y="4.16663" width="50" height="50" rx="25" fill="#E2B6B6"/>
+                <rect x="4.16675" y="4.16663" width="50" height="50" rx="25" stroke="#EED3D3" stroke-width="8.33333"/>
+                <path d="M29.1668 34.3752H29.1772M29.1668 26.0418V30.2085M27.3856 20.6877L18.5626 35.4168C18.3807 35.7319 18.2845 36.089 18.2835 36.4528C18.2824 36.8166 18.3767 37.1743 18.5568 37.4903C18.737 37.8063 18.9967 38.0697 19.3102 38.2542C19.6238 38.4387 19.9801 38.5378 20.3439 38.5418H37.9897C38.3535 38.5378 38.7098 38.4387 39.0234 38.2542C39.3369 38.0697 39.5966 37.8063 39.7768 37.4903C39.9569 37.1743 40.0512 36.8166 40.0501 36.4528C40.0491 36.089 39.9529 35.7319 39.771 35.4168L30.948 20.6877C30.7624 20.3815 30.5009 20.1284 30.1889 19.9528C29.8769 19.7771 29.5249 19.6848 29.1668 19.6848C28.8087 19.6848 28.4567 19.7771 28.1447 19.9528C27.8327 20.1284 27.5712 20.3815 27.3856 20.6877Z" stroke="#A92525" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
               </div>
-
-              <h2 style="
-                font-size: 24px;
-                font-weight: 600;
-                color: #1a1a1a;
-                margin: 0 0 12px 0;
-              ">${titleText}</h2>
-
-              <p style="
-                font-size: 15px;
-                color: #666;
-                margin: 0;
-                line-height: 1.5;
-              ">${descriptionText}</p>
             </div>
 
-            <div style="
-              display: flex;
-              gap: 12px;
-              justify-content: flex-end;
-            ">
-              <button id="cancelBtn" style="
-                padding: 0px 12px;
-                font-size: 16px;
-                font-weight: 500;
-                border: 2px solid #404040;
-                background: white;
-                color: #333;
-                border-radius: 11px;
-                cursor: pointer;
-                transition: all 0.2s;
-                width: 94px;
-              ">${cancelText}</button>
+            <h2 style="
+              font-size: 24px;
+              font-weight: 600;
+              color: #1a1a1a;
+              margin: 0 0 12px 0;
+            ">Are You Sure You Want To Delete This Item?</h2>
 
-              <button id="deleteBtn" style="
-                padding: 0px 12px;
-                font-size: 16px;
-                font-weight: 500;
-                border: none;
-                background: #A92525;
-                color: white;
-                border-radius: 11px;
-                cursor: pointer;
-                transition: all 0.2s;
-                width: 94px;
-              ">${deleteText}</button>
-            </div>
-          `;
+            <p style="
+              font-size: 15px;
+              color: #666;
+              margin: 0;
+              line-height: 1.5;
+            ">"This Action Cannot Be Undone. The Selected Item Will Be<br>Permanently Removed From The System."</p>
+          </div>
+
+          <div style="
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+          ">
+            <button id="cancelBtn" style="
+              padding: 0px 12px;
+              font-size: 16px;
+              font-weight: 500;
+              border: 2px solid #404040;
+              background: white;
+              color: #333;
+              border-radius: 11px;
+              cursor: pointer;
+              transition: all 0.2s;
+              width: 94px;
+            ">Cancel</button>
+
+            <button id="deleteBtn" style="
+              padding: 0px 12px;
+              font-size: 16px;
+              font-weight: 500;
+              border: none;
+              background: #A92525;
+              color: white;
+              border-radius: 11px;
+              cursor: pointer;
+              transition: all 0.2s;
+               width: 94px;
+            ">Delete</button>
+          </div>
+        `;
 
       overlay.appendChild(modal);
       document.body.appendChild(overlay);

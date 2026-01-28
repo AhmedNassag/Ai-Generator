@@ -35,29 +35,4 @@ class Team extends Model
     {
         return $this->belongsToMany(User::class, null, 'team_ids', 'user_ids');
     }
-
-    /*public function vulnerabilities()
-    {
-        return $this->belongsToMany(Vulnerability::class, null,  'team_ids', 'vulnerability_ids');
-    }
-    public function mitigation_risks()
-    {
-        return $this->belongsToMany(\App\Models\Risk\Risk::class,null, "mitigation_team_ids" ,'mitigation_risk_ids');
-    }
-
-    public function assets()
-    {
-        return $this->belongsToMany(Asset::class, null,  'team_ids', 'asset_ids');
-    }
-    public function risks()
-    {
-        return $this->belongsToMany(\App\Models\Risk\Risk::class, null,'team_ids', 'risk_ids');
-    }
-
-    public function documents(): BelongsToMany
-    {
-        return $this->belongsToMany(\App\Models\Document\Document::class, null, 'team_ids', 'document_ids');
-    }*/
-
-
 }

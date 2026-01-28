@@ -328,7 +328,6 @@ import { Ckeditor } from "@ckeditor/ckeditor5-vue";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import LazySelectField from "@/components/LazySelectField.vue";
 import TeamSelect from "./TeamSelect.vue";
-import { getI18n } from "../main";
 
 // rules
 defineRule("required", required);
@@ -336,48 +335,36 @@ defineRule("email", email);
 defineRule("min", min);
 defineRule("number", numeric);
 
-// Create a function that returns translated messages
-const getTranslatedMessage = (key, params = {}) => {
-  // This function will be set when the component is mounted
-  if (window.__getTranslatedMessage) {
-    return window.__getTranslatedMessage(key, params);
-  }
-  return key; // Fallback to the key
-};
-
 defineRule("date", (value) => {
   if (!value) return true;
   const date = new Date(value);
-  // return !isNaN(date.getTime()) ? true : "Please enter a valid date.";
-  return !isNaN(date.getTime()) ? true : getTranslatedMessage('common.please enter a valid date');
+  return !isNaN(date.getTime()) ? true : "Please enter a valid date.";
 });
+
 defineRule("time", (value) => {
   const timeRegex = /^([01]?[0-9]|2[0-3]):([0-5][0-9])$/;
-  // return timeRegex.test(value) ? true : "Please enter a valid time (HH:mm).";
-  return timeRegex.test(value) ? true : getTranslatedMessage('common.please enter a valid time (HH:mm)');
+  return timeRegex.test(value) ? true : "Please enter a valid time (HH:mm).";
 });
+
 defineRule("url", (value) => {
   if (!value) return true;
   const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-  // return urlRegex.test(value) ? true : "Please enter a valid URL.";
-  return urlRegex.test(value) ? true : getTranslatedMessage('common.Please enter a valid URL');
+  return urlRegex.test(value) ? true : "Please enter a valid URL.";
 });
 
-// configure({
-//   generateMessage: (ctx) => {
-//     const messages = {
-//       required: `${ctx.field} ${i18n.global.t('common.is required')}.`,
-//       email: `${i18n.global.t('common.Please enter a valid email address')}.`,
-//       min: `${ctx.field} ${i18n.global.t('common.must be at least')} ${ctx.rule.params[0]} ${i18n.global.t('common.characters')}.`,
-//       number: `${ctx.field} ${i18n.global.t('common.must be a valid number')}.`,
-//       date: `${i18n.global.t('common.Please enter a valid date')}.`,
-//       time: `${i18n.global.t('common.Please enter a valid time (HH:mm)')}.`,
-//     };
-//     return messages[ctx.rule.name] || `${i18n.global.t('common.Invalid field')}`;
-//   },
-// });
-
-let i18n = null;
+configure({
+  generateMessage: (ctx) => {
+    const messages = {
+      required: `${ctx.field} is required.`,
+      email: "Please enter a valid email address.",
+      min: `${ctx.field} must be at least ${ctx.rule.params[0]} characters.`,
+      number: `${ctx.field} must be a valid number.`,
+      date: "Please enter a valid date.",
+      time: "Please enter a valid time (HH:mm).",
+    };
+    return messages[ctx.rule.name] || "Invalid field";
+  },
+});
 
 export default {
   props: {
@@ -431,34 +418,9 @@ export default {
   },
 
   mounted() {
-    i18n = getI18n ? getI18n() : this.$i18n || null;
-    // this.configureValidation();
-    window.__getTranslatedMessage = (key, params) => {
-      return this.$t(key, params);
-    };
-    configure({
-      generateMessage: (ctx) => {
-        const fieldLabel = this.getFieldDisplayName(ctx.field);
-        const messages = {
-          required: `${fieldLabel} ${this.$t('common.is required')}`,
-          email: `${this.$t('common.Please enter a valid email address')}`,
-          min: `${fieldLabel} ${this.$t('common.must be at least')} ${ctx.rule.params[0]} ${this.$t('common.characters')}`,
-          number: `${fieldLabel} ${this.$t('common.must be a valid number')}`,
-          date: `${this.$t('common.Please enter a valid date')}`,
-          time: `${this.$t('common.Please enter a valid time (HH:mm)')}`,
-          url: `${this.$t('common.Please enter a valid url')}`,
-        };
-        return messages[ctx.rule.name] || `${this.$t('common.invalid field')}`;
-      },
-    });
-
     this.fields = this.schema;
     this.initializeImagePreviews();
     // this.updateImageBackgrounds();
-  },
-
-  beforeUnmount() {
-    delete window.__getTranslatedMessage;
   },
 
   watch: {
@@ -480,33 +442,6 @@ export default {
   },
 
   methods: {
-    configureValidation() {
-      configure({
-        generateMessage: (ctx) => {
-          const messages = {
-            required: `${ctx.field} ${this.$t('common.is required')}.`,
-            email: `${this.$t('common.Please enter a valid email address')}.`,
-            min: `${ctx.field} ${this.$t('common.must be at least')} ${ctx.rule.params[0]} ${this.$t('common.characters')}.`,
-            number: `${ctx.field} ${this.$t('common.must be a valid number')}.`,
-            date: `${this.$t('common.Please enter a valid date')}.`,
-            time: `${this.$t('common.Please enter a valid time (HH:mm)')}.`,
-          };
-          return messages[ctx.rule.name] || `${this.$t('common.Invalid field')}`;
-        },
-      });
-    },
-
-    getFieldDisplayName(name) {
-      const f = this.fields.find(x => x.name === name);
-      if (f?.label) return f.label; // Prefer schema label if present
-      const key = `fields.${name}`; // Optional i18n: define translations like fields.name
-      if (this.$te && this.$te(key)) return this.$t(key);
-      // Fallback: humanize the field name (e.g., "first_name" -> "First Name")
-      return name
-        .replace(/[_-]/g, ' ')
-        .replace(/\b\w/g, c => c.toUpperCase());
-    },
-
     selectSingleOption(option, fieldName) {
       this.newItem[fieldName] =
         this.newItem[fieldName] === option?.id ? null : option?.id;

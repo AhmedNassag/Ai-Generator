@@ -186,7 +186,6 @@ class User extends Model implements Authenticatable, JWTSubject, CanResetPasswor
 
     public function getJWTCustomClaims($permissions_model = [])
     {
-
         // $role_permissions = Job::find($this->job_id)->role()->first()->permission_ids;
         // foreach ($role_permissions as $permission_id) {
         //     $permission = Permission::find($permission_id);
@@ -215,7 +214,6 @@ class User extends Model implements Authenticatable, JWTSubject, CanResetPasswor
             foreach ($permission["controllers"] as $controller => $actions) {
                 foreach ($actions as $action => $value) {
                     $formattedAction = $controller . '\\' . $controller . 'Controller\\' . $action;
-
                     // Check if the key exists, then append to the list instead of overwriting
                     if (isset($permissions[$permission["name"]])) {
                         $permissions[$permission["name"]][] = $formattedAction;
@@ -226,25 +224,20 @@ class User extends Model implements Authenticatable, JWTSubject, CanResetPasswor
             }
         }
         $encryptedPermissions = [];
-
         // Loop through each permission and apply encryption logic
         foreach ($permissions as $permission => $actions) {
             foreach ($actions as $action) {
                 // Get the formatted controller-method string (e.g. "PositionController\index")
                 $permissionAction = $action;
-
                 // Create hash for permission
                 $hash = hash('sha256', $permissionAction);
-
                 // Generate UUID from the hash
                 $shortHash = substr($hash, 0, 16);
                 $uuid = substr($shortHash, 0, 4) . '-' . substr($shortHash, 4, 4) . '-' . substr($shortHash, 8, 4) . '-' . substr($shortHash, 12, 4);
-
                 // Encrypt the UUID for storage in the JWT
                 $encryptedPermissions[] = $uuid;
             }
         }
-
         // Return the encrypted permissions as a custom claim
         return [
             'permission' => $encryptedPermissions,
@@ -252,42 +245,9 @@ class User extends Model implements Authenticatable, JWTSubject, CanResetPasswor
 
         ];
     }
+
     public function managees()
     {
         return $this->hasMany(User::class, 'manager_id');
     }
-
-    /*public function risks(){
-        return $this->belongsToMany(\App\Models\Risk\Risk::class, null, 'stakeholder_ids', 'risk_ids');
-    }
-
-    public function documents(): BelongsToMany
-    {
-        return $this->belongsToMany(\App\Models\Document\Document::class, null, 'stakeholder_ids', 'document_ids');
-    }
-    public function kpis(): BelongsToMany
-    {
-        return $this->belongsToMany(\App\Models\Kpi\Kpi::class, null, 'kpiOwner_ids', 'kpi_ids');
-    }
-
-    public function changeRequests() {
-        return $this->hasMany(ChangeRequest::class,'created_by');
-    }
-
-    public function phishingGroups()
-    {
-        return $this->belongsToMany(
-            PhishingGroup::class,
-            null,
-            'user_ids',
-            'phishing_group_ids'
-        );
-    }
-
-
-    public function campaigns(): BelongsToMany
-    {
-        return $this->belongsToMany(\App\Models\Campaign\Campaign::class, null, 'user_ids', 'campaign_ids');
-    }*/
-
 }

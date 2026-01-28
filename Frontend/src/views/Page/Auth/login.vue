@@ -10,7 +10,7 @@
     <div class="login-right">
       <div class="login-card">
         <div class="login-header">
-          <h1 class="welcome-title">Welcome Back To <span class="grc-text">GRC</span></h1>
+          <h1 class="welcome-title">Welcome Back To <br><span class="grc-text">Our System</span></h1>
           <p class="welcome-subtitle">Please Login To Your Account</p>
         </div>
         <form class="theme-form" @submit.prevent="handleLogin">

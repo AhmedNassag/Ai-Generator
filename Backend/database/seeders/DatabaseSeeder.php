@@ -1,12 +1,13 @@
 <?php
 
 namespace Database\Seeders;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use Database\Seeders\ColorSeeder;
+use Database\Seeders\PositionSeeder;
 use Database\Seeders\DepartmentSeeder;
-use Database\Seeders\LmsCourseSeeder;
-use Database\Seeders\MaturitySeeder;
-use Database\Seeders\RiskSeeder;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\TeamSeeder;
+use Database\Seeders\JobSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,7 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
         $this->call([
 	        ColorSeeder::class,
             PositionSeeder::class,
@@ -25,6 +25,5 @@ class DatabaseSeeder extends Seeder
             TeamSeeder::class,
             JobSeeder::class,
         ]);
-
     }
 }

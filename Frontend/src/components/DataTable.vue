@@ -29,7 +29,7 @@
                 stroke-width="0.5"
               />
             </svg>
-            <span class="ms-2">Import</span>
+            <span class="ms-2">{{ $t("common.import") }}</span>
           </button>
         </div>
 
@@ -56,7 +56,7 @@
                   stroke-width="0.5"
                 />
               </svg>
-              <span class="ms-2">Export</span>
+              <span class="ms-2">{{ $t("common.export") }}</span>
             </button>
 
             <!-- Export Dropdown Menu -->
@@ -82,7 +82,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span>Export All Data</span>
+                <span>{{ $t("common.export_all_data") }}</span>
               </div>
               <div class="export-option" @click="handleExportCurrent">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -101,7 +101,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span>Export Current Page</span>
+                <span>{{ $t("common.export_current_page") }}</span>
               </div>
               <div class="export-option" @click="openColumnSelection">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -112,7 +112,7 @@
                     stroke-linecap="round"
                   />
                 </svg>
-                <span>Select Columns</span>
+                <span>{{ $t("common.select_columns") }}</span>
               </div>
             </div>
           </div>
@@ -148,7 +148,7 @@
                   stroke-width="0.5"
                 />
               </svg>
-              <span class="ms-2">PDF</span>
+              <span class="ms-2">{{ $t("common.pdf") }}</span>
             </button>
 
             <!-- PDF Dropdown Menu -->
@@ -170,7 +170,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span>Export All to PDF</span>
+                <span>{{ $t("common.export_all_to_pdf") }}</span>
               </div>
               <div class="pdf-option" @click="handlePdfExportCurrent">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -189,7 +189,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span>Export Current Page to PDF</span>
+                <span>{{ $t("common.export_current_page_to_pdf") }}</span>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@
             :aria-label="addNewButtonTitle"
           >
             <v-icon left class="icon-add mr-2">{{ addNewButtonIcon }}</v-icon>
-            <span class="">{{ addNewButtonTitle }}</span>
+            <span class="">{{ $t('common.' + addNewButtonTitle) }}</span>
           </button>
         </div>
 
@@ -216,7 +216,7 @@
             title="Configurations"
           >
             <v-icon left class="icon-add m-rtl">mdi-cog</v-icon>
-            <span>Configs.</span>
+            <span>{{ $t("common.configs") }}.</span>
           </button>
         </div>
 
@@ -254,7 +254,7 @@
               @input="debouncedFetchData"
               type="text"
               class="search-field border-0"
-              placeholder="Search..."
+              :placeholder="$t('common.Search')"
             />
             <span class="icon-right d-flex m-rtl">
               <svg
@@ -591,7 +591,6 @@
           <tr
             v-for="(row, index) in paginatedData"
             :key="`row-${row.id || index}`"
-            v-memo="[row, visibleColumns, orderedColumnIndexes]"
           >
             <template
               v-for="columnIndex in orderedColumnIndexes"
@@ -955,7 +954,7 @@
       >
         <div class="modal-container export-modal" @click.stop>
           <div class="modal-header">
-            <h5>Select Columns to Export</h5>
+            <h5>{{ $t("common.select_columns_to_export") }}</h5>
             <button @click="closeColumnSelection" class="close-btn">✕</button>
           </div>
           <div class="modal-body">
@@ -964,13 +963,13 @@
                 @click="selectAllExportColumns"
                 class="btn btn-sm btn-outline-primary mr-2"
               >
-                Select All
+                {{ $t("common.select_all") }}
               </button>
               <button
                 @click="deselectAllExportColumns"
                 class="btn btn-sm btn-outline-secondary"
               >
-                Deselect All
+                {{ $t("common.deselect_all") }}
               </button>
             </div>
             <div class="column-selection-grid">
@@ -1023,7 +1022,7 @@
                 @click="closeColumnSelection"
                 class="btn btn-secondary ml-2"
               >
-                Cancel
+                {{ $t("common.cancel") }}
               </button>
             </div>
           </div>
@@ -1225,7 +1224,7 @@ export default {
     },
     addNewButtonTitle: {
       type: String,
-      default: "Add New",
+      default: "add_new",
     },
     addNewButtonIcon: {
       type: String,

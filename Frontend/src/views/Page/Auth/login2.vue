@@ -4,7 +4,7 @@
       <div class="left-content">
         <div class="logo-section">
           <img class="company-logo" src="@/assets/images/logo/logo5.png" alt="Advanced Controls" />
-          <h1 class="welcome-title">Welcome Back To <span class="grc-text">GRC</span></h1>
+          <h1 class="welcome-title">Welcome Back To <br><span class="grc-text">Our System</span></h1>
           <p class="welcome-subtitle">Please Login To Your Account</p>
         </div>
       </div>

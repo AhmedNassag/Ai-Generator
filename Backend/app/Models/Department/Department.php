@@ -90,8 +90,4 @@ class Department extends Model
     {
         return $this->hasMany(Department::class, 'parent_id')->with('departments');
     }
-
-    /*public function changeRequests() {
-        return $this->hasMany(ChangeRequest::class,'department_id');
-    }*/
 }

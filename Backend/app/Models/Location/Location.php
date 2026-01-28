@@ -19,14 +19,4 @@ class Location extends Model
         'name',
         'risk_ids'
     ];
-
-    /*public function risks()
-    {
-        return $this->belongsToMany(\App\Models\Risk\Risk::class, null, 'location_ids', 'risk_ids');
-    }
-
-    public function assets()
-    {
-        return $this->hasMany(\App\Models\Asset\Asset::class);
-    }*/
 }
