@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Repositories\Eloquent\@@Name@@;
+
+use App\Models\@@Name@@\@@Name@@;
+use App\Repositories\BaseRepository;
+
+ /**
+ * @@Name@@Repository
+ *
+ * This class is responsible for handling the data operations related to the @@Name@@ model.
+ * It extends the BaseRepository class, leveraging the shared repository functionality,
+ * such as CRUD operations, and specifies the @@Name@@ model as its target entity.
+ */
+class @@Name@@Repository extends BaseRepository
+{
+    /**
+     * @@Name@@Repository constructor.
+     *
+     * Initializes the repository by passing an instance of the @@Name@@ model to the parent BaseRepository.
+     * This setup allows the BaseRepository methods to work specifically with @@Name@@ data.
+     */
+    public function __construct()
+    {
+        // Pass a new instance of the @@Name@@ model to the parent BaseRepository constructor
+        parent::__construct(new @@Name@@());
+    }
+}

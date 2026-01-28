@@ -1,0 +1,15 @@
+{
+  "Dashboard": "Dashboard",
+  "Raise Support": "Raise Support",
+  "Document": "Document",
+  "common": {
+    "Insert_success": "Insert Successfully",
+    "Updata_success": "Update Successfully",
+    "Delete_success": "Delete Successfully",
+    "operation_success": "The operation was completed successfully!",
+    "Insert_error": "Insert Error",
+    "Updata_error": "Update Error",
+    "Delete_error": "Delete Error",
+    "operation_failed": "An error occurred."
+  }
+}

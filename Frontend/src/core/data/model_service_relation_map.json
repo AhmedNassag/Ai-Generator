@@ -1,0 +1,3286 @@
+{
+  "Services": {
+    "BaseService": "http://145.223.82.98:9494/api",
+    "UserService": "http://145.223.82.98:7474/api",
+    "NotificationService": "http://145.223.82.98:6464/api",
+    "RegulatorService": "http://82.29.175.67:3030/api",
+    "KpiService": "http://82.29.175.67:4040/api",
+    "StrategicPlanService": "http://strategic-plan-service:8080/api"
+  },
+  "Models": {
+    "Color": {
+      "service": "UserService",
+      "route": "color",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "departments",
+          "model": "Department",
+          "display_name": "Departments",
+          "foreign_key": "",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Dashboard": {
+      "service": "UserService",
+      "route": "dashboard",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Department": {
+      "service": "UserService",
+      "route": "department",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "color",
+          "model": "Color",
+          "display_name": "Color",
+          "foreign_key": "color_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "parent",
+          "model": "Department",
+          "display_name": "Parent",
+          "foreign_key": "parent_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "jobs",
+          "model": "Job",
+          "display_name": "Jobs",
+          "foreign_key": "job_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ExportTemplate": {
+      "service": "UserService",
+      "route": "export-template",
+      "default_field": "name",
+      "relations": []
+    },
+    "Hierarchy": {
+      "service": "UserService",
+      "route": "hierarchy",
+      "default_field": "name",
+      "relations": []
+    },
+    "Job": {
+      "service": "UserService",
+      "route": "job",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "departments",
+          "model": "Department",
+          "display_name": "Departments",
+          "foreign_key": "department_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "position",
+          "model": "Position",
+          "display_name": "Position",
+          "foreign_key": "position_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "role",
+          "model": "Role",
+          "display_name": "Role",
+          "foreign_key": "role_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "users",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "LDAP": {
+      "service": "UserService",
+      "route": "l-d-a-p",
+      "default_field": "name",
+      "relations": []
+    },
+    "Location": {
+      "service": "UserService",
+      "route": "location",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Permission": {
+      "service": "UserService",
+      "route": "permission",
+      "default_field": "name",
+      "relations": []
+    },
+    "Position": {
+      "service": "UserService",
+      "route": "position",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "jobs",
+          "model": "Job",
+          "display_name": "Jobs",
+          "foreign_key": "job_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Role": {
+      "service": "UserService",
+      "route": "role",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "job",
+          "model": "Job",
+          "display_name": "Job",
+          "foreign_key": "job_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "departments",
+          "model": "Department",
+          "display_name": "Departments",
+          "foreign_key": "department_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Team": {
+      "service": "UserService",
+      "route": "team",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "users",
+          "model": "User",
+          "display_name": "Users",
+          "foreign_key": "user_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "vulnerabilitys",
+          "model": "Vulnerability",
+          "display_name": "Vulnerabilitys",
+          "foreign_key": "team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Assets",
+          "foreign_key": "team_ids",
+          "type": "hasMany",
+          "reverse": true
+        },
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "mitigationRisks",
+          "model": "Risk",
+          "display_name": "Mitigation Risks",
+          "foreign_key": "team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "documents",
+          "model": "Document",
+          "display_name": "Documents",
+          "foreign_key": "document_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "User": {
+      "service": "UserService",
+      "route": "user",
+      "default_field": "full_name",
+      "relations": [
+        {
+          "name": "role",
+          "model": "Role",
+          "display_name": "Role",
+          "foreign_key": "role_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "department",
+          "model": "Department",
+          "display_name": "Department",
+          "foreign_key": "department_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "teams",
+          "model": "Team",
+          "display_name": "Teams",
+          "foreign_key": "team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "job",
+          "model": "Job",
+          "display_name": "Job",
+          "foreign_key": "job_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "manager",
+          "model": "User",
+          "display_name": "Manager",
+          "foreign_key": "manager_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "documents",
+          "model": "Document",
+          "display_name": "Documents",
+          "foreign_key": "document_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "kpis",
+          "model": "Kpi",
+          "display_name": "Kpis",
+          "foreign_key": "kpi_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "phishingGroups",
+          "model": "PhishingGroup",
+          "display_name": "Phishing Groups",
+          "foreign_key": "phishing_group_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "campaigns",
+          "model": "Campaign",
+          "display_name": "Campaigns",
+          "foreign_key": "campaign_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "UserReport": {
+      "service": "UserService",
+      "route": "user-report",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Widget": {
+      "service": "UserService",
+      "route": "widget",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Agenda": {
+      "service": "BaseService",
+      "route": "agenda",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "committee",
+          "model": "Committee",
+          "display_name": "Committee",
+          "foreign_key": "committee_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "topics",
+          "model": "Topic",
+          "display_name": "Topics",
+          "foreign_key": "agenda_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "deferedTopics",
+          "model": "Topic",
+          "display_name": "Defered Topics",
+          "foreign_key": "agenda_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "meeting",
+          "model": "Meeting",
+          "display_name": "Meeting",
+          "foreign_key": "agenda_id",
+          "type": "hasOne"
+        },
+        {
+          "name": "createdBy",
+          "model": "User",
+          "display_name": "Created By",
+          "foreign_key": "created_by",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Assessment": {
+      "service": "BaseService",
+      "route": "assessment",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "template",
+          "model": "AssessmentTemplate",
+          "display_name": "Template",
+          "foreign_key": "template_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "results",
+          "model": "AssessmentResult",
+          "display_name": "AssessmentResult",
+          "foreign_key": "assessment_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "users",
+          "model": "User",
+          "display_name": "Users",
+          "foreign_key": "user_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "AssessmentResult": {
+      "service": "BaseService",
+      "route": "assessment-result",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "assessment",
+          "model": "Assessment",
+          "display_name": "Assessment",
+          "foreign_key": "assessment_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "AssessmentTemplate": {
+      "service": "BaseService",
+      "route": "assessment-template",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "questions",
+          "model": "Question",
+          "display_name": "Questions",
+          "foreign_key": "question_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Asset": {
+      "service": "BaseService",
+      "route": "asset",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "assetCategory",
+          "model": "assetCategory",
+          "display_name": "Asset Category",
+          "foreign_key": "asset_category_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "assetEnvironmentCategory",
+          "model": "AssetEnvironmentCategory",
+          "display_name": "Asset Environment Category",
+          "foreign_key": "asset_environment_category_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "owner",
+          "model": "User",
+          "display_name": "Owner",
+          "foreign_key": "owner_id",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "operatingSystem",
+          "model": "operatingSystem",
+          "display_name": "Operating System",
+          "foreign_key": "operating_system_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "location",
+          "model": "Location",
+          "display_name": "Location",
+          "foreign_key": "location_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "hostRegion",
+          "model": "hostRegion",
+          "display_name": "Host Region",
+          "foreign_key": "host_region_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "teams",
+          "model": "Team",
+          "display_name": "Teams",
+          "foreign_key": "team_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "assetGroups",
+          "model": "AssetGroup",
+          "display_name": "Asset Groups",
+          "foreign_key": "asset_group_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "vulnerabilitys",
+          "model": "Vulnerability",
+          "display_name": "Vulnerabilitys",
+          "foreign_key": "vulnerability_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "belongsToMany"
+        }
+      ]
+    },
+    "AssetEnvironmentCategory": {
+      "service": "BaseService",
+      "route": "asset-environment-category",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Assets",
+          "foreign_key": "asset_environment_category_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "AssetGroup": {
+      "service": "BaseService",
+      "route": "asset-group",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Assets",
+          "foreign_key": "asset_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "AssetValuation": {
+      "service": "BaseService",
+      "route": "asset-valuation",
+      "default_field": "name",
+      "relations": []
+    },
+    "AssetValueQuestion": {
+      "service": "BaseService",
+      "route": "asset-value-question",
+      "default_field": "name",
+      "relations": []
+    },
+    "Campaign": {
+      "service": "BaseService",
+      "route": "campaign",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "phishingGroups",
+          "model": "PhishingGroups",
+          "display_name": "Phishing Groups",
+          "foreign_key": "phishingGroups_id",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "phishingTemplates",
+          "model": "PhishingTemplate",
+          "display_name": "Phishing Templates",
+          "foreign_key": "phishingTemplate_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "lmsModules",
+          "model": "LmsModule",
+          "display_name": "Lms Modules",
+          "foreign_key": "lmsModule_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "users",
+          "model": "User",
+          "display_name": "Users",
+          "foreign_key": "user_ids",
+          "type": "belongsToMany"
+        }
+      ]
+    },
+    "CampaignSetting": {
+      "service": "BaseService",
+      "route": "campaign-setting",
+      "default_field": "name",
+      "relations": []
+    },
+    "Category": {
+      "service": "BaseService",
+      "route": "category",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "tasks",
+          "model": "Task",
+          "display_name": "Tasks",
+          "foreign_key": "category_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "CenterPolicy": {
+      "service": "BaseService",
+      "route": "center-policy",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "documents",
+          "model": "Document",
+          "display_name": "Documents",
+          "foreign_key": "document_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "CertifiateTemplete": {
+      "service": "BaseService",
+      "route": "certifiate-templete",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Course",
+          "foreign_key": "course_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "level",
+          "model": "LmsLevel",
+          "display_name": "Level",
+          "foreign_key": "level_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "module",
+          "model": "LmsModule",
+          "display_name": "Module",
+          "foreign_key": "module_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ChangeRequest": {
+      "service": "BaseService",
+      "route": "change-request",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "department",
+          "model": "Department",
+          "display_name": "Department",
+          "foreign_key": "department_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "position",
+          "model": "Position",
+          "display_name": "Position",
+          "foreign_key": "position_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Comment": {
+      "service": "BaseService",
+      "route": "comment",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "commentable",
+          "model": "Commentable",
+          "display_name": "Commentable",
+          "foreign_key": "commentable_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "parent",
+          "model": "Department",
+          "display_name": "Parent",
+          "foreign_key": "parent_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "audit",
+          "model": "AuditPlan",
+          "display_name": "Audit",
+          "foreign_key": "audit_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Committee": {
+      "service": "BaseService",
+      "route": "committee",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "chairperson",
+          "model": "User",
+          "display_name": "Chairperson",
+          "foreign_key": "chairperson_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "vice_chair",
+          "model": "User",
+          "display_name": "ViceChair",
+          "foreign_key": "vice_chair_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "secretary",
+          "model": "User",
+          "display_name": "Secretary",
+          "foreign_key": "secretary_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "members",
+          "model": "User",
+          "display_name": "Members",
+          "foreign_key": "member_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "agendas",
+          "model": "Agenda",
+          "display_name": "Agendas",
+          "foreign_key": "committee_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "meetings",
+          "model": "Meeting",
+          "display_name": "Meetings",
+          "foreign_key": "committee_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "topics",
+          "model": "Topic",
+          "display_name": "Topics",
+          "foreign_key": "committee_id"
+        }
+      ]
+    },
+    "Course": {
+      "service": "BaseService",
+      "route": "course",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "levels",
+          "model": "LmsLevel",
+          "display_name": "LmsLevel",
+          "foreign_key": "course_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Document": {
+      "service": "BaseService",
+      "route": "document",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "teams",
+          "model": "Team",
+          "display_name": "Teams",
+          "foreign_key": "team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "owner",
+          "model": "User",
+          "display_name": "Owner",
+          "foreign_key": "owner_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "category",
+          "model": "Category",
+          "display_name": "Category",
+          "foreign_key": "category_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "documentCategory",
+          "model": "DocumentCategory",
+          "display_name": "Document Category",
+          "foreign_key": "document_category_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "reviewer",
+          "model": "Reviewer",
+          "display_name": "Reviewer",
+          "foreign_key": "reviewer_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "framework",
+          "model": "Framework",
+          "display_name": "Framework",
+          "foreign_key": "framework_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "DocumentCategory": {
+      "service": "BaseService",
+      "route": "document-category",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "workflow",
+          "model": "Workflow",
+          "display_name": "Workflow",
+          "foreign_key": "workflow_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Exception": {
+      "service": "BaseService",
+      "route": "exception",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "stakeholders",
+          "model": "Stakeholder",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "requestor",
+          "model": "Requestor",
+          "display_name": "Requestor",
+          "foreign_key": "requestor_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "framework",
+          "model": "Framework",
+          "display_name": "Framework",
+          "foreign_key": "framework",
+          "type": "belongsTo"
+        },
+        {
+          "name": "risk",
+          "model": "Risk",
+          "display_name": "Risk",
+          "foreign_key": "risk",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "GeneralSettings": {
+      "service": "BaseService",
+      "route": "general-settings",
+      "default_field": "name",
+      "relations": []
+    },
+    "Incident": {
+      "service": "BaseService",
+      "route": "incident",
+      "default_field": "summary",
+      "relations": [
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholders",
+          "type": "hasMany"
+        },
+        {
+          "name": "reporter",
+          "model": "User",
+          "display_name": "Reporter",
+          "foreign_key": "createdBy",
+          "type": "belongsTo"
+        },
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Related risks",
+          "foreign_key": "relatedRisks",
+          "type": "hasMany"
+        },
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Related assets",
+          "foreign_key": "relatedAssets",
+          "type": "hasMany"
+        },
+        {
+          "name": "csirt_users",
+          "model": "User",
+          "display_name": "CSIRT.",
+          "foreign_key": "csirt_users",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "InternalAudit": {
+      "service": "BaseService",
+      "route": "internal-audit",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "regulator",
+          "model": "Regulator",
+          "display_name": "Regulator",
+          "foreign_key": "regulator_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "framework",
+          "model": "Framework",
+          "display_name": "Framework",
+          "foreign_key": "framework_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "controls",
+          "model": "Control",
+          "display_name": "Controls",
+          "foreign_key": "control_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "documents",
+          "model": "Document",
+          "display_name": "Documents",
+          "foreign_key": "document_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "reviewers",
+          "model": "Reviewer",
+          "display_name": "Reviewers",
+          "foreign_key": "reviewer_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "InternalAuditResult": {
+      "service": "BaseService",
+      "route": "internal-audit-result",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "audit",
+          "model": "AuditPlan",
+          "display_name": "Audit",
+          "foreign_key": "audit_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "document",
+          "model": "Document",
+          "display_name": "Document",
+          "foreign_key": "document_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "InternalMessage": {
+      "service": "BaseService",
+      "route": "internal-message",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "departments",
+          "model": "Department",
+          "display_name": "Departments",
+          "foreign_key": "department_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "jobs",
+          "model": "Job",
+          "display_name": "Jobs",
+          "foreign_key": "job_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "users",
+          "model": "User",
+          "display_name": "Users",
+          "foreign_key": "user_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "teams",
+          "model": "Teams",
+          "display_name": "Teams",
+          "foreign_key": "teams_ids",
+          "type": "belongsToMany"
+        }
+      ]
+    },
+    "Language": {
+      "service": "BaseService",
+      "route": "language",
+      "default_field": "name",
+      "relations": []
+    },
+    "LmsLevel": {
+      "service": "BaseService",
+      "route": "lms-level",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Course",
+          "foreign_key": "course_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "modules",
+          "model": "LmsModule",
+          "display_name": "Lms Modules",
+          "foreign_key": "level_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "LmsModule": {
+      "service": "BaseService",
+      "route": "lms-module",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "level",
+          "model": "LmsLevel",
+          "display_name": "Level",
+          "foreign_key": "level_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "controls",
+          "model": "Control",
+          "display_name": "Controls",
+          "foreign_key": "control_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "campaigns",
+          "model": "Campaign",
+          "display_name": "Campaigns",
+          "foreign_key": "campaign_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "survey",
+          "model": "Survey",
+          "display_name": "Survey",
+          "foreign_key": "survey_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "answerResults",
+          "model": "LmsUserAnswer",
+          "display_name": "Survey",
+          "foreign_key": "module_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "LmsUserAnswer": {
+      "service": "BaseService",
+      "route": "lms-user-answer",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "module",
+          "model": "LmsModule",
+          "display_name": "Module",
+          "foreign_key": "module_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Meeting": {
+      "service": "BaseService",
+      "route": "meeting",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "agenda",
+          "model": "Agenda",
+          "display_name": "Agenda",
+          "foreign_key": "agenda_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "committee",
+          "model": "Committee",
+          "display_name": "Committee",
+          "foreign_key": "committee_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "recommendations",
+          "model": "TopicRecommendation",
+          "display_name": "Topic Recommendation",
+          "foreign_key": "meeting_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "createdBy",
+          "model": "User",
+          "display_name": "Created By",
+          "foreign_key": "created_by",
+          "type": "belongsTo"
+        },
+        {
+          "name": "participants",
+          "model": "User",
+          "display_name": "Participants",
+          "foreign_key": "participants",
+          "type": "embedded"
+        }
+      ]
+    },
+    "PhishingCategory": {
+      "service": "BaseService",
+      "route": "phishing-category",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "websites",
+          "model": "PhishingWebsitePage",
+          "display_name": "Websites",
+          "foreign_key": "phishing_category_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "campaigns",
+          "model": "Campaign",
+          "display_name": "Campaigns",
+          "foreign_key": "phishing_category_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "PhishingDomain": {
+      "service": "BaseService",
+      "route": "phishing-domain",
+      "default_field": "name",
+      "relations": []
+    },
+    "PhishingGroup": {
+      "service": "BaseService",
+      "route": "phishing-group",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "users",
+          "model": "User",
+          "display_name": "Users",
+          "foreign_key": "user_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "campaigns",
+          "model": "Campaign",
+          "display_name": "Campaigns",
+          "foreign_key": "campaign_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "PhishingSenderProfile": {
+      "service": "BaseService",
+      "route": "phishing-sender-profile",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "websiteDomain",
+          "model": "PhishingDomain",
+          "display_name": "Website Domain",
+          "foreign_key": "website_domain_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "PhishingTemplate": {
+      "service": "BaseService",
+      "route": "phishing-template",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "senderProfile",
+          "model": "PhishingSenderProfile",
+          "display_name": "Sender Profile",
+          "foreign_key": "sender_profile_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "phishingWebsite",
+          "model": "PhishingWebsitePage",
+          "display_name": "Phishing Website",
+          "foreign_key": "phishing_website_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "campaigns",
+          "model": "Campaign",
+          "display_name": "Campaigns",
+          "foreign_key": "campaign_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "PhishingWebsitePage": {
+      "service": "BaseService",
+      "route": "phishing-website-page",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "phishingCategory",
+          "model": "PhishingCategory",
+          "display_name": "Phishing Category",
+          "foreign_key": "phishing_category_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "domain",
+          "model": "Domain",
+          "display_name": "Domain",
+          "foreign_key": "domain_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "PhysicalCourse": {
+      "service": "BaseService",
+      "route": "physical-course",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "certificateTemplate",
+          "model": "CertifiateTemplete",
+          "display_name": "Certificate Template",
+          "foreign_key": "certificate_template_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "survey",
+          "model": "Survey",
+          "display_name": "Survey",
+          "foreign_key": "survey_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "users",
+          "model": "User",
+          "display_name": "Users",
+          "foreign_key": "user_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "schedules",
+          "model": "PhysicalCourseSchedule",
+          "display_name": "Physical Course Schedules",
+          "foreign_key": "course_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "materials",
+          "model": "PhysicalCourseMaterial",
+          "display_name": "Physical Course Materials",
+          "foreign_key": "course_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "grades",
+          "model": "PhysicalCourseGrade",
+          "display_name": "Physical Course Grades",
+          "foreign_key": "course_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "attendances",
+          "model": "PhysicalCourseAttendance",
+          "display_name": "Physical Course Attendances",
+          "foreign_key": "course_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "requests",
+          "model": "PhysicalCourseRequest",
+          "display_name": "Physical Course Requests",
+          "foreign_key": "course_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "PhysicalCourseAttendance": {
+      "service": "BaseService",
+      "route": "physical-course-attendance",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Course",
+          "foreign_key": "course_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "courseSchedule",
+          "model": "CourseSchedule",
+          "display_name": "Course Schedule",
+          "foreign_key": "course_schedule_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "PhysicalCourseGrade": {
+      "service": "BaseService",
+      "route": "physical-course-grade",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Course",
+          "foreign_key": "course_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "PhysicalCourseMaterial": {
+      "service": "BaseService",
+      "route": "physical-course-material",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Course",
+          "foreign_key": "course_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "PhysicalCourseRequest": {
+      "service": "BaseService",
+      "route": "physical-course-request",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Course",
+          "foreign_key": "course_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "transferredToCourse",
+          "model": "PhysicalCourse",
+          "display_name": "Transferred To Course",
+          "foreign_key": "transferred_to_course_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "PhysicalCourseSchedule": {
+      "service": "BaseService",
+      "route": "physical-course-schedule",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Course",
+          "foreign_key": "course_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "attendances",
+          "model": "PhysicalCourseAttendance",
+          "display_name": "Attendances",
+          "foreign_key": "course_schedule_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "QualysScan": {
+      "service": "BaseService",
+      "route": "qualys-scan",
+      "default_field": "name",
+      "relations": []
+    },
+    "Question": {
+      "service": "BaseService",
+      "route": "question",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "templates",
+          "model": "AssessmentTemplate",
+          "display_name": "Assessment Templates",
+          "foreign_key": "question_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "questionnaires",
+          "model": "ThirdPartyQuestionnaire",
+          "display_name": "Third Party Questionnaires",
+          "foreign_key": "questionnaire_ids",
+          "type": "belongsToMany"
+        }
+      ]
+    },
+    "Review": {
+      "service": "BaseService",
+      "route": "review",
+      "default_field": "name",
+      "relations": []
+    },
+    "Risk": {
+      "service": "BaseService",
+      "route": "risk",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "riskMappings",
+          "model": "RiskCatalog",
+          "display_name": "Risk Mappings",
+          "foreign_key": "risk_mapping_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "threatMappings",
+          "model": "ThreatCatalog",
+          "display_name": "Threat Mappings",
+          "foreign_key": "threat_mapping_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "category",
+          "model": "Category",
+          "display_name": "Category",
+          "foreign_key": "category_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "locations",
+          "model": "Location",
+          "display_name": "Locations",
+          "foreign_key": "location_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "owner",
+          "model": "User",
+          "display_name": "Owner",
+          "foreign_key": "owner_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "tags",
+          "model": "tag",
+          "display_name": "Tags",
+          "foreign_key": "tag_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "teams",
+          "model": "Team",
+          "display_name": "Teams",
+          "foreign_key": "team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "reference",
+          "model": "Reference",
+          "display_name": "Reference",
+          "foreign_key": "reference_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "regulator",
+          "model": "Regulator",
+          "display_name": "Regulator",
+          "foreign_key": "regulator_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Assets",
+          "foreign_key": "asset_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "technologys",
+          "model": "Technology",
+          "display_name": "Technologys",
+          "foreign_key": "technology_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "impactScope",
+          "model": "RiskSource",
+          "display_name": "Impact Scope",
+          "foreign_key": "impact_scope_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "mitigationEffort",
+          "model": "RiskMitigationEffort",
+          "display_name": "Mitigation Effort",
+          "foreign_key": "mitigation_effort_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "planningStrategy",
+          "model": "RiskPlanningStrategy",
+          "display_name": "Planning Strategy",
+          "foreign_key": "planning_strategy_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "mitigationOwner",
+          "model": "User",
+          "display_name": "Mitigation Owner",
+          "foreign_key": "mitigation_owner_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "mitigationTeams",
+          "model": "Team",
+          "display_name": "Mitigation Teams",
+          "foreign_key": "mitigation_team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "mitigationControls",
+          "model": "Control",
+          "display_name": "Mitigation Controls",
+          "foreign_key": "mitigation_control_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "questionnaires",
+          "model": "ThirdPartyQuestionnaire",
+          "display_name": "Questionnaires",
+          "foreign_key": "questionnaire_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "RiskCatalog": {
+      "service": "BaseService",
+      "route": "risk-catalog",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "function",
+          "model": "Function",
+          "display_name": "Function",
+          "foreign_key": "function_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "group",
+          "model": "Group",
+          "display_name": "Group",
+          "foreign_key": "group_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "RiskCategory": {
+      "service": "BaseService",
+      "route": "risk-category",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "category_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "RiskCloseReason": {
+      "service": "BaseService",
+      "route": "risk-close-reason",
+      "default_field": "name",
+      "relations": []
+    },
+    "RiskFunction": {
+      "service": "BaseService",
+      "route": "risk-function",
+      "default_field": "name",
+      "relations": []
+    },
+    "RiskGroup": {
+      "service": "BaseService",
+      "route": "risk-group",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "riskCatalogs",
+          "model": "RiskCatalog",
+          "display_name": "Risk Catalogs",
+          "foreign_key": "group_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "RiskLevel": {
+      "service": "BaseService",
+      "route": "risk-level",
+      "default_field": "name",
+      "relations": []
+    },
+    "RiskMitigationEffort": {
+      "service": "BaseService",
+      "route": "risk-mitigation-effort",
+      "default_field": "name",
+      "relations": []
+    },
+    "RiskPlanningStrategy": {
+      "service": "BaseService",
+      "route": "risk-planning-strategy",
+      "default_field": "name",
+      "relations": []
+    },
+    "RiskScoringHistory": {
+      "service": "BaseService",
+      "route": "risk-scoring-history",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "risk",
+          "model": "Risk",
+          "display_name": "Risk",
+          "foreign_key": "risk_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "RiskSource": {
+      "service": "BaseService",
+      "route": "risk-source",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_score_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Survey": {
+      "service": "BaseService",
+      "route": "survey",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "questions",
+          "model": "SurveyQuestion",
+          "display_name": "Survey Questions",
+          "type": "hasMany"
+        },
+        {
+          "name": "surveyResponses",
+          "model": "SurveyResponse",
+          "display_name": "Survey Responses",
+          "foreign_key": "survey_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "SurveyQuestion": {
+      "service": "BaseService",
+      "route": "survey-question",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "survey",
+          "model": "Survey",
+          "display_name": "Survey",
+          "foreign_key": "survey_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "SurveyResponse": {
+      "service": "BaseService",
+      "route": "survey-response",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "survey",
+          "model": "Survey",
+          "display_name": "Survey",
+          "foreign_key": "survey_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "course",
+          "model": "Course",
+          "display_name": "Courses",
+          "foreign_key": "respondent_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "trainingModule",
+          "model": "LmsModule",
+          "display_name": "Lms Modules",
+          "foreign_key": "respondent_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "SystemSetting": {
+      "service": "BaseService",
+      "route": "system-setting",
+      "default_field": "name",
+      "relations": []
+    },
+    "Task": {
+      "service": "BaseService",
+      "route": "task",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "category",
+          "model": "Category",
+          "display_name": "Category",
+          "foreign_key": "category_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "assignee",
+          "model": "User",
+          "display_name": "Assignee",
+          "foreign_key": "assignee_id",
+          "type": "belongsToMany"
+        }
+      ]
+    },
+    "Technology": {
+      "service": "BaseService",
+      "route": "technology",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ThirdPartyClassification": {
+      "service": "BaseService",
+      "route": "third-party-classification",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "thirdPartyProfiles",
+          "model": "ThirdPartyProfile",
+          "display_name": "Third Party Profiles",
+          "foreign_key": "third_party_classification_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ThirdPartyContactQuestionnaireAnswer": {
+      "service": "BaseService",
+      "route": "third-party-contact-questionnaire-answer",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "contact",
+          "model": "ThirdPartyProfileContact",
+          "display_name": "Contact",
+          "foreign_key": "contact_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "questionnaire",
+          "model": "ThirdPartyQuestionnaire",
+          "display_name": "Questionnaire",
+          "foreign_key": "questionnaire_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ThirdPartyEvaluation": {
+      "service": "BaseService",
+      "route": "third-party-evaluation",
+      "default_field": "name",
+      "relations": []
+    },
+    "ThirdPartyProfile": {
+      "service": "BaseService",
+      "route": "third-party-profile",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "thirdPartyClassification",
+          "model": "ThirdPartyClassification",
+          "display_name": "Third Party Classification",
+          "foreign_key": "third_party_classification_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "contacts",
+          "model": "ThirdPartyProfileContact",
+          "display_name": "Contacts",
+          "foreign_key": "third_party_profile_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "entities",
+          "model": "ThirdPartyProfileEntity",
+          "display_name": "Entities",
+          "foreign_key": "third_party_profile_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "subsidiaries",
+          "model": "ThirdPartyProfileSubsidiary",
+          "display_name": "Subsidiaries",
+          "foreign_key": "third_party_profile_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "requests",
+          "model": "ThirdPartyRequest",
+          "display_name": "Requests",
+          "foreign_key": "third_party_profile_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ThirdPartyProfileContact": {
+      "service": "BaseService",
+      "route": "third-party-profile-contact",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "thirdPartyProfile",
+          "model": "ThirdPartyProfile",
+          "display_name": "Third Party Profile",
+          "foreign_key": "third_party_profile_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ThirdPartyProfileEntity": {
+      "service": "BaseService",
+      "route": "third-party-profile-entity",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "thirdPartyProfile",
+          "model": "ThirdPartyProfile",
+          "display_name": "Third Party Profile",
+          "foreign_key": "third_party_profile_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ThirdPartyProfileSubsidiary": {
+      "service": "BaseService",
+      "route": "third-party-profile-subsidiary",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "thirdPartyProfile",
+          "model": "ThirdPartyProfile",
+          "display_name": "Third Party Profile",
+          "foreign_key": "third_party_profile_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ThirdPartyQuestionnaire": {
+      "service": "BaseService",
+      "route": "third-party-questionnaire",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "request",
+          "model": "ThirdPartyRequest",
+          "display_name": "Request",
+          "foreign_key": "request_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "assessment",
+          "model": "Assessment",
+          "display_name": "Assessment",
+          "foreign_key": "assessment_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "contact",
+          "model": "ThirdPartyProfileContact",
+          "display_name": "Contact",
+          "foreign_key": "contact_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ThirdPartyQuestionnaireResult": {
+      "service": "BaseService",
+      "route": "third-party-questionnaire-result",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "contactQuestionnaireAnswer",
+          "model": "ThirdPartyContactQuestionnaireAnswer",
+          "display_name": "Contact Questionnaire Answer",
+          "foreign_key": "contact_questionnaire_answer_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "question",
+          "model": "Question",
+          "display_name": "Question",
+          "foreign_key": "question_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "answer",
+          "model": "Answer",
+          "display_name": "Answer",
+          "foreign_key": "answer_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ThirdPartyQuestionnaireRisk": {
+      "service": "BaseService",
+      "route": "third-party-questionnaire-risk",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "questionnaire",
+          "model": "ThirdPartyQuestionnaire",
+          "display_name": "Questionnaire",
+          "foreign_key": "questionnaire_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "answer",
+          "model": "Answer",
+          "display_name": "Answer",
+          "foreign_key": "answer_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "riskScoringMethod",
+          "model": "RiskScoringMethod",
+          "display_name": "Risk Scoring Method",
+          "foreign_key": "risk_scoring_method_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "likelihood",
+          "model": "Likelihood",
+          "display_name": "Likelihood",
+          "foreign_key": "likelihood_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "impact",
+          "model": "Impact",
+          "display_name": "Impact",
+          "foreign_key": "impact_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "owner",
+          "model": "User",
+          "display_name": "Owner",
+          "foreign_key": "owner_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "frameworkControls",
+          "model": "FrameworkControls",
+          "display_name": "Framework Controls",
+          "foreign_key": "framework_controls_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "assets",
+          "model": "Assets",
+          "display_name": "Assets",
+          "foreign_key": "assets_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "tags",
+          "model": "Tags",
+          "display_name": "Tags",
+          "foreign_key": "tags_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ThirdPartyRequest": {
+      "service": "BaseService",
+      "route": "third-party-request",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "thirdPartyProfile",
+          "model": "ThirdPartyProfile",
+          "display_name": "Third Party Profile",
+          "foreign_key": "third_party_profile_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "thirdPartyService",
+          "model": "ThirdPartyService",
+          "display_name": "Third Party Service",
+          "foreign_key": "third_party_service_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "department",
+          "model": "Department",
+          "display_name": "Department",
+          "foreign_key": "department_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "job",
+          "model": "Job",
+          "display_name": "Job",
+          "foreign_key": "job_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ThirdPartyService": {
+      "service": "BaseService",
+      "route": "third-party-service",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "thirdpartyRequests",
+          "model": "ThirdPartyRequest",
+          "display_name": "Thirdparty Requests",
+          "foreign_key": "third_party_service_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ThreatCatalog": {
+      "service": "BaseService",
+      "route": "threat-catalog",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Topic": {
+      "service": "BaseService",
+      "route": "topic",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "owner",
+          "model": "User",
+          "display_name": "Owner",
+          "foreign_key": "owner_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "committee",
+          "model": "Committee",
+          "display_name": "Committee",
+          "foreign_key": "committee_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "risk",
+          "model": "Risk",
+          "display_name": "Risk",
+          "foreign_key": "risk_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "department",
+          "model": "Department",
+          "display_name": "Department",
+          "foreign_key": "department_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "agenda",
+          "model": "Agenda",
+          "display_name": "Agenda",
+          "foreign_key": "agenda_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "mainTopic",
+          "model": "Topic",
+          "display_name": "Main Topic",
+          "foreign_key": "topic_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "subTopics",
+          "model": "Topic",
+          "display_name": "Sub Topics",
+          "foreign_key": "topic_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "recommendations",
+          "model": "TopicRecommendation",
+          "display_name": "Topic Recommendations",
+          "foreign_key": "topic_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "TopicRecommendation": {
+      "service": "BaseService",
+      "route": "topic-recommendation",
+      "default_field": "title",
+      "relations": [
+        {
+          "name": "topic",
+          "model": "Topic",
+          "display_name": "Topic",
+          "foreign_key": "topic_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "meeting",
+          "model": "Meeting",
+          "display_name": "Meeting",
+          "foreign_key": "meeting_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "assignee",
+          "model": "User",
+          "display_name": "Assignee",
+          "foreign_key": "assignee_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "createdBy",
+          "model": "User",
+          "display_name": "Created By",
+          "foreign_key": "created_by",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "TrackingMail": {
+      "service": "BaseService",
+      "route": "tracking-mail",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "template",
+          "model": "AssessmentTemplate",
+          "display_name": "Template",
+          "foreign_key": "template_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "campaign",
+          "model": "Campaign",
+          "display_name": "Campaign",
+          "foreign_key": "campaign_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Translate": {
+      "service": "BaseService",
+      "route": "translate",
+      "default_field": "name",
+      "relations": []
+    },
+    "Translations": {
+      "service": "BaseService",
+      "route": "translations",
+      "default_field": "name",
+      "relations": []
+    },
+    "UserCertificate": {
+      "service": "BaseService",
+      "route": "user-certificate",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "template",
+          "model": "CertifiateTemplete",
+          "display_name": "Template",
+          "foreign_key": "template_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Vulnerability": {
+      "service": "BaseService",
+      "route": "vulnerability",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "asset",
+          "model": "Asset",
+          "display_name": "Asset",
+          "foreign_key": "asset_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "teams",
+          "model": "Team",
+          "display_name": "Teams",
+          "foreign_key": "team_ids",
+          "type": "belongsToMany"
+        }
+      ]
+    },
+    "VulnerabilityCatalogue": {
+      "service": "BaseService",
+      "route": "vulnerability-catalogue",
+      "default_field": "name",
+      "relations": []
+    },
+    "Workflow": {
+      "service": "BaseService",
+      "route": "workflow",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "workflowCategory",
+          "model": "WorkflowCategory",
+          "display_name": "Workflow Category",
+          "foreign_key": "workflowCategory_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "WorkflowCategory": {
+      "service": "BaseService",
+      "route": "workflow-category",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "workflows",
+          "model": "Workflow",
+          "display_name": "Workflows",
+          "foreign_key": "workflow_category_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "assetCategory": {
+      "service": "BaseService",
+      "route": "asset-category",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Assets",
+          "foreign_key": "asset_category_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "assetValueLevel": {
+      "service": "BaseService",
+      "route": "asset-value-level",
+      "default_field": "name",
+      "relations": []
+    },
+    "hostRegion": {
+      "service": "BaseService",
+      "route": "host-region",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Assets",
+          "foreign_key": "host_region_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "operatingSystem": {
+      "service": "BaseService",
+      "route": "operating-system",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "assets",
+          "model": "Asset",
+          "display_name": "Assets",
+          "foreign_key": "operating_system_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "tag": {
+      "service": "BaseService",
+      "route": "tag",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "threatGroup": {
+      "service": "BaseService",
+      "route": "threat-group",
+      "default_field": "name",
+      "relations": []
+    },
+    "AuditPlan": {
+      "service": "RegulatorService",
+      "route": "audit-plan",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "auditer",
+          "model": "User",
+          "display_name": "Auditer",
+          "foreign_key": "auditer_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "regulator",
+          "model": "Regulator",
+          "display_name": "Regulator",
+          "foreign_key": "regulator_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "framework",
+          "model": "Frameworks",
+          "display_name": "Framework",
+          "foreign_key": "framework_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "AuditPolicyCompliance": {
+      "service": "RegulatorService",
+      "route": "audit-policy-compliance",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "document",
+          "model": "Document",
+          "display_name": "Document",
+          "foreign_key": "document_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "auditer",
+          "model": "User",
+          "display_name": "Auditer",
+          "foreign_key": "auditer_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "AuditPolicyComplianceResult": {
+      "service": "RegulatorService",
+      "route": "audit-policy-compliance-result",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "policy",
+          "model": "Policy",
+          "display_name": "Policy",
+          "foreign_key": "policy_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "audit",
+          "model": "AuditPlan",
+          "display_name": "Audit",
+          "foreign_key": "audit_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "AuditPolicyComplianceTotalStatus": {
+      "service": "RegulatorService",
+      "route": "audit-policy-compliance-total-status",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "audit",
+          "model": "AuditPlan",
+          "display_name": "Audit",
+          "foreign_key": "audit_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "policy",
+          "model": "Policy",
+          "display_name": "Policy",
+          "foreign_key": "policy_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "user",
+          "model": "User",
+          "display_name": "User",
+          "foreign_key": "user_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "AuditRemidation": {
+      "service": "RegulatorService",
+      "route": "audit-remidation",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "controlAudit",
+          "model": "FrameworkControlTestAudit",
+          "display_name": "Control Audit",
+          "foreign_key": "control_audit_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Control": {
+      "service": "RegulatorService",
+      "route": "control",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "parent",
+          "model": "Control",
+          "display_name": "Parent",
+          "foreign_key": "parent_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "framework",
+          "model": "Frameworks",
+          "display_name": "Framework",
+          "foreign_key": "framework_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "domain",
+          "model": "Domain",
+          "display_name": "Domain",
+          "foreign_key": "domain_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "documents",
+          "model": "Document",
+          "display_name": "Documents",
+          "foreign_key": "document_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "risks",
+          "model": "Risk",
+          "display_name": "Risks",
+          "foreign_key": "risk_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "mitigationControls",
+          "model": "Control",
+          "display_name": "Mitigation Controls",
+          "foreign_key": "mitigation_control_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "requirements",
+          "model": "Requirement",
+          "display_name": "Requirements",
+          "foreign_key": "requirement_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "evidences",
+          "model": "Evidence",
+          "display_name": "Evidences",
+          "foreign_key": "evidence_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "controlMappings",
+          "model": "ControlMapping",
+          "display_name": "Mapping Controls",
+          "foreign_key": "control_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ControlClass": {
+      "service": "RegulatorService",
+      "route": "control-class",
+      "default_field": "name",
+      "relations": []
+    },
+    "ControlMapping": {
+      "service": "RegulatorService",
+      "route": "control-mapping",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "mappingControl",
+          "model": "MappingControl",
+          "display_name": "Mapping Control",
+          "foreign_key": "mapping_control_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ControlPhase": {
+      "service": "RegulatorService",
+      "route": "control-phase",
+      "default_field": "name",
+      "relations": []
+    },
+    "ControlRequirement": {
+      "service": "RegulatorService",
+      "route": "control-requirement",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "framework",
+          "model": "Frameworks",
+          "display_name": "Framework",
+          "foreign_key": "framework_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "requirement",
+          "model": "Requirement",
+          "display_name": "Requirement",
+          "foreign_key": "requirement_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "ControlType": {
+      "service": "RegulatorService",
+      "route": "control-type",
+      "default_field": "name",
+      "relations": []
+    },
+    "Domain": {
+      "service": "RegulatorService",
+      "route": "domain",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "parent",
+          "model": "Control",
+          "display_name": "Parent",
+          "foreign_key": "parent_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Evidence": {
+      "service": "RegulatorService",
+      "route": "evidence",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "requirement",
+          "model": "Requirement",
+          "display_name": "Requirement",
+          "foreign_key": "requirement_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "controls",
+          "model": "Control",
+          "display_name": "Controls",
+          "foreign_key": "control_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "FrameWorkRequirement": {
+      "service": "RegulatorService",
+      "route": "frame-work-requirement",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "framework",
+          "model": "Frameworks",
+          "display_name": "Framework",
+          "foreign_key": "framework_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "requirement",
+          "model": "Requirement",
+          "display_name": "Requirement",
+          "foreign_key": "requirement_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Framework": {
+      "service": "RegulatorService",
+      "route": "framework",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "controls",
+          "model": "Control",
+          "display_name": "Controls",
+          "foreign_key": "_id",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "FrameworkControlTestAudit": {
+      "service": "RegulatorService",
+      "route": "framework-control-test-audit",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "audit",
+          "model": "AuditPlan",
+          "display_name": "Audit",
+          "foreign_key": "audit_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "framework",
+          "model": "Frameworks",
+          "display_name": "Framework",
+          "foreign_key": "framework_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "domain",
+          "model": "Domain",
+          "display_name": "Domain",
+          "foreign_key": "domain_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "family",
+          "model": "Domain",
+          "display_name": "Family",
+          "foreign_key": "family_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "childs",
+          "model": "FrameworkControlTestAudit",
+          "display_name": "Childs",
+          "foreign_key": "child_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "FrameworkInstall": {
+      "service": "RegulatorService",
+      "route": "framework-install",
+      "default_field": "name",
+      "relations": []
+    },
+    "Frameworks": {
+      "service": "RegulatorService",
+      "route": "frameworks",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "regulator",
+          "model": "Regulator",
+          "display_name": "Regulator",
+          "foreign_key": "regulator_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Maturity": {
+      "service": "RegulatorService",
+      "route": "maturity",
+      "default_field": "name",
+      "relations": []
+    },
+    "Regulator": {
+      "service": "RegulatorService",
+      "route": "regulator",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "frameworks",
+          "model": "Framework",
+          "display_name": "Frameworks",
+          "foreign_key": "",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Requirement": {
+      "service": "RegulatorService",
+      "route": "requirement",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "responsible",
+          "model": "User",
+          "display_name": "Responsible",
+          "foreign_key": "responsible_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "responsibleTeam",
+          "model": "Team",
+          "display_name": "Responsible Team",
+          "foreign_key": "responsible_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "control",
+          "model": "Control",
+          "display_name": "Control",
+          "foreign_key": "control_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Deliverable": {
+      "service": "StrategicPlanService",
+      "route": "deliverable",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "milestone",
+          "model": "Milestone",
+          "display_name": "Milestone",
+          "foreign_key": "milestone_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Initiative": {
+      "service": "StrategicPlanService",
+      "route": "initiative",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "objectives",
+          "model": "Objective",
+          "display_name": "Objectives",
+          "foreign_key": "objective_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "ownerTeams",
+          "model": "Team",
+          "display_name": "Owner Teams",
+          "foreign_key": "owner_team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "ownerUsers",
+          "model": "User",
+          "display_name": "Owner Users",
+          "foreign_key": "owner_user_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "initiatives",
+          "model": "Initiative",
+          "display_name": "Initiatives",
+          "foreign_key": "initiative_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Milestone": {
+      "service": "StrategicPlanService",
+      "route": "milestone",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "workflow",
+          "model": "Workflow",
+          "display_name": "Workflow",
+          "foreign_key": "workflow_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "project",
+          "model": "Project",
+          "display_name": "Project",
+          "foreign_key": "project_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Objective": {
+      "service": "StrategicPlanService",
+      "route": "objective",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "strategicPlan",
+          "model": "StrategicPlan",
+          "display_name": "Strategic Plan",
+          "foreign_key": "strategicPlan_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "domains",
+          "model": "Domain",
+          "display_name": "Domains",
+          "foreign_key": "domain_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "initiatives",
+          "model": "Initiative",
+          "display_name": "Initiatives",
+          "foreign_key": "initiative_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "ObjectiveType": {
+      "service": "StrategicPlanService",
+      "route": "objective-type",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "objectives",
+          "model": "Objective",
+          "display_name": "Objectives",
+          "foreign_key": "type",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "Program": {
+      "service": "StrategicPlanService",
+      "route": "program",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "workflow",
+          "model": "Workflow",
+          "display_name": "Workflow",
+          "foreign_key": "workflow_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "ownerTeams",
+          "model": "Team",
+          "display_name": "Owner Teams",
+          "foreign_key": "owner_team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "ownerUsers",
+          "model": "OwnerUsers",
+          "display_name": "Owner Users",
+          "foreign_key": "owner_users_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "initiative",
+          "model": "Initiative",
+          "display_name": "Initiative",
+          "foreign_key": "initiative_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "Project": {
+      "service": "StrategicPlanService",
+      "route": "project",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "ownerUsers",
+          "model": "User",
+          "display_name": "Owner Users",
+          "foreign_key": "owner_user_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "ownerTeams",
+          "model": "Team",
+          "display_name": "Owner Teams",
+          "foreign_key": "owner_team_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "stakeholders",
+          "model": "User",
+          "display_name": "Stakeholders",
+          "foreign_key": "stakeholder_ids",
+          "type": "hasMany"
+        },
+        {
+          "name": "initiative",
+          "model": "Initiative",
+          "display_name": "Initiative",
+          "foreign_key": "initiative_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "program",
+          "model": "Program",
+          "display_name": "Program",
+          "foreign_key": "program_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "SPTask": {
+      "service": "StrategicPlanService",
+      "route": "s-p-task",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "generalTask",
+          "model": "Task",
+          "display_name": "General Task",
+          "foreign_key": "general_task_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "deliverable",
+          "model": "Deliverable",
+          "display_name": "Deliverable",
+          "foreign_key": "deliverable_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "StrategicPlan": {
+      "service": "StrategicPlanService",
+      "route": "strategic-plan",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "document",
+          "model": "Document",
+          "display_name": "Document",
+          "foreign_key": "document_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "requirements",
+          "model": "Requirement",
+          "display_name": "Requirements",
+          "foreign_key": "requirement_ids",
+          "type": "hasMany"
+        }
+      ]
+    },
+    "FormulaVariable": {
+      "service": "KpiService",
+      "route": "formula-variable",
+      "default_field": "name",
+      "relations": []
+    },
+    "KPISubmission": {
+      "service": "KpiService",
+      "route": "k-p-i-submission",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "kpi",
+          "model": "Kpi",
+          "display_name": "Kpi",
+          "foreign_key": "kpi_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "KPIType": {
+      "service": "KpiService",
+      "route": "k-p-i-type",
+      "default_field": "name",
+      "relations": []
+    },
+    "KPIUnit": {
+      "service": "KpiService",
+      "route": "k-p-i-unit",
+      "default_field": "name",
+      "relations": []
+    },
+    "Kpi": {
+      "service": "BaseService",
+      "route": "kpi",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "kpiAssessments",
+          "model": "KpiAssessment",
+          "display_name": "Kpi Assessments",
+          "foreign_key": "kpi_id",
+          "type": "hasMany"
+        },
+        {
+          "name": "kpiOwners",
+          "model": "User",
+          "display_name": "Kpi Owners",
+          "foreign_key": "kpiOwner_ids",
+          "type": "belongsToMany"
+        },
+        {
+          "name": "createdBy",
+          "model": "User",
+          "display_name": "Created By",
+          "foreign_key": "created_by",
+          "type": "belongsTo"
+        },
+        {
+          "name": "department",
+          "model": "Department",
+          "display_name": "Department",
+          "foreign_key": "department_id",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "KpiAssessment": {
+      "service": "BaseService",
+      "route": "kpi-assessment",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "kpi",
+          "model": "Kpi",
+          "display_name": "Kpi",
+          "foreign_key": "kpi_id",
+          "type": "belongsTo"
+        },
+        {
+          "name": "assesmentBy",
+          "model": "User",
+          "display_name": "Assesment By",
+          "foreign_key": "assesment_by",
+          "type": "belongsTo"
+        },
+        {
+          "name": "createdBy",
+          "model": "User",
+          "display_name": "Created By",
+          "foreign_key": "created_by",
+          "type": "belongsTo"
+        }
+      ]
+    },
+    "EmailConfig": {
+      "service": "NotificationService",
+      "route": "email-config",
+      "default_field": "name",
+      "relations": []
+    },
+    "Log": {
+      "service": "NotificationService",
+      "route": "log",
+      "default_field": "name",
+      "relations": []
+    },
+    "LogSetting": {
+      "service": "NotificationService",
+      "route": "log-setting",
+      "default_field": "name",
+      "relations": []
+    },
+    "Notification": {
+      "service": "NotificationService",
+      "route": "notification",
+      "default_field": "name",
+      "relations": [
+        {
+          "name": "notifiable",
+          "model": "Notifiable",
+          "display_name": "Notifiable",
+          "foreign_key": "",
+          "type": "morphTo"
+        }
+      ]
+    },
+    "NotificationSetting": {
+      "service": "NotificationService",
+      "route": "notification-setting",
+      "default_field": "name",
+      "relations": []
+    }
+  }
+}

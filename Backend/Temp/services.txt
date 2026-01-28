@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Services\Eloquent\@@Name@@;
+
+use App\Models\@@Name@@\@@Name@@;
+use App\Services\BaseService;
+use Illuminate\Http\Request;
+use App\Repositories\Eloquent\@@Name@@\@@Name@@Repository;
+
+class @@Name@@Service extends BaseService
+{
+
+     public function __construct()
+     {
+          parent::__construct(new @@Name@@Repository());
+     }
+    
+     
+}

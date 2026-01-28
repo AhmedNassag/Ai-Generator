@@ -1,0 +1,13 @@
+<?php
+@include('Modules/Phone/PhoneRoutes.php');
+@include('Modules/Color/ColorRoutes.php');
+@include('Modules/Job/JobRoutes.php');
+@include('Modules/Team/TeamRoutes.php');
+@include('Modules/User/UserRoutes.php');
+@include('Modules/Role/RoleRoutes.php');
+@include('Modules/LDAP/LDAPRoutes.php');
+@include('Modules/Position/PositionRoutes.php');
+@include('Modules/Department/DepartmentRoutes.php');
+@include('Modules/Permission/PermissionRoutes.php');
+@include('Modules/Location/LocationRoutes.php');
+@include('Modules/Hierarchy/HierarchyRoutes.php');

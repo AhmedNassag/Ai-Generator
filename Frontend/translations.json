@@ -1,0 +1,3314 @@
+[
+  {
+    "name": "auditplan",
+    "en": [
+      {
+        "Sedation": "Sedation"
+      },
+      {
+        "Basic Information": "Basic Information"
+      },
+      {
+        "Assign Users": "Assign Users"
+      },
+      {
+        "Assign Teams": "Assign Teams"
+      },
+      {
+        "Schedule": "Schedule"
+      },
+      {
+        "Cancel": "Cancel"
+      },
+      {
+        "Open": "Open"
+      },
+      {
+        "Close": "Close"
+      },
+      {
+        "Export": "Export"
+      },
+      {
+        "Proceed Anyway": "Proceed Anyway"
+      },
+      {
+        "audit_name": "Audit Name"
+      },
+      {
+        "Regulator": "Regulator"
+      },
+      {
+        "Framework": "Framework"
+      },
+      {
+        "Auditer": "Auditer"
+      },
+      {
+        "TypeOfResponsible": "Typeofresponsible"
+      },
+      {
+        "Assistant": "Assistant"
+      },
+      {
+        "Start-Date": "Start-date"
+      },
+      {
+        "Due-Date": "Due-date"
+      },
+      {
+        "PeriodicalTime": "Periodicaltime"
+      },
+      {
+        "AuditNumberInitiated": "Auditnumberinitiated"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "open_controls_detected": "Open Controls Detected"
+      },
+      {
+        "Loading___": "Loading "
+      },
+      {
+        "Saving___": "Saving "
+      },
+      {
+        "Save changes": "Save Changes"
+      },
+      {
+        "User Assistant": "User Assistant"
+      },
+      {
+        "Team Assistant": "Team Assistant"
+      },
+      {
+        "Edit Audit Document": "Edit Audit Document"
+      },
+      {
+        "Start New Audit": "Start New Audit"
+      },
+      {
+        "Update your audit details": "Update your audit details"
+      },
+      {
+        "Create a new audit plan": "Create a new audit plan"
+      },
+      {
+        "Audit Name": "Audit Name"
+      },
+      {
+        "Regulator": "Regulator"
+      },
+      {
+        "Framework": "Framework"
+      },
+      {
+        "Auditer": "Auditer"
+      },
+      {
+        "Start Date": "Start Date"
+      },
+      {
+        "Due Date": "Due Date"
+      },
+      {
+        "Next Initiate Date": "Next Initiate Date"
+      },
+      {
+        "Select Users": "Select Users"
+      },
+      {
+        "Select Teams": "Select Teams"
+      },
+      { "Periodical Time": "Periodical Time" },
+      { "open_controls_detected": "Open Controls Detected" },
+      {
+        "open_controls_message": "There are <strong>{count}</strong> open controls in this framework."
+      },
+      { "show_controls_button": "Show Controls" },
+      { "ignore_continue_button": "Ignore & Continue" },
+      { "open_controls_detected": "Open Controls Detected" },
+      { "audit_name_is_required": "Audit name is required" },
+      { "audit_name_min_length": "Audit name must be at least 3 characters" },
+      { "regulator_is_required": "Regulator is required" },
+      { "framework_is_required": "Framework is required" },
+      { "auditer_is_required": "Auditer is required" },
+      {
+        "responsible_person_required": "At least one responsible person/team is required"
+      },
+      { "start_date_is_required": "Start date is required" },
+      { "start_date_cannot_be_past": "Start date cannot be in the past" },
+      {
+        "start_date_must_be_before_due_date": "Start date must be before due date"
+      },
+      { "due_date_is_required": "Due date is required" },
+      {
+        "due_date_must_be_after_start_date": "Due date must be after start date"
+      },
+      { "periodical_time_is_required": "Periodical time is required" },
+      {
+        "periodical_time_cannot_be_negative": "Periodical time cannot be negative"
+      },
+      { "open_controls_title": "Open Controls Detected" },
+      {
+        "open_controls_message": "There are <strong>{count}</strong> open controls in this framework."
+      },
+      { "show_controls_button": "Show Controls" },
+      { "ignore_continue_button": "Ignore & Continue" },
+      { "save_changes": "Save Changes" },
+      { "create_audit": "Create Audit" }
+    ],
+    "ar": [
+      {
+        "Sedation": "التخدير"
+      },
+      {
+        "Basic Information": "المعلومات الأساسية"
+      },
+      {
+        "Assign Users": "تعيين المستخدمين"
+      },
+      {
+        "Assign Teams": "تعيين الفرق"
+      },
+      {
+        "Schedule": "الجدول الزمني"
+      },
+      {
+        "Cancel": "إلغاء"
+      },
+      {
+        "Open": "فتح"
+      },
+      {
+        "Close": "إغلاق"
+      },
+      {
+        "Export": "تصدير"
+      },
+      {
+        "Proceed Anyway": "المتابعة على أي حال"
+      },
+      {
+        "audit_name": "اسم التدقيق"
+      },
+      {
+        "Regulator": "المنظم"
+      },
+      {
+        "Framework": "الإطار"
+      },
+      {
+        "Auditer": "مدقق"
+      },
+      {
+        "TypeOfResponsible": "نوع المسؤول"
+      },
+      {
+        "Assistant": "مساعد"
+      },
+      {
+        "Start-Date": "تاريخ البدء"
+      },
+      {
+        "Due-Date": "تاريخ الاستحقاق"
+      },
+      {
+        "PeriodicalTime": "الوقت الدوري"
+      },
+      {
+        "AuditNumberInitiated": "رقم التدقيق المبدئي"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "open_controls_detected": "تم اكتشاف ضوابط مفتوحة"
+      },
+      {
+        "Loading___": "جاري التحميل"
+      },
+      {
+        "Saving___": "جاري الحفظ"
+      },
+      {
+        "Save changes": "حفظ التغييرات"
+      },
+      {
+        "User Assistant": "مساعد المستخدم"
+      },
+      {
+        "Team Assistant": "مساعد الفريق"
+      },
+      {
+        "Edit Audit Document": "تحرير مستند التدقيق"
+      },
+      {
+        "Start New Audit": "بدء تدقيق جديد"
+      },
+      {
+        "Update your audit details": "تحديث تفاصيل التدقيق الخاص بك"
+      },
+      {
+        "Create a new audit plan": "إنشاء خطة تدقيق جديدة"
+      },
+      {
+        "Audit Name": "اسم التدقيق"
+      },
+      {
+        "Regulator": "المنظم"
+      },
+      {
+        "Framework": "الإطار"
+      },
+      {
+        "Auditer": "مدقق"
+      },
+      {
+        "Start Date": "تاريخ البدء"
+      },
+      {
+        "Due Date": "تاريخ الاستحقاق"
+      },
+      {
+        "Next Initiate Date": "تاريخ البدء التالي"
+      },
+      {
+        "Select Users": "اختر المستخدمين"
+      },
+      {
+        "Select Teams": "اختر الفرق"
+      },
+      { "Periodical Time": "الوقت الدوري" },
+      { "open_controls_detected": "تم اكتشاف ضوابط مفتوحة" },
+      {
+        "open_controls_message": "هناك <strong>{count}</strong> ضوابط مفتوحة في هذا الإطار."
+      },
+      { "show_controls_button": "عرض الضوابط" },
+      { "ignore_continue_button": "تجاهل واستمرار" },
+      { "open_controls_detected": "تم اكتشاف ضوابط مفتوحة" },
+      { "audit_name_is_required": "اسم التدقيق مطلوب" },
+      {
+        "audit_name_min_length": "يجب أن يتكون اسم التدقيق من 3 أحرف على الأقل"
+      },
+      { "regulator_is_required": "المنظم مطلوب" },
+      { "framework_is_required": "الإطار مطلوب" },
+      { "auditer_is_required": "المدقق مطلوب" },
+      {
+        "responsible_person_required": "يجب اختيار شخص/فريق مسؤول واحد على الأقل"
+      },
+      { "start_date_is_required": "تاريخ البدء مطلوب" },
+      { "start_date_cannot_be_past": "لا يمكن أن يكون تاريخ البدء في الماضي" },
+      {
+        "start_date_must_be_before_due_date": "يجب أن يكون تاريخ البدء قبل تاريخ الاستحقاق"
+      },
+      { "due_date_is_required": "تاريخ الاستحقاق مطلوب" },
+      {
+        "due_date_must_be_after_start_date": "يجب أن يكون تاريخ الاستحقاق بعد تاريخ البدء"
+      },
+      { "periodical_time_is_required": "الوقت الدوري مطلوب" },
+      {
+        "periodical_time_cannot_be_negative": "لا يمكن أن يكون الوقت الدوري سالبًا"
+      },
+      { "open_controls_title": "تم اكتشاف ضوابط مفتوحة" },
+      {
+        "open_controls_message": "هناك <strong>{count}</strong> ضوابط مفتوحة في هذا الإطار."
+      },
+      { "show_controls_button": "عرض الضوابط" },
+      { "ignore_continue_button": "تجاهل واستمرار" },
+      { "save_changes": "حفظ التغييرات" },
+      { "create_audit": "إنشاء تدقيق" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "auditpolicycompliance",
+    "en": [
+      {
+        "Sedation": "Sedation"
+      },
+      {
+        "Domains and Families:": "Domains And Families:"
+      },
+      {
+        "Basic Information": "Basic Information"
+      },
+      {
+        "Schedule & Timeline": "Schedule & Timeline"
+      },
+      {
+        "Requires File Upload": "Requires File Upload"
+      },
+      {
+        "Team Assignments": "Team Assignments"
+      },
+      {
+        "All fields marked with * are required": "All Fields Marked With * Are Required"
+      },
+      {
+        "No auditees available": "No Auditees Available"
+      },
+      {
+        "There are no auditees assigned to this audit_": "There Are No Auditees Assigned To This Audit "
+      },
+      {
+        "Audit_Name": "Audit Name"
+      },
+      {
+        "Document_Type": "Document Type"
+      },
+      {
+        "Document": "Document"
+      },
+      {
+        "Auditer": "Auditer"
+      },
+      {
+        "Auditees": "Auditees"
+      },
+      {
+        "Start-Date": "Start-date"
+      },
+      {
+        "Due-Date": "Due-date"
+      },
+      {
+        "PeriodicalTime": "Periodicaltime"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "Approve All_": "Approve All "
+      },
+      {
+        "Calculate Total_": "Calculate Total "
+      },
+      {
+        "Send Results_": "Send Results "
+      },
+      {
+        "Export Data_": "Export Data "
+      },
+      {
+        "Import Data_": "Import Data "
+      },
+      {
+        "policies found for this audit": "Policies Found For This Audit"
+      },
+      {
+        "No Policies Found": "No Policies Found"
+      },
+      {
+        "There are no policies associated with this audit_": "There Are No Policies Associated With This Audit "
+      },
+      {
+        "Loading policies___": "Loading Policies "
+      },
+      {
+        "Upload Evidence": "Upload Evidence"
+      },
+      {
+        "Attach supporting files": "Attach Supporting Files"
+      },
+      {
+        "Update Status": "Update Status"
+      },
+      {
+        "Change compliance status": "Change Compliance Status"
+      },
+      {
+        "Add Comment": "Add Comment"
+      },
+      {
+        "Provide feedback": "Provide Feedback"
+      },
+      {
+        "Approve": "Approve"
+      },
+      {
+        "_Mark ascompliant": " Mark Ascompliant"
+      },
+      {
+        "Reject": "Reject"
+      },
+      {
+        "Mark as non-compliant": "Mark As Non-compliant"
+      },
+      {
+        "Loading audit data___": "Loading Audit Data "
+      },
+      {
+        "Updating___": "Updating "
+      },
+      {
+        "Evidence Vault": "Evidence Vault"
+      },
+      {
+        "Secure compliance documentation management": "Secure Compliance Documentation Management"
+      },
+      {
+        "Evidence Repository": "Evidence Repository"
+      },
+      {
+        "Refresh": "Refresh"
+      },
+      {
+        "Loading evidence___": "Loading Evidence "
+      },
+      {
+        "No Evidence Submitted": "No Evidence Submitted"
+      },
+      {
+        "Start by uploading your first compliance document": "Start By Uploading Your First Compliance Document"
+      },
+      {
+        "Add Evidence": "Add Evidence"
+      },
+      {
+        "Cancel": "Cancel"
+      },
+      {
+        "Confirm Deletion": "Confirm Deletion"
+      },
+      {
+        "This action is irreversible": "This Action Is Irreversible"
+      },
+      {
+        "Are you sure you want to permanently delete this evidence? All associated data will be lost_": "Are You Sure You Want To Permanently Delete This Evidence? All Associated Data Will Be Lost "
+      },
+      {
+        "Keep Evidence": "Keep Evidence"
+      },
+      {
+        "Delete Permanently": "Delete Permanently"
+      },
+      {
+        "Upload Audit Results": "Upload Audit Results"
+      },
+      {
+        "Import audit compliance data from Excel/CSV": "Import Audit Compliance Data From Excel/csv"
+      },
+      {
+        "Supported formats: _xlsx, _xls, _csv (Max size: 5MB)": "Supported Formats: Xlsx, Xls, Csv (max Size: 5mb)"
+      },
+      {
+        "Edit Audit": "Edit Audit"
+      },
+      {
+        "Create New Audit": "Create New Audit"
+      },
+      {
+        "Update audit configuration": "Update audit configuration"
+      },
+      {
+        "Configure audit parameters and assignments": "Configure audit parameters and assignments"
+      },
+      {
+        "Audit Name": "Audit Name"
+      },
+      {
+        "Document Type": "Document Type"
+      },
+      {
+        "Document": "Document"
+      },
+      {
+        "Lead Auditor": "Lead Auditor"
+      },
+      {
+        "Start Date": "Start Date"
+      },
+      {
+        "Due Date": "Due Date"
+      },
+      {
+        "Recurrence Period": "Recurrence Period"
+      },
+      {
+        "Next Scheduled Date": "Next Scheduled Date"
+      },
+      {
+        "Auditees": "Auditees"
+      },
+      {
+        "At least one auditee is required": "At least one auditee is required"
+      },
+      {
+        "Cancel": "Cancel"
+      },
+      {
+        "Update Audit": "Update Audit"
+      },
+      {
+        "Create Audit": "Create Audit"
+      },
+      {
+        "Enter a descriptive name for this audit": "Enter a descriptive name for this audit"
+      },
+      {
+        "Select the type of document to audit": "Select the type of document to audit"
+      },
+      {
+        "Choose specific document to audit": "Choose specific document to audit"
+      },
+      {
+        "Assign primary auditor responsible": "Assign primary auditor responsible"
+      },
+      {
+        "When audit begins": "When audit begins"
+      },
+      {
+        "Completion deadline": "Completion deadline"
+      },
+      {
+        "How often audit repeats": "How often audit repeats"
+      },
+      {
+        "Auto-calculated next occurrence": "Auto-calculated next occurrence"
+      },
+      {
+        "Select team members to be audited": "Select team members to be audited"
+      },
+      {
+        "Current Document": "Current Document"
+      },
+      {
+        "others": "others"
+      },
+      { "auditpolicycompliance": "audit policy compliance" }
+    ],
+    "ar": [
+      {
+        "Sedation": "التخدير"
+      },
+      {
+        "Domains and Families:": "المجالات والعائلات:"
+      },
+      {
+        "Basic Information": "المعلومات الأساسية"
+      },
+      {
+        "Schedule & Timeline": "الجدول الزمني والخطة"
+      },
+      {
+        "Requires File Upload": "يتطلب تحميل ملف"
+      },
+      {
+        "Team Assignments": "تعيين الفرق"
+      },
+      {
+        "All fields marked with * are required": "جميع الحقول المميزة بـ * مطلوبة"
+      },
+      {
+        "No auditees available": "لا يوجد مدققون متاحون"
+      },
+      {
+        "There are no auditees assigned to this audit_": "لا يوجد مدققون معينون لهذا التدقيق"
+      },
+      {
+        "Audit_Name": "اسم التدقيق"
+      },
+      {
+        "Document_Type": "نوع المستند"
+      },
+      {
+        "Document": "المستند"
+      },
+      {
+        "Auditer": "مدقق"
+      },
+      {
+        "Auditees": "المدقق عليهم"
+      },
+      {
+        "Start-Date": "تاريخ البدء"
+      },
+      {
+        "Due-Date": "تاريخ الاستحقاق"
+      },
+      {
+        "PeriodicalTime": "الوقت الدوري"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "Approve All_": "الموافقة على الكل"
+      },
+      {
+        "Calculate Total_": "حساب الإجمالي"
+      },
+      {
+        "Send Results_": "إرسال النتائج"
+      },
+      {
+        "Export Data_": "تصدير البيانات"
+      },
+      {
+        "Import Data_": "استيراد البيانات"
+      },
+      {
+        "policies found for this audit": "تم العثور على سياسات لهذا التدقيق"
+      },
+      {
+        "No Policies Found": "لم يتم العثور على سياسات"
+      },
+      {
+        "There are no policies associated with this audit_": "لا توجد سياسات مرتبطة بهذا التدقيق"
+      },
+      {
+        "Loading policies___": "جاري تحميل السياسات"
+      },
+      {
+        "Upload Evidence": "تحميل الأدلة"
+      },
+      {
+        "Attach supporting files": "إرفاق ملفات داعمة"
+      },
+      {
+        "Update Status": "تحديث الحالة"
+      },
+      {
+        "Change compliance status": "تغيير حالة الامتثال"
+      },
+      {
+        "Add Comment": "إضافة تعليق"
+      },
+      {
+        "Provide feedback": "تقديم ملاحظات"
+      },
+      {
+        "Approve": "موافقة"
+      },
+      {
+        "_Mark ascompliant": "وضع علامة كممتثل"
+      },
+      {
+        "Reject": "رفض"
+      },
+      {
+        "Mark as non-compliant": "وضع علامة كغير متوافق"
+      },
+      {
+        "Loading audit data___": "جاري تحميل بيانات التدقيق"
+      },
+      {
+        "Updating___": "جاري التحديث"
+      },
+      {
+        "Evidence Vault": "خزانة الأدلة"
+      },
+      {
+        "Secure compliance documentation management": "إدارة آمنة لوثائق الامتثال"
+      },
+      {
+        "Evidence Repository": "مستودع الأدلة"
+      },
+      {
+        "Refresh": "تحديث"
+      },
+      {
+        "Loading evidence___": "جاري تحميل الأدلة"
+      },
+      {
+        "No Evidence Submitted": "لا توجد أدلة مرفوعة"
+      },
+      {
+        "Start by uploading your first compliance document": "ابدأ بتحميل أول مستند امتثال"
+      },
+      {
+        "Add Evidence": "إضافة دليل"
+      },
+      {
+        "Cancel": "إلغاء"
+      },
+      {
+        "Confirm Deletion": "تأكيد الحذف"
+      },
+      {
+        "This action is irreversible": "هذا الإجراء غير قابل للتراجع"
+      },
+      {
+        "Are you sure you want to permanently delete this evidence? All associated data will be lost_": "هل أنت متأكد أنك تريد حذف هذا الدليل نهائيًا؟ سيتم فقدان جميع البيانات المرتبطة"
+      },
+      {
+        "Keep Evidence": "الاحتفاظ بالدليل"
+      },
+      {
+        "Delete Permanently": "حذف نهائي"
+      },
+      {
+        "Upload Audit Results": "تحميل نتائج التدقيق"
+      },
+      {
+        "Import audit compliance data from Excel/CSV": "استيراد بيانات امتثال التدقيق من Excel/CSV"
+      },
+      {
+        "Supported formats: _xlsx, _xls, _csv (Max size: 5MB)": "التنسيقات المدعومة: xlsx, xls, csv (الحد الأقصى للحجم: 5 ميجابايت)"
+      },
+      {
+        "Edit Audit": "تعديل التدقيق"
+      },
+      {
+        "Create New Audit": "إنشاء تدقيق جديد"
+      },
+      {
+        "Update audit configuration": "تحديث إعدادات التدقيق"
+      },
+      {
+        "Configure audit parameters and assignments": "ضبط معايير وتعيينات التدقيق"
+      },
+      {
+        "Audit Name": "اسم التدقيق"
+      },
+      {
+        "Document Type": "نوع المستند"
+      },
+      {
+        "Document": "المستند"
+      },
+      {
+        "Lead Auditor": "المدقق الرئيسي"
+      },
+      {
+        "Start Date": "تاريخ البدء"
+      },
+      {
+        "Due Date": "تاريخ الاستحقاق"
+      },
+      {
+        "Recurrence Period": "فترة التكرار"
+      },
+      {
+        "Next Scheduled Date": "الموعد المجدول التالي"
+      },
+      {
+        "Auditees": "المدقق عليهم"
+      },
+      {
+        "At least one auditee is required": "يجب اختيار مدقق واحد على الأقل"
+      },
+      {
+        "Cancel": "إلغاء"
+      },
+      {
+        "Update Audit": "تحديث التدقيق"
+      },
+      {
+        "Create Audit": "إنشاء تدقيق"
+      },
+      {
+        "Enter a descriptive name for this audit": "أدخل اسمًا وصفياً لهذا التدقيق"
+      },
+      {
+        "Select the type of document to audit": "اختر نوع المستند المراد تدقيقه"
+      },
+      {
+        "Choose specific document to audit": "اختر مستندًا محددًا للتدقيق"
+      },
+      {
+        "Assign primary auditor responsible": "تعيين المدقق الرئيسي المسؤول"
+      },
+      {
+        "When audit begins": "عند بدء التدقيق"
+      },
+      {
+        "Completion deadline": "موعد الانتهاء"
+      },
+      {
+        "How often audit repeats": "عدد مرات تكرار التدقيق"
+      },
+      {
+        "Auto-calculated next occurrence": "الموعد التالي المحسوب تلقائيًا"
+      },
+      {
+        "Select team members to be audited": "اختر أعضاء الفريق المراد تدقيقهم"
+      },
+      {
+        "Current Document": "المستند الحالي"
+      },
+      {
+        "others": "أخرى"
+      },
+      { "auditpolicycompliance": "امتثال سياسة التدقيق" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "sedationmodal",
+    "en": [
+      {
+        "cancel": "Cancel"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "success": "Success"
+      },
+      {
+        "users": "Users"
+      },
+      {
+        "teams": "Teams"
+      }
+    ],
+    "ar": [
+      {
+        "cancel": "إلغاء"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "success": "نجاح"
+      },
+      {
+        "users": "المستخدمين"
+      },
+      {
+        "teams": "الفرق"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "complianceresultaudit",
+    "en": [
+      {
+        "total_status": "Total Status"
+      },
+      {
+        "mdichevronright": "Mdichevronright"
+      },
+      {
+        "due_date": "Due Date"
+      },
+      {
+        "mdicalendaralert": "Mdicalendaralert"
+      },
+      {
+        "started": "Started"
+      },
+      {
+        "mdicalendarstart": "Mdicalendarstart"
+      },
+      {
+        "document": "Document"
+      },
+      {
+        "mdifiledocument": "Mdifiledocument"
+      },
+      {
+        "category": "Category"
+      },
+      {
+        "mdifolderstar": "Mdifolderstar"
+      },
+      {
+        "audit": "Audit"
+      },
+      {
+        "mdiclipboardcheck": "Mdiclipboardcheck"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "success": "Success"
+      },
+      {
+        "update_failed": "Update Failed"
+      },
+      {
+        "are_you_sure": "Are You Sure"
+      },
+      {
+        "compliance_history": "Compliance History"
+      },
+      {
+        "view_policy": "View Policy"
+      },
+      {
+        "actions": "Actions"
+      },
+      {
+        "last_updated": "Last Updated"
+      },
+      {
+        "auditer_status": "Auditer Status"
+      },
+      {
+        "auditee_status": "Auditee Status"
+      },
+      {
+        "pending_status": "Pending Status"
+      },
+      {
+        "policy_name": "Policy Name"
+      },
+      { "audit": "Audit" },
+      { "category": "Category" },
+      { "document": "Document" },
+      { "started": "Started" },
+      { "due_date": "Due Date" },
+      { "total_status": "Total Status" },
+      { "active": "Active" },
+      { "ended": "Ended" },
+      { "approve_all": "Approve All" },
+      { "calculate_total": "Calculate Total" },
+      { "send_results": "Send Results" },
+      { "export_data": "Export Data" },
+      { "import_data": "Import Data" },
+      { "approve_all": "Approve all policies" },
+      { "calculate_total": "Calculate compliance totals" },
+      { "send_results": "Send audit results" },
+      { "export_data": "Export audit data" },
+      { "import_data": "Import audit data" },
+      { "na": "N/A" },
+      { "title": "Audit Policies" },
+      { "found": "policies found for this audit" },
+      { "search_placeholder": "Search policies..." },
+      { "no_data_title": "No Policies Found" },
+      { "no_data_text": "There are no policies associated with this audit." },
+      { "loading": "Loading policies..." },
+      { "upload_evidence": "Upload Evidence" },
+      { "upload_evidence_subtitle": "Attach supporting files" },
+      { "update_status": "Update Status" },
+      { "update_status_subtitle": "Change compliance status" },
+      { "add_comment": "Add Comment" },
+      { "add_comment_subtitle": "Provide feedback" },
+      { "approve": "Approve" },
+      { "approve_subtitle": "Mark as compliant" },
+      { "reject": "Reject" },
+      { "reject_subtitle": "Mark as non-compliant" },
+      { "showing": "Showing {start} to {end} of {total} policies" },
+      { "previous": "Previous" },
+      { "next": "Next" },
+      { "items_per_page": "Items per page" },
+      { "loading": "Loading audit data..." },
+      { "reject_title": "Select Rejection Status" },
+      { "update_title": "Update Compliance Status" },
+      { "reject_subtitle": "Please specify why this policy is being rejected" },
+      { "update_subtitle": "Change the status of this requirement" },
+      { "select_label": "Select Status" },
+      { "updating": "Updating..." },
+      { "cancel": "Cancel" },
+      { "update_status": "Update Status" },
+      { "policy_name": "Policy Name" },
+      { "pending_status": "Pending Status" },
+      { "auditee_status": "Auditee Status" },
+      { "auditer_status": "Auditer Status" },
+      { "last_updated": "Last Updated" },
+      { "actions": "Actions" },
+      { "pending_status": "Pending Status" },
+      { "auditee_status": "Auditee Status" },
+      { "auditer_status": "Auditer Status" },
+      { "last_updated": "Last Updated" },
+      { "actions": "Actions" },
+      { "Not Implemented": "Not Implemented" },
+      { "Partially Implemented": "Partially Implemented" },
+      { "Not Applicable": "Not Applicable" },
+      { "Implemented": "Implemented" },
+      { "View Policy": "View Policy" },
+      { "Compliance History": "Compliance History" },
+
+      { "Are you sure?": "Are you sure?" },
+      {
+        "This action cannot be undone": "This action cannot be undone"
+      },
+      { "Yes, {action} it!": "Yes, {action} it!" },
+      { "Cancel": "Cancel" },
+      { "Update Failed": "Update Failed" },
+      { "An error occurred": "An error occurred" },
+      { "Audit Policies": "Audit Policies" },
+      { "Audit Id": "Audit Id" },
+      { "Document Policy ID": "Document Policy ID" },
+      { "Policy Clause": "Policy Clause" },
+      { "Document Name": "Document Name" },
+      { "Status": "Status" },
+      {
+        "Please select a status from the dropdown": "Please select a status from the dropdown"
+      },
+      { "Invalid status selected": "Invalid status selected" },
+      { "Invalid Input": "Invalid Input" },
+      { "Error": "Error" },
+      { "Failed to export audit data": "Failed to export audit data" },
+      { "Success": "Success" },
+      { "All Polices Are Approved": "All Polices Are Approved" },
+      {
+        "Failed to Approved on All Polices. Please try again.": "Failed to Approved on All Polices. Please try again."
+      },
+      {
+        "Total status Calculated successfully": "Total status Calculated successfully"
+      },
+      {
+        "Failed to calc status. Please try again.": "Failed to calc status. Please try again."
+      },
+      {
+        "All result Are Sended Succefully To Auditer": "All result Are Sended Succefully To Auditer"
+      },
+      {
+        "Failed to send Result for Auditer. Please try again.": "Failed to send Result for Auditer. Please try again."
+      },
+      {
+        "No Evidence": "No Evidence"
+      },
+      {
+        "No evidence available for this policy": "No evidence available for this policy"
+      },
+      { "auditpolicycompliance": "Compliance Result Audit" }
+    ],
+    "ar": [
+      {
+        "total_status": "الحالة الإجمالية"
+      },
+      {
+        "mdichevronright": "سهم اتجاه اليمين"
+      },
+      {
+        "due_date": "تاريخ الاستحقاق"
+      },
+      {
+        "mdicalendaralert": "تقويم مع تنبيه"
+      },
+      {
+        "started": "بدأ"
+      },
+      {
+        "mdicalendarstart": "تقويم البدء"
+      },
+      {
+        "document": "المستند"
+      },
+      {
+        "mdifiledocument": "ملف مستند"
+      },
+      {
+        "category": "الفئة"
+      },
+      {
+        "mdifolderstar": "مجلد مميز"
+      },
+      {
+        "audit": "التدقيق"
+      },
+      {
+        "mdiclipboardcheck": "لوح剪剪板 مع تأشير"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "success": "نجاح"
+      },
+      {
+        "update_failed": "فشل التحديث"
+      },
+      {
+        "are_you_sure": "هل أنت متأكد؟"
+      },
+      {
+        "compliance_history": "سجل الامتثال"
+      },
+      {
+        "view_policy": "عرض السياسة"
+      },
+      {
+        "actions": "الإجراءات"
+      },
+      {
+        "last_updated": "آخر تحديث"
+      },
+      {
+        "auditer_status": "حالة المدقق"
+      },
+      {
+        "auditee_status": "حالة المدقق عليه"
+      },
+      {
+        "pending_status": "حالة الانتظار"
+      },
+      {
+        "policy_name": "اسم السياسة"
+      },
+      { "audit": "التدقيق" },
+      { "category": "الفئة" },
+      { "document": "المستند" },
+      { "started": "بدأ" },
+      { "due_date": "تاريخ الاستحقاق" },
+      { "total_status": "الحالة الإجمالية" },
+      { "active": "نشط" },
+      { "ended": "انتهى" },
+      { "approve_all": "الموافقة على الكل" },
+      { "calculate_total": "حساب الإجمالي" },
+      { "send_results": "إرسال النتائج" },
+      { "export_data": "تصدير البيانات" },
+      { "import_data": "استيراد البيانات" },
+      { "approve_all": "الموافقة على جميع السياسات" },
+      { "calculate_total": "حساب إجمالي الامتثال" },
+      { "send_results": "إرسال نتائج التدقيق" },
+      { "export_data": "تصدير بيانات التدقيق" },
+      { "import_data": "استيراد بيانات التدقيق" },
+      { "na": "غير متوفر" },
+      { "title": "سياسات التدقيق" },
+      { "found": "تم العثور على سياسات لهذا التدقيق" },
+      { "search_placeholder": "البحث عن السياسات..." },
+      { "no_data_title": "لم يتم العثور على سياسات" },
+      { "no_data_text": "لا توجد سياسات مرتبطة بهذا التدقيق." },
+      { "loading": "جارٍ تحميل السياسات..." },
+      { "upload_evidence": "تحميل الأدلة" },
+      { "upload_evidence_subtitle": "إرفاق ملفات داعمة" },
+      { "update_status": "تحديث الحالة" },
+      { "update_status_subtitle": "تغيير حالة الامتثال" },
+      { "add_comment": "إضافة تعليق" },
+      { "add_comment_subtitle": "تقديم ملاحظات" },
+      { "approve": "موافقة" },
+      { "approve_subtitle": "وضع علامة كممتثل" },
+      { "reject": "رفض" },
+      { "reject_subtitle": "وضع علامة كغير متوافق" },
+      { "showing": "عرض {start} إلى {end} من {total} سياسة" },
+      { "previous": "السابق" },
+      { "next": "التالي" },
+      { "items_per_page": "العناصر لكل صفحة" },
+      { "loading": "جارٍ تحميل بيانات التدقيق..." },
+      { "reject_title": "حدد حالة الرفض" },
+      { "update_title": "تحديث حالة الامتثال" },
+      { "reject_subtitle": "يرجى تحديد سبب رفض هذه السياسة" },
+      { "update_subtitle": "تغيير حالة هذا المطلب" },
+      { "select_label": "اختر الحالة" },
+      { "updating": "جارٍ التحديث..." },
+      { "cancel": "إلغاء" },
+      { "update_status": "تحديث الحالة" },
+      { "policy_name": "اسم السياسة" },
+      { "pending_status": "حالة الانتظار" },
+      { "auditee_status": "حالة المدقق عليه" },
+      { "auditer_status": "حالة المدقق" },
+      { "last_updated": "آخر تحديث" },
+      { "actions": "الإجراءات" },
+      { "pending_status": "حالة الانتظار" },
+      { "auditee_status": "حالة المدقق عليه" },
+      { "auditer_status": "حالة المدقق" },
+      { "last_updated": "آخر تحديث" },
+      { "actions": "الإجراءات" },
+      { "Not Implemented": "غير منفذ" },
+      { "Partially Implemented": "منفذ جزئيًا" },
+      { "Not Applicable": "غير قابل للتطبيق" },
+      { "Implemented": "منفذ" },
+      { "View Policy": "عرض السياسة" },
+      { "Compliance History": "سجل الامتثال" },
+
+      { "Are you sure?": "هل أنت متأكد؟" },
+      {
+        "This action cannot be undone": "لا يمكن التراجع عن هذا الإجراء."
+      },
+      { "Yes, {action} it!": "نعم، قم بـ{action}!" },
+      { "Cancel": "إلغاء" },
+      { "Update Failed": "فشل التحديث" },
+      { "An error occurred": "حدث خطأ" },
+      { "Audit Policies": "سياسات التدقيق" },
+      { "Audit Id": "معرف التدقيق" },
+      { "Document Policy ID": "معرف سياسة المستند" },
+      { "Policy Clause": "بند السياسة" },
+      { "Document Name": "اسم المستند" },
+      { "Status": "الحالة" },
+      {
+        "Please select a status from the dropdown": "يرجى اختيار حالة من القائمة المنسدلة"
+      },
+      { "Invalid status selected": "تم اختيار حالة غير صالحة" },
+      { "Invalid Input": "إدخال غير صالح" },
+      { "Error": "خطأ" },
+      { "Failed to export audit data": "فشل في تصدير بيانات التدقيق" },
+      { "Success": "نجاح" },
+      { "All Polices Are Approved": "تمت الموافقة على جميع السياسات" },
+      {
+        "Failed to Approved on All Polices. Please try again.": "فشل في الموافقة على جميع السياسات. يرجى المحاولة مرة أخرى."
+      },
+      {
+        "Total status Calculated successfully": "تم حساب الحالة الإجمالية بنجاح"
+      },
+      {
+        "Failed to calc status. Please try again.": "فشل في حساب الحالة. يرجى المحاولة مرة أخرى."
+      },
+      {
+        "All result Are Sended Succefully To Auditer": "تم إرسال جميع النتائج بنجاح إلى المدقق"
+      },
+      {
+        "Failed to send Result for Auditer. Please try again.": "فشل في إرسال النتيجة للمدقق. يرجى المحاولة مرة أخرى."
+      },
+      {
+        "No Evidence": "لا توجد أدلة"
+      },
+      {
+        "No evidence available for this policy": "لا توجد أدلة متاحة لهذه السياسة"
+      },
+      { "auditpolicycompliance": "نتيجة الامتثال للتدقيق" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "importauditresult",
+    "en": [
+      {
+        "mdiclose": "Mdiclose"
+      },
+      {
+        "upload_failed": "Upload Failed"
+      },
+      {
+        "success": "Success"
+      }
+    ],
+    "ar": [
+      {
+        "mdiclose": "إغلاق"
+      },
+      {
+        "upload_failed": "فشل التحميل"
+      },
+      {
+        "success": "نجاح"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "auditpolicycomplianceresult",
+    "en": [
+      {
+        "email": "Email"
+      },
+      {
+        "name": "Name"
+      },
+      {
+        "my_options": "My Options"
+      },
+      {
+        "accept_terms_and_conditions": "Accept Terms And Conditions"
+      },
+      {
+        "description": "Description"
+      }
+    ],
+    "ar": [
+      {
+        "email": "البريد الإلكتروني"
+      },
+      {
+        "name": "الاسم"
+      },
+      {
+        "my_options": "خياراتي"
+      },
+      {
+        "accept_terms_and_conditions": "قبول الشروط والأحكام"
+      },
+      {
+        "description": "الوصف"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "comments",
+    "en": [
+      { "title": "Comments ({count})" },
+      { "post_comment": "Post a comment" },
+      { "private": "Private comment" },
+      { "public": "Public comment" },
+      { "write_placeholder": "Write your comment here..." },
+      { "reply_placeholder": "Write your reply here..." },
+      { "shortcut_hint": "Ctrl + Enter to post" },
+      { "post": "Post Comment" },
+      { "posting": "Posting..." },
+      { "reply": "Reply" },
+      { "cancel": "Cancel" },
+      { "sort_newest": "Newest first" },
+      { "sort_oldest": "Oldest first" },
+      { "author": "Author" },
+      { "hide_replies": "Hide replies" },
+      { "show_replies": "Show replies ({count})" },
+      { "replying_to": "Replying to" },
+      { "no_comments": "No comments yet" },
+      { "be_first": "Be the first to leave a comment" },
+      { "loading": "Loading comments..." }
+    ],
+    "ar": [
+      { "title": "التعليقات ({count})" },
+      { "post_comment": "نشر تعليق" },
+      { "private": "تعليق خاص" },
+      { "public": "تعليق عام" },
+      { "write_placeholder": "اكتب تعليقك هنا..." },
+      { "reply_placeholder": "اكتب ردك هنا..." },
+      { "shortcut_hint": "Ctrl + Enter للنشر" },
+      { "post": "نشر تعليق" },
+      { "posting": "جارٍ النشر..." },
+      { "reply": "رد" },
+      { "cancel": "إلغاء" },
+      { "sort_newest": "الأحدث أولاً" },
+      { "sort_oldest": "الأقدم أولاً" },
+      { "author": "المؤلف" },
+      { "hide_replies": "إخفاء الردود" },
+      { "show_replies": "عرض الردود ({count})" },
+      { "replying_to": "رد على" },
+      { "no_comments": "لا توجد تعليقات بعد" },
+      { "be_first": "كن الأول في ترك تعليق" },
+      { "loading": "جارٍ تحميل التعليقات..." }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "auditRemidation",
+    "en": [
+      {
+        "ResponsibleUser": "Responsibleuser"
+      },
+      {
+        "ControlAuditName": "Controlauditname"
+      },
+      {
+        "CorrectiveActionPlan": "Correctiveactionplan"
+      },
+      {
+        "budgetary": "Budgetary"
+      },
+      {
+        "status": "Status"
+      },
+      {
+        "Due-Date": "Due-date"
+      },
+      {
+        "comments": "Comments"
+      },
+      {
+        "Created_at": "Created At"
+      },
+      {
+        "Due Date": "Due Date"
+      },
+      {
+        "Status": "Status"
+      },
+      {
+        "Approved": "Approved"
+      },
+      {
+        "Rejected": "Rejected"
+      },
+      {
+        "Budgetary": "Budgetary"
+      },
+      {
+        "Corrective Action Plan": "Corrective Action Plan"
+      },
+      {
+        "Remediation Comments": "Remediation Comments"
+      }
+    ],
+    "ar": [
+      {
+        "ResponsibleUser": "المستخدم المسؤول"
+      },
+      {
+        "ControlAuditName": "اسم ضابط التدقيق"
+      },
+      {
+        "CorrectiveActionPlan": "خطة العمل التصحيحي"
+      },
+      {
+        "budgetary": "ميزاني"
+      },
+      {
+        "status": "الحالة"
+      },
+      {
+        "Due-Date": "تاريخ الاستحقاق"
+      },
+      {
+        "comments": "تعليقات"
+      },
+      {
+        "Created_at": "تم الإنشاء في"
+      },
+      {
+        "Due Date": "تاريخ الاستحقاق"
+      },
+      {
+        "Status": "الحالة"
+      },
+      {
+        "Approved": "مقبول"
+      },
+      {
+        "Rejected": "مرفوض"
+      },
+      {
+        "Budgetary": "ميزاني"
+      },
+      {
+        "Corrective Action Plan": "خطة العمل التصحيحية"
+      },
+      {
+        "Remediation Comments": "تعليقات المعالجة"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "governance",
+    "en": [
+      {
+        "governance": "Governance"
+      }
+    ],
+    "ar": [
+      {
+        "governance": "الحوكمة"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "centerpolicy",
+    "en": [
+      {
+        "policy-name": "Policy-name"
+      },
+      {
+        "document": "Document"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "successfully": "Successfully"
+      },
+      {
+        "Edit Policy": "Edit Policy"
+      },
+      {
+        "Add Policy": "Add Policy"
+      },
+      {
+        "Policy Name": "Policy Name"
+      },
+      {
+        "Name is required": "Name is required"
+      },
+      {
+        "Select Document": "Select Document"
+      },
+      {
+        "Cancel": "Cancel"
+      },
+      {
+        "Update": "Update"
+      },
+      {
+        "Save": "Save"
+      },
+      {
+        "others": "others"
+      }
+    ],
+    "ar": [
+      {
+        "policy-name": "اسم السياسة"
+      },
+      {
+        "document": "المستند"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "successfully": "بنجاح"
+      },
+      {
+        "Edit Policy": "تعديل السياسة"
+      },
+      {
+        "Add Policy": "إضافة سياسة"
+      },
+      {
+        "Policy Name": "اسم السياسة"
+      },
+      {
+        "Name is required": "الاسم مطلوب"
+      },
+      {
+        "Select Document": "اختر مستند"
+      },
+      {
+        "Cancel": "إلغاء"
+      },
+      {
+        "Update": "تحديث"
+      },
+      {
+        "Save": "حفظ"
+      },
+      {
+        "others": "أخرى"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "control",
+    "en": [
+      {
+        "All": "All"
+      },
+      {
+        "Not Applicable": "Not Applicable"
+      },
+      {
+        "Not Implemented": "Not Implemented"
+      },
+      {
+        "Implemented": "Implemented"
+      },
+      {
+        "Partially Implemented": "Partially Implemented"
+      },
+      {
+        "Requirements": "Requirements"
+      },
+      {
+        "Edit": "Edit"
+      },
+      {
+        "Delete": "Delete"
+      },
+      {
+        "framework": "Framework"
+      },
+      {
+        "domain": "Domain"
+      },
+      {
+        "family": "Family"
+      },
+      {
+        "Add Requirement": "Add Requirement"
+      },
+      {
+        "Select a requirement type": "Select A Requirement Type"
+      },
+      {
+        "Type 1": "Type 1"
+      },
+      {
+        "Type 2": "Type 2"
+      },
+      {
+        "Type 3": "Type 3"
+      },
+      {
+        "name": "Name"
+      },
+      {
+        "Description": "Description"
+      },
+      {
+        "Responsible Type": "Responsible Type"
+      },
+      {
+        "Team": "Team"
+      },
+      {
+        "User": "User"
+      },
+      {
+        "Department Manager": "Department Manager"
+      },
+      {
+        "Select": "Select"
+      },
+      {
+        "Submit": "Submit"
+      },
+      {
+        "Add New Control Mapping": "Add New Control Mapping"
+      },
+      {
+        "Control": "Control"
+      },
+      {
+        "Framework": "Framework"
+      },
+      {
+        "Action": "Action"
+      },
+      {
+        "No Data Found": "No Data Found"
+      },
+      {
+        "Add Mapping": "Add Mapping"
+      },
+      {
+        "Select Framework": "Select Framework"
+      },
+      {
+        "Select Control": "Select Control"
+      },
+      {
+        "description": "Description"
+      },
+      {
+        "subdomain": "Subdomain"
+      },
+      {
+        "Control Status": "Control Status"
+      },
+      {
+        "requirement": "Requirement"
+      },
+      {
+        "short_name": "Short Name"
+      },
+      {
+        "long name": "Long Name"
+      },
+      {
+        "control number": "Control Number"
+      },
+      {
+        "control class": "Control Class"
+      },
+      {
+        "control priority": "Control Priority"
+      },
+      {
+        "control-owner": "Control-owner"
+      },
+      {
+        "control-maturity": "Control-maturity"
+      },
+      {
+        "control_type": "Control Type"
+      },
+      {
+        "control_phase": "Control Phase"
+      },
+      {
+        "mitigation percent": "Mitigation Percent"
+      },
+      {
+        "desired maturity": "Desired Maturity"
+      },
+      {
+        "parent": "Parent"
+      },
+      {
+        "approximate time": "Approximate Time"
+      },
+      {
+        "supplemental guidance": "Supplemental Guidance"
+      },
+      {
+        "test steps": "Test Steps"
+      },
+      {
+        "expected results": "Expected Results"
+      },
+      {
+        "status": "Status"
+      },
+      {
+        "due_date": "Due Date"
+      },
+      {
+        "expiration_date": "Expiration Date"
+      },
+      {
+        "responsible": "Responsible"
+      },
+      {
+        "mapping_control_id": "Mapping Control Id"
+      },
+      {
+        "control_id": "Control Id"
+      },
+      { "Governance": "Governance" },
+      { "REGULATOR / CONTROL": "REGULATOR / CONTROL" },
+      { "control": "control" }
+    ],
+    "ar": [
+      {
+        "All": "الكل"
+      },
+      {
+        "Not Applicable": "غير قابل للتطبيق"
+      },
+      {
+        "Not Implemented": "غير مطبق"
+      },
+      {
+        "Implemented": "مطبق"
+      },
+      {
+        "Partially Implemented": "مطبق جزئياً"
+      },
+      {
+        "Requirements": "المتطلبات"
+      },
+      {
+        "Edit": "تعديل"
+      },
+      {
+        "Delete": "حذف"
+      },
+      {
+        "framework": "الإطار"
+      },
+      {
+        "domain": "المجال"
+      },
+      {
+        "family": "العائلة"
+      },
+      {
+        "Add Requirement": "إضافة متطلب"
+      },
+      {
+        "Select a requirement type": "اختر نوع المتطلب"
+      },
+      {
+        "Type 1": "النوع 1"
+      },
+      {
+        "Type 2": "النوع 2"
+      },
+      {
+        "Type 3": "النوع 3"
+      },
+      {
+        "name": "الاسم"
+      },
+      {
+        "Description": "الوصف"
+      },
+      {
+        "Responsible Type": "نوع المسؤول"
+      },
+      {
+        "Team": "الفريق"
+      },
+      {
+        "User": "المستخدم"
+      },
+      {
+        "Department Manager": "مدير القسم"
+      },
+      {
+        "Select": "اختر"
+      },
+      {
+        "Submit": "إرسال"
+      },
+      {
+        "Add New Control Mapping": "إضافة تعيين تحكم جديد"
+      },
+      {
+        "Control": "التحكم"
+      },
+      {
+        "Framework": "الإطار"
+      },
+      {
+        "Action": "إجراء"
+      },
+      {
+        "No Data Found": "لا توجد بيانات"
+      },
+      {
+        "Add Mapping": "إضافة تعيين"
+      },
+      {
+        "Select Framework": "اختر الإطار"
+      },
+      {
+        "Select Control": "اختر التحكم"
+      },
+      {
+        "description": "الوصف"
+      },
+      {
+        "subdomain": "المجال الفرعي"
+      },
+      {
+        "Control Status": "حالة التحكم"
+      },
+      {
+        "requirement": "المتطلب"
+      },
+      {
+        "short_name": "اسم مختصر"
+      },
+      {
+        "long name": "اسم طويل"
+      },
+      {
+        "control number": "رقم التحكم"
+      },
+      {
+        "control class": "فئة التحكم"
+      },
+      {
+        "control priority": "أولوية التحكم"
+      },
+      {
+        "control-owner": "مالك التحكم"
+      },
+      {
+        "control-maturity": "نضج التحكم"
+      },
+      {
+        "control_type": "نوع التحكم"
+      },
+      {
+        "control_phase": "مرحلة التحكم"
+      },
+      {
+        "mitigation percent": "نسبة التخفيف"
+      },
+      {
+        "desired maturity": "النضج المطلوب"
+      },
+      {
+        "parent": "الأصل"
+      },
+      {
+        "approximate time": "الوقت التقريبي"
+      },
+      {
+        "supplemental guidance": "إرشادات تكميلية"
+      },
+      {
+        "test steps": "خطوات الاختبار"
+      },
+      {
+        "expected results": "النتائج المتوقعة"
+      },
+      {
+        "status": "الحالة"
+      },
+      {
+        "due_date": "تاريخ الاستحقاق"
+      },
+      {
+        "expiration_date": "تاريخ الانتهاء"
+      },
+      {
+        "responsible": "المسؤول"
+      },
+      {
+        "mapping_control_id": "معرف تحكم التعيين"
+      },
+      {
+        "control_id": "معرف التحكم"
+      },
+      { "Governance": "الحوكمة" },
+      { "REGULATOR / CONTROL": "المنظم / التحكم" },
+      { "control": "التحكم" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "domain",
+    "en": [
+      {
+        "Add New Domain": "Add New Domain"
+      },
+      {
+        "Domain Hierarchy": "Domain Hierarchy"
+      },
+      {
+        "Loading___": "Loading "
+      },
+      {
+        "name": "Name"
+      },
+      {
+        "order": "Order"
+      },
+      {
+        "domain": "Domain"
+      },
+      {
+        "subdomain": "Subdomain"
+      },
+      {
+        "domainname": "Domainname"
+      },
+      {
+        "my_options": "My Options"
+      },
+      {
+        "customswaltitle": "Customswaltitle"
+      },
+      { "domain": "Domain" }
+    ],
+    "ar": [
+      {
+        "Add New Domain": "إضافة مجال جديد"
+      },
+      {
+        "Domain Hierarchy": "تسلسل المجالات"
+      },
+      {
+        "Loading___": "جاري التحميل"
+      },
+      {
+        "name": "الاسم"
+      },
+      {
+        "order": "الترتيب"
+      },
+      {
+        "domain": "المجال"
+      },
+      {
+        "subdomain": "المجال الفرعي"
+      },
+      {
+        "domainname": "اسم المجال"
+      },
+      {
+        "my_options": "خياراتي"
+      },
+      {
+        "customswaltitle": "عنوان مخصص"
+      },
+      { "domain": "المجال" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "emailconfig",
+    "en": [
+      {
+        "email_type": "Email Type"
+      },
+      {
+        "smtp_username": "Smtp Username"
+      },
+      {
+        "smtp_from_username": "Smtp From Username"
+      },
+      {
+        "smtp_server": "Smtp Server"
+      },
+      {
+        "smtp_port": "Smtp Port"
+      },
+      {
+        "ssl_tls": "Ssl Tls"
+      },
+      {
+        "SMTP": "Smtp"
+      },
+      {
+        "SMTPUserName": "Smtpusername"
+      },
+      {
+        "SmtpFromUsername": "Smtpfromusername"
+      },
+      {
+        "SMTPPassword": "Smtppassword"
+      },
+      {
+        "SMTPServer": "Smtpserver"
+      },
+      {
+        "SMTPPort": "Smtpport"
+      },
+      {
+        "SMTPSecurity": "Smtpsecurity"
+      }
+    ],
+    "ar": [
+      {
+        "email_type": "نوع البريد الإلكتروني"
+      },
+      {
+        "smtp_username": "اسم مستخدم SMTP"
+      },
+      {
+        "smtp_from_username": "اسم المستخدم المرسل"
+      },
+      {
+        "smtp_server": "خادم SMTP"
+      },
+      {
+        "smtp_port": "منفذ SMTP"
+      },
+      {
+        "ssl_tls": "SSL/TLS"
+      },
+      {
+        "SMTP": "SMTP"
+      },
+      {
+        "SMTPUserName": "اسم مستخدم SMTP"
+      },
+      {
+        "SmtpFromUsername": "اسم المستخدم المرسل"
+      },
+      {
+        "SMTPPassword": "كلمة مرور SMTP"
+      },
+      {
+        "SMTPServer": "خادم SMTP"
+      },
+      {
+        "SMTPPort": "منفذ SMTP"
+      },
+      {
+        "SMTPSecurity": "أمان SMTP"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "auditinfocomponent",
+    "en": [
+      {
+        "mdialertcircle": "Mdialertcircle"
+      },
+      {
+        "mdicalendarclock": "Mdicalendarclock"
+      },
+      {
+        "due_date": "Due Date"
+      },
+      {
+        "mdicalendarstart": "Mdicalendarstart"
+      },
+      {
+        "start_date": "Start Date"
+      },
+      {
+        "audit_schedule": "Audit Schedule"
+      },
+      {
+        "mdicalendarcheck": "Mdicalendarcheck"
+      },
+      {
+        "mdiprogresscheck": "Mdiprogresscheck"
+      },
+      {
+        "control_status": "Control Status"
+      },
+      {
+        "mdiidentifier": "Mdiidentifier"
+      },
+      {
+        "control_number": "Control Number"
+      },
+      {
+        "control_description": "Control Description"
+      },
+      {
+        "control_information": "Control Information"
+      },
+      {
+        "mdiinformationoutline": "Mdiinformationoutline"
+      },
+      {
+        "mdiupdate": "Mdiupdate"
+      },
+      {
+        "mdicalendarrange": "Mdicalendarrange"
+      },
+      {
+        "mdiclipboardtextoutline": "Mdiclipboardtextoutline"
+      },
+      { "not_specified": "not specified" },
+      {
+        "This audit is overdue": "This audit is overdue"
+      },
+      {
+        "Not scheduled": "Not scheduled"
+      },
+      {
+        "Personnel": "Personnel"
+      },
+      {
+        "Next Scheduled Audit": "Next Scheduled Audit"
+      },
+      { "Auditor": "Auditor" },
+      { "Frequency": "Frequency" },
+      { "Responsible Type": "Responsible Type" },
+      { "Responsible Team": "Responsible Team" },
+      { "No responsible team assigned": "No responsible team assigned" },
+      { "Created": "Created" },
+      { "Updated": "Updated" },
+      { "not_assigned": "Not Assigned" },
+      {
+        "unknown_user": "Unknown User"
+      },
+      { "unknown_entity": "Unknown ({id})" },
+      {
+        "unknown_team": "Unknown Team"
+      },
+      { "user": "user" },
+      { "team": "team" },
+      { "Audit Name": "Audit Name" },
+      { "Loading audit information": "Loading audit information..." },
+      {
+        "Please wait while we fetch the data": "Please wait while we fetch the data"
+      }
+    ],
+    "ar": [
+      {
+        "mdialertcircle": "رمز دائرة التنبيه"
+      },
+      {
+        "mdicalendarclock": "رمز ساعة التقويم"
+      },
+      {
+        "due_date": "تاريخ الاستحقاق"
+      },
+      {
+        "mdicalendarstart": "رمز بدء التقويم"
+      },
+      {
+        "start_date": "تاريخ البدء"
+      },
+      {
+        "audit_schedule": "جدول التدقيق"
+      },
+      {
+        "mdicalendarcheck": "رمز التحقق في التقويم"
+      },
+      {
+        "mdiprogresscheck": "رمز التحقق في التقدم"
+      },
+      {
+        "control_status": "حالة التحكم"
+      },
+      {
+        "mdiidentifier": "رمز المعرف"
+      },
+      {
+        "control_number": "رقم التحكم"
+      },
+      {
+        "control_description": "وصف التحكم"
+      },
+      {
+        "control_information": "معلومات التحكم"
+      },
+      {
+        "mdiinformationoutline": "رمز معلومات مخطط"
+      },
+      {
+        "mdiupdate": "رمز التحديث"
+      },
+      {
+        "mdicalendarrange": "رمز نطاق التقويم"
+      },
+      {
+        "mdiclipboardtextoutline": "رمز نص لوحة الحافظة"
+      },
+      {
+        "not_specified": "غير محدد"
+      },
+      {
+        "This audit is overdue": "هذا التدقيق متأخر"
+      },
+      {
+        "Not scheduled": "غير مجدول"
+      },
+      {
+        "Personnel": "الموظفين"
+      },
+      {
+        "Next Scheduled Audit": "التدقيق المجدول التالي"
+      },
+      { "Auditor": "المدقق" },
+      { "Frequency": "التكرار" },
+      { "Responsible Type": "نوع المسؤول" },
+      { "Responsible Team": "الفريق المسؤول" },
+      { "No responsible team assigned": "لم يتم تعيين فريق مسؤول" },
+      {
+        "Created": "تم الإنشاء"
+      },
+      {
+        "Updated": "تم التحديث"
+      },
+      { "not_assigned": "غير معين" },
+      {
+        "unknown_user": "مستخدم غير معروف"
+      },
+      { "unknown_entity": "غير معروف ({id})" },
+      {
+        "unknown_team": "فريق غير معروف"
+      },
+      { "user": "مستخدم" },
+      { "team": "فريق" },
+      { "Audit Name": "اسم التدقيق" },
+      { "Loading audit information": "جارٍ تحميل معلومات التدقيق..." },
+      {
+        "Please wait while we fetch the data": "يرجى الانتظار أثناء جلب البيانات"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "mainStep",
+    "en": [
+      { "back": "Back" },
+      { "continue": "Continue" },
+      { "finish": "Finish" },
+      { "audit_info": "Audit Info" },
+      { "requirement_achievement": "Requirement Achievement" },
+      { "audit_result": "Audit Result" },
+      { "audit_remediation": "Audit Remediation" },
+      { "audit_trail": "Audit Trail" }
+    ],
+    "ar": [
+      { "back": "رجوع" },
+      { "continue": "متابعة" },
+      { "finish": "إنهاء" },
+      { "audit_info": "معلومات التدقيق" },
+      { "requirement_achievement": "تحقيق المتطلبات" },
+      { "audit_result": "نتيجة التدقيق" },
+      { "audit_remediation": "معالجة التدقيق" },
+      { "audit_trail": "سجل التدقيق" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "auditremidationcomponent",
+    "en": [
+      {
+        "mdiaccount": "Mdiaccount"
+      },
+      {
+        "assistants": "Assistants"
+      },
+      {
+        "summary": "Summary"
+      },
+      {
+        "closed": "Closed"
+      },
+      {
+        "open": "Open"
+      },
+      {
+        "select_status": "Select Status"
+      },
+      {
+        "audit_status": "Audit Status"
+      },
+      {
+        "no": "No"
+      },
+      {
+        "yes": "Yes"
+      },
+      {
+        "remediation_needed": "Remediation Needed"
+      },
+      {
+        "audit_remediation": "Audit Remediation"
+      },
+      { "Submit": "Submit" },
+      { "Remidation": "Remidation" },
+      { "Remediation Required": "Remediation Required" },
+      { "Cancel": "Cancel" },
+      { "Save Changes": "Save Changes" },
+
+      { "responsible_user": "Responsible User" },
+      { "due_date": "Due Date" },
+      { "budgetary": "Budgetary" },
+      { "status": "Status" },
+      { "status_approved": "Approved" },
+      { "status_rejected": "Rejected" },
+      { "comment": "Comment" },
+      { "corrective_action_plan": "Corrective Action Plan" },
+      { "select_type": "Select {type}" },
+      { "users": "Users" },
+      { "teams": "Teams" }
+    ],
+    "ar": [
+      {
+        "mdiaccount": "رمز الحساب"
+      },
+      {
+        "assistants": "المساعدون"
+      },
+      {
+        "summary": "ملخص"
+      },
+      {
+        "closed": "مغلق"
+      },
+      {
+        "open": "مفتوح"
+      },
+      {
+        "select_status": "اختر الحالة"
+      },
+      {
+        "audit_status": "حالة التدقيق"
+      },
+      {
+        "no": "لا"
+      },
+      {
+        "yes": "نعم"
+      },
+      {
+        "remediation_needed": "تحتاج إلى معالجة"
+      },
+      {
+        "audit_remediation": "معالجة التدقيق"
+      },
+      { "Submit": "إرسال" },
+      { "Remidation": "المعالجة" },
+      { "Remediation Required": "المعالجة مطلوبة" },
+      { "Cancel": "إلغاء" },
+      { "Save Changes": "حفظ التغييرات" },
+      { "responsible_user": "المستخدم المسؤول" },
+      { "due_date": "تاريخ الاستحقاق" },
+      { "budgetary": "الميزانية" },
+      { "status": "الحالة" },
+      { "status_approved": "مقبول" },
+      { "status_rejected": "مرفوض" },
+      { "comment": "تعليق" },
+      { "corrective_action_plan": "خطة العمل التصحيحي" },
+      { "select_type": "اختر {type}" },
+      { "users": "المستخدمون" },
+      { "teams": "الفرق" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "auditresultcomponent",
+    "en": [
+      { "audit_results_overview": "Audit Results Overview" },
+      { "mdichartpie": "mdi-chart-pie" },
+      { "requirement_status": "Requirement Status" },
+      { "evidence_status": "Evidence Status" },
+      { "mdiclipboardcheckoutline": "mdi-clipboard-check-outline" },
+      { "update_control_status": "Update Control Status" },
+      { "control_implementation_status": "Control Implementation Status" },
+      { "select_control_status": "Select Control Status" },
+      { "mdicheckcircle": "mdi-check-circle" },
+      { "update_status": "Update Status" },
+      { "success": "Success" },
+      { "control_status_updated": "Control status updated successfully" },
+      { "error": "Error" },
+      { "control_status_update_failed": "Failed to update control status" },
+      { "status_not_applicable": "Not Applicable" },
+      { "status_not_implemented": "Not Implemented" },
+      { "status_partially_implemented": "Partially Implemented" },
+      { "status_implemented": "Implemented" },
+      { "status_approved": "Approved" },
+      { "status_rejected": "Rejected" },
+      { "status_pending": "Pending" },
+      { "status_not_relevant": "Not Relevant" },
+      { "requirement_chart_title": "Requirement Status" },
+      { "evidence_chart_title": "Evidence Status" },
+      { "requirements": "Requirements" },
+      { "evidences": "Evidences" },
+      { "chart_loading": "Loading..." },
+      { "chart_no_data": "No data to display" },
+      { "print_chart": "Print chart" },
+      { "download_png": "Download PNG image" },
+      { "download_jpeg": "Download JPEG image" },
+      { "download_pdf": "Download PDF document" },
+      { "download_svg": "Download SVG vector image" },
+      { "chart_context_menu": "Chart context menu" },
+      { "Failed to update control status": "Failed to update control status" },
+      { "Requirement Status": "Requirement Status" },
+      { "Evidence Status": "Evidence Status" },
+      {
+        "Control status updated successfully": "Control status updated successfully"
+      },
+      { "Failed to update control status": "Failed to update control status" }
+    ],
+    "ar": [
+      { "audit_results_overview": "نظرة عامة على نتائج التدقيق" },
+      { "mdichartpie": "mdi-chart-pie" },
+      { "requirement_status": "حالة المتطلبات" },
+      { "evidence_status": "حالة الأدلة" },
+      { "mdiclipboardcheckoutline": "mdi-clipboard-check-outline" },
+      { "update_control_status": "تحديث حالة التحكم" },
+      { "control_implementation_status": "حالة تنفيذ التحكم" },
+      { "select_control_status": "اختر حالة التحكم" },
+      { "mdicheckcircle": "mdi-check-circle" },
+      { "update_status": "تحديث الحالة" },
+      { "success": "نجاح" },
+      { "control_status_updated": "تم تحديث حالة التحكم بنجاح" },
+      { "error": "خطأ" },
+      { "control_status_update_failed": "فشل في تحديث حالة التحكم" },
+      { "status_not_applicable": "غير قابل للتطبيق" },
+      { "status_not_implemented": "غير مطبق" },
+      { "status_partially_implemented": "مطبق جزئياً" },
+      { "status_implemented": "مطبق" },
+      { "status_approved": "مقبول" },
+      { "status_rejected": "مرفوض" },
+      { "status_pending": "قيد الانتظار" },
+      { "status_not_relevant": "غير ذي صلة" },
+      { "requirement_chart_title": "حالة المتطلبات" },
+      { "evidence_chart_title": "حالة الأدلة" },
+      { "requirements": "المتطلبات" },
+      { "evidences": "الأدلة" },
+      { "chart_loading": "جار التحميل..." },
+      { "chart_no_data": "لا توجد بيانات للعرض" },
+      { "print_chart": "طباعة الرسم البياني" },
+      { "download_png": "تنزيل صورة PNG" },
+      { "download_jpeg": "تنزيل صورة JPEG" },
+      { "download_pdf": "تنزيل مستند PDF" },
+      { "download_svg": "تنزيل صورة SVG متجهة" },
+      { "chart_context_menu": "قائمة سياق الرسم البياني" },
+      { "Requirement Status": "حالة المتطلبات" },
+      { "Evidence Status": "حالة الأدلة" },
+      { "Control status updated successfully": "تم تحديث حالة التحكم بنجاح" },
+      { "Failed to update control status": "فشل في تحديث حالة التحكم" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "audittrailcomponent",
+    "en": [
+      {
+        "no_specific_changes_detected": "No Specific Changes Detected"
+      },
+      {
+        "removed": "Removed"
+      },
+      {
+        "added": "Added"
+      },
+      {
+        "to": "To"
+      },
+      {
+        "from": "From"
+      },
+      {
+        "changes_made": "Changes Made"
+      },
+      {
+        "browser": "Browser"
+      },
+      {
+        "ip_address": "Ip Address"
+      },
+      {
+        "user": "User"
+      },
+      {
+        "action": "Action"
+      },
+      {
+        "date": "Date"
+      },
+      {
+        "basic_information": "Basic Information"
+      },
+      {
+        "mdiclose": "Mdiclose"
+      },
+      {
+        "audit_log_details": "Audit Log Details"
+      },
+      {
+        "view_details": "View Details"
+      },
+      {
+        "no_changes_detected": "No Changes Detected"
+      },
+      {
+        "details": "Details"
+      },
+      {
+        "changes": "Changes"
+      },
+      {
+        "changed_by": "Changed By"
+      },
+      {
+        "audit_trail": "Audit Trail"
+      }
+    ],
+    "ar": [
+      {
+        "no_specific_changes_detected": "لم يتم اكتشاف تغييرات محددة"
+      },
+      {
+        "removed": "تمت الإزالة"
+      },
+      {
+        "added": "تمت الإضافة"
+      },
+      {
+        "to": "إلى"
+      },
+      {
+        "from": "من"
+      },
+      {
+        "changes_made": "التغييرات التي تم إجراؤها"
+      },
+      {
+        "browser": "المتصفح"
+      },
+      {
+        "ip_address": "عنوان IP"
+      },
+      {
+        "user": "المستخدم"
+      },
+      {
+        "action": "الإجراء"
+      },
+      {
+        "date": "التاريخ"
+      },
+      {
+        "basic_information": "المعلومات الأساسية"
+      },
+      {
+        "mdiclose": "رمز الإغلاق"
+      },
+      {
+        "audit_log_details": "تفاصيل سجل التدقيق"
+      },
+      {
+        "view_details": "عرض التفاصيل"
+      },
+      {
+        "no_changes_detected": "لم يتم اكتشاف تغييرات"
+      },
+      {
+        "details": "التفاصيل"
+      },
+      {
+        "changes": "التغييرات"
+      },
+      {
+        "changed_by": "تم التغيير بواسطة"
+      },
+      {
+        "audit_trail": "مسار التدقيق"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "mainstep",
+    "en": [
+      {
+        "audit_trail": "Audit Trail"
+      },
+      {
+        "audit_remidation": "Audit Remidation"
+      },
+      {
+        "audit_result": "Audit Result"
+      },
+      {
+        "requirement_achievement": "Requirement Achievement"
+      },
+      {
+        "audit_info": "Audit Info"
+      }
+    ],
+    "ar": [
+      {
+        "audit_trail": "سجل التدقيق"
+      },
+      {
+        "audit_remidation": "معالجة التدقيق"
+      },
+      {
+        "audit_result": "نتائج التدقيق"
+      },
+      {
+        "requirement_achievement": "تحقيق المتطلبات"
+      },
+      {
+        "audit_info": "معلومات التدقيق"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "requirementachievementcomponent",
+    "en": [
+      {
+        "mdidotsvertical": "Mdidotsvertical"
+      },
+      {
+        "na": "Na"
+      },
+      {
+        "actions": "Actions"
+      },
+      {
+        "evidence_count": "Evidence Count"
+      },
+      {
+        "status": "Status"
+      },
+      {
+        "responsible": "Responsible"
+      },
+      {
+        "due_date": "Due Date"
+      },
+      {
+        "description": "Description"
+      },
+      {
+        "requirement_name": "Requirement Name"
+      },
+      {
+        "requirements_achievement": "Requirements Achievement"
+      },
+      {
+        "mdiclipboardcheck": "Mdiclipboardcheck"
+      },
+      {
+        "add_requirement": "Add Requirement"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "success": "Success"
+      },
+      {
+        "validation_error": "Validation Error"
+      },
+      {
+        "name": "Name"
+      },
+      { "select_requirement": "Select Requirement" },
+      { "create_new_requirement": "Create New Requirement" },
+      { "how_to_add": "How would you like to add a requirement?" },
+      { "select_existing": "Select Existing" },
+      { "create_new": "Create New" },
+      { "select_requirement_field": "Select Requirement" },
+      { "name_field": "Requirement Name" },
+      { "notes_label": "Notes" },
+      { "responsible_type_field": "Responsible Type" },
+      { "responsible_field": "Responsible" },
+      { "due_date_field": "Due Date" },
+      { "expire_days_field": "Expire Days" },
+      { "expire_days_hint": "Number of days before requirement expires" },
+      { "add_selected": "Add Selected" },
+      { "create_and_add": "Create & Add" },
+      { "cancel": "Cancel" },
+      { "add_new_evidence": "Add New Evidence" },
+      { "requirement_name_field": "Requirement Name" },
+      { "description_field": "Description" },
+      { "evidence_file_field": "Evidence File" },
+      { "submit_evidence_button": "Submit Evidence" },
+      { "name_required": "Name is required" },
+      { "description_required": "Description is required" },
+      { "file_required": "File is required" },
+      { "evidence_for": "Evidence for" },
+      { "requirement": "Requirement" },
+      { "name": "Name" },
+      { "created_by": "Created By" },
+      { "file": "File" },
+      { "created_at": "Created At" },
+      { "updated_at": "Updated At" },
+      { "status": "Status" },
+      { "pending": "Pending" },
+      { "approved": "Approved" },
+      { "rejected": "Rejected" },
+      { "not_relevant": "Not Relevant" },
+      { "approve": "Approve" },
+      { "reject": "Reject" },
+      { "not_relevant": "Not Relevant" },
+      { "download": "Download" },
+      { "close": "Close" },
+      { "na": "N/A" },
+      { "view_evidence": "View Evidence" },
+      { "add_attachment": "Add Attachment" },
+      { "comments": "Comments" },
+      { "approve_requirement": "Approve Requirement" },
+      { "reject_requirement": "Reject Requirement" },
+      { "validation_error": "Validation Error" },
+      { "due_date_required": "Due date is required" },
+      { "due_date_past": "Due date cannot be in the past" },
+      { "success": "Success" },
+      { "requirement_added": "Requirement added successfully" },
+      { "error": "Error" },
+      { "add_requirement_failed": "Failed to add requirement" },
+      { "success": "Success" },
+      { "evidence_submitted": "Evidence submitted successfully" },
+      { "error": "Error" },
+      { "submit_evidence_failed": "Failed to submit evidence" },
+      { "evidence_status_updated": "Evidence status updated successfully" },
+      { "evidence_status_update_failed": "Failed to update evidence status" },
+      {
+        "requirement_status_updated": "Requirement status updated successfully"
+      },
+      {
+        "requirement_status_update_failed": "Failed to update requirement status"
+      }
+    ],
+    "ar": [
+      {
+        "mdidotsvertical": "نقاط رأسية"
+      },
+      {
+        "na": "غير مطبق"
+      },
+      {
+        "actions": "إجراءات"
+      },
+      {
+        "evidence_count": "عدد الأدلة"
+      },
+      {
+        "status": "الحالة"
+      },
+      {
+        "responsible": "المسؤول"
+      },
+      {
+        "due_date": "تاريخ الاستحقاق"
+      },
+      {
+        "description": "الوصف"
+      },
+      {
+        "requirement_name": "اسم المتطلب"
+      },
+      {
+        "requirements_achievement": "تحقيق المتطلبات"
+      },
+      {
+        "mdiclipboardcheck": "لوحة تحقق"
+      },
+      {
+        "add_requirement": "إضافة متطلب"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "success": "نجاح"
+      },
+      {
+        "validation_error": "خطأ في التحقق"
+      },
+      {
+        "name": "الاسم"
+      },
+      { "select_requirement": "اختر متطلب" },
+      { "create_new_requirement": "إنشاء متطلب جديد" },
+      { "how_to_add": "كيف ترغب في إضافة متطلب؟" },
+      { "select_existing": "اختر موجود" },
+      { "create_new": "إنشاء جديد" },
+      { "select_requirement_field": "اختر متطلب" },
+      { "name_field": "اسم المتطلب" },
+      { "notes_label": "ملاحظات" },
+      { "responsible_type_field": "نوع المسؤول" },
+      { "responsible_field": "المسؤول" },
+      { "due_date_field": "تاريخ الاستحقاق" },
+      { "expire_days_field": "أيام الانتهاء" },
+      {
+        "expire_days_hint": "عدد الأيام قبل انتهاء المتطلب"
+      },
+      { "add_selected": "إضافة المحدد" },
+      { "create_and_add": "إنشاء وإضافة" },
+      { "cancel": "إلغاء" },
+      { "add_new_evidence": "إضافة دليل جديد" },
+      { "requirement_name_field": "اسم المتطلب" },
+      { "description_field": "الوصف" },
+      { "evidence_file_field": "ملف الدليل" },
+      { "submit_evidence_button": "إرسال الدليل" },
+      { "name_required": "الاسم مطلوب" },
+      { "description_required": "الوصف مطلوب" },
+      { "file_required": "الملف مطلوب" },
+      { "evidence_for": "الدليل لـ" },
+      { "requirement": "متطلب" },
+      { "name": "الاسم" },
+      { "created_by": "تم إنشاؤه بواسطة" },
+      { "file": "الملف" },
+      { "created_at": "تم الإنشاء في" },
+      { "updated_at": "تم التحديث في" },
+      { "status": "الحالة" },
+      { "pending": "قيد الانتظار" },
+      { "approved": "مقبول" },
+      { "rejected": "مرفوض" },
+      { "not_relevant": "غير ذي صلة" },
+      { "approve": "موافقة" },
+      { "reject": "رفض" },
+      { "not_relevant": "غير ذي صلة" },
+      { "download": "تنزيل" },
+      { "close": "إغلاق" },
+      { "na": "غير مطبق" },
+      { "view_evidence": "عرض الدليل" },
+      { "add_attachment": "إضافة مرفق" },
+      { "comments": "تعليقات" },
+      { "approve_requirement": "موافقة المتطلب" },
+      { "reject_requirement": "رفض المتطلب" },
+      { "validation_error": "خطأ في التحقق" },
+      { "due_date_required": "تاريخ الاستحقاق مطلوب" },
+      { "due_date_past": "تاريخ الاستحقاق لا يمكن أن يكون في الماضي" },
+      { "success": "نجاح" },
+      { "requirement_added": "تم إضافة المتطلب بنجاح" },
+      { "error": "خطأ" },
+      { "add_requirement_failed": "فشل في إضافة المتطلب" },
+      { "success": "نجاح" },
+      { "evidence_submitted": "تم إرسال الدليل بنجاح" },
+      { "error": "خطأ" },
+      { "submit_evidence_failed": "فشل في إرسال الدليل" },
+      { "evidence_status_updated": "تم تحديث حالة الأدلة بنجاح" },
+      { "evidence_status_update_failed": "فشل تحديث حالة الأدلة" },
+      { "requirement_status_updated": "تم تحديث حالة المتطلبات بنجاح" },
+      { "requirement_status_update_failed": "فشل تحديث حالة المتطلبات" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "frameworkcontroltestaudit",
+    "en": [
+      {
+        "AuditName": "Auditname"
+      },
+      {
+        "Famework": "Famework"
+      },
+      {
+        "control": "Control"
+      },
+      {
+        "ComplianceName": "Compliancename"
+      },
+      {
+        "AuditResult": "Auditresult"
+      },
+      {
+        "AuditNumber": "Auditnumber"
+      },
+      {
+        "Tester": "Tester"
+      },
+      {
+        "IntiationDate": "Intiationdate"
+      },
+      {
+        "LastDate": "Lastdate"
+      },
+      {
+        "NextDate": "Nextdate"
+      },
+      {
+        "AuditStatus": "Auditstatus"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "successfully": "Successfully"
+      },
+      {
+        "please_select_a_framework": "Please Select A Framework"
+      },
+      { "CreationDate": "Creationdate" },
+      {
+        "frameworkcontroltestaudit": "Framework Control Test Audit"
+      }
+    ],
+    "ar": [
+      {
+        "AuditName": "اسم التدقيق"
+      },
+      {
+        "Famework": "الإطار"
+      },
+      {
+        "control": "التحكم"
+      },
+      {
+        "ComplianceName": "اسم الامتثال"
+      },
+      {
+        "AuditResult": "نتيجة التدقيق"
+      },
+      {
+        "AuditNumber": "رقم التدقيق"
+      },
+      {
+        "Tester": "المختبر"
+      },
+      {
+        "IntiationDate": "تاريخ البدء"
+      },
+      {
+        "LastDate": "آخر تاريخ"
+      },
+      {
+        "NextDate": "التاريخ التالي"
+      },
+      {
+        "AuditStatus": "حالة التدقيق"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "successfully": "بنجاح"
+      },
+      {
+        "please_select_a_framework": "الرجاء اختيار إطار عمل"
+      },
+      { "CreationDate": "تاريخ الإنشاء" },
+      {
+        "frameworkcontroltestaudit": "اختبار تدقيق التحكم في الإطار"
+      }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "auditEndModal",
+    "en": [
+      { "select_framework_title": "Select Framework for Audit To End Audit" },
+      { "available_frameworks": "Available Frameworks" },
+      { "choose_framework_placeholder": "Choose a framework..." },
+      { "framework_selection_hint": "Please select a framework to proceed" },
+      { "cancel_button": "Cancel" },
+      { "confirm_button": "Confirm Selection" }
+    ],
+    "ar": [
+      { "select_framework_title": "اختر إطار العمل لإنهاء التدقيق" },
+      { "available_frameworks": "الأطر المتاحة" },
+      { "choose_framework_placeholder": "اختر إطار عمل..." },
+      { "framework_selection_hint": "يرجى اختيار إطار عمل للمتابعة" },
+      { "cancel_button": "إلغاء" },
+      { "confirm_button": "تأكيد الاختيار" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+  {
+    "name": "frameworkinstall",
+    "en": [
+      {
+        "Select Regulation and Framework": "Select Regulation And Framework"
+      },
+      {
+        "Regulation": "Regulation"
+      },
+      {
+        "Select Regulation": "Select Regulation"
+      },
+      {
+        "NCA": "Nca"
+      },
+      {
+        "ISO": "Iso"
+      },
+      {
+        "SAMA": "Sama"
+      },
+      {
+        "CMA": "Cma"
+      },
+      {
+        "Framework": "Framework"
+      },
+      {
+        "Select Framework": "Select Framework"
+      },
+      {
+        "Install": "Install"
+      },
+      {
+        "Choose Options": "Choose Options"
+      },
+      {
+        "Mapping Related Doc": "Mapping Related Doc"
+      },
+      {
+        "Install Controls evidences": "Install Controls Evidences"
+      },
+      {
+        "Mapping evidences For Related Required Framework": "Mapping Evidences For Related Required Framework"
+      },
+      {
+        "Cancel": "Cancel"
+      },
+      {
+        "Deploy": "Deploy"
+      },
+      {
+        "Frameworks Installed": "Frameworks Installed"
+      },
+      {
+        "Framework Name": "Framework Name"
+      },
+      {
+        "Controls": "Controls"
+      },
+      {
+        "Created At": "Created At"
+      },
+      {
+        "info": "Info"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "success": "Success"
+      },
+      {
+        "are_you_sure": "Are You Sure"
+      },
+      { "frameworkinstall": "framework install" }
+    ],
+    "ar": [
+      {
+        "Select Regulation and Framework": "اختر التنظيم والإطار"
+      },
+      {
+        "Regulation": "التنظيم"
+      },
+      {
+        "Select Regulation": "اختر التنظيم"
+      },
+      {
+        "NCA": "NCA"
+      },
+      {
+        "ISO": "ISO"
+      },
+      {
+        "SAMA": "SAMA"
+      },
+      {
+        "CMA": "CMA"
+      },
+      {
+        "Framework": "الإطار"
+      },
+      {
+        "Select Framework": "اختر الإطار"
+      },
+      {
+        "Install": "تثبيت"
+      },
+      {
+        "Choose Options": "اختر الخيارات"
+      },
+      {
+        "Mapping Related Doc": "ربط المستندات ذات الصلة"
+      },
+      {
+        "Install Controls evidences": "تثبيت أدلة الضوابط"
+      },
+      {
+        "Mapping evidences For Related Required Framework": "ربط الأدلة للإطار المطلوب"
+      },
+      {
+        "Cancel": "إلغاء"
+      },
+      {
+        "Deploy": "نشر"
+      },
+      {
+        "Frameworks Installed": "الأطر المثبتة"
+      },
+      {
+        "Framework Name": "اسم الإطار"
+      },
+      {
+        "Controls": "الضوابط"
+      },
+      {
+        "Created At": "تاريخ الإنشاء"
+      },
+      {
+        "info": "معلومات"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "success": "نجاح"
+      },
+      {
+        "are_you_sure": "هل أنت متأكد؟"
+      },
+      { "frameworkinstall": "تثبيت الإطار" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  },
+
+  {
+    "name": "hierarchy",
+    "en": [
+      {
+        "loading": "Loading"
+      },
+      {
+        "error": "Error"
+      },
+      {
+        "success": "Success"
+      },
+      { "Hierarchy": "Hierarchy" }
+    ],
+    "ar": [
+      {
+        "loading": "جاري التحميل"
+      },
+      {
+        "error": "خطأ"
+      },
+      {
+        "success": "نجاح"
+      },
+      { "Hierarchy": "التسلسل الهرمي" }
+    ],
+    "updated_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    },
+    "created_at": {
+      "$date": "2025-07-29T07:46:28.897Z"
+    }
+  }
+]

@@ -1,0 +1,4313 @@
+{
+  "totalFilesScanned": 204,
+  "totalExistingKeys": 2113,
+  "totalNewKeys": 944,
+  "files": [
+    {
+      "file": "App.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\Breadcrumb.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\block\\header\\bookmarkSearch.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "bookmarksearch.back",
+        "bookmarksearch.add_new_bookmark",
+        "bookmarksearch.bookmark"
+      ]
+    },
+    {
+      "file": "components\\commen\\block\\header\\cartBox.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "cartbox.checkout",
+        "cartbox.go_to_your_cart",
+        "cartbox.100000",
+        "cartbox.order_total_",
+        "cartbox.50000",
+        "cartbox.mens_jacket",
+        "cartbox.500",
+        "cartbox.womens_track_suit",
+        "cartbox.cart"
+      ]
+    },
+    {
+      "file": "components\\commen\\block\\header\\headerSection.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\block\\header\\languageView.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\block\\header\\logoSection.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\block\\header\\messageBox.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "messagebox.check_all",
+        "messagebox.message"
+      ]
+    },
+    {
+      "file": "components\\commen\\block\\header\\modeView.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\block\\header\\notificationBox.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "notificationbox.view_all",
+        "notificationbox.you_dont_have_notifications",
+        "notificationbox.loading",
+        "notificationbox.notifications"
+      ]
+    },
+    {
+      "file": "components\\commen\\block\\header\\profileView.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "profileview.log_out",
+        "profileview.profile",
+        "profileview.my_certifiate",
+        "profileview.admin"
+      ]
+    },
+    {
+      "file": "components\\commen\\block\\header\\searchBar.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\block\\header\\searchInput.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\block\\sidebar\\navMenu.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "navmenu.back"
+      ]
+    },
+    {
+      "file": "components\\commen\\block\\sidebar\\sidebarSection.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\commen\\card\\cardData1.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "components\\Comment.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "comment.loading_comments",
+        "comment.be_the_first_to_leave_a_comment",
+        "comment.no_comments_yet",
+        "comment.cancel",
+        "comment.replying_to",
+        "comment.reply",
+        "comment.private",
+        "comment.author",
+        "comment.oldest_first",
+        "comment.newest_first",
+        "comment.to_post",
+        "comment.enter",
+        "comment.ctrl",
+        "comment.post_a_comment"
+      ]
+    },
+    {
+      "file": "components\\DataCard.vue",
+      "existingKeys": [
+        "site.search_holder",
+        "site.total",
+        "site.previous",
+        "site.next"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "components\\DataTable-copy.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "datatable-copy.delete",
+        "datatable-copy.edit",
+        "datatable-copy.actions"
+      ]
+    },
+    {
+      "file": "components\\DataTable.vue",
+      "existingKeys": [
+        "datatable.edit",
+        "datatable.delete"
+      ],
+      "newKeys": [
+        "datatable.actions"
+      ]
+    },
+    {
+      "file": "components\\FilePreview.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "filepreview.browse"
+      ]
+    },
+    {
+      "file": "components\\Form.vue",
+      "existingKeys": [
+        "common.save",
+        "common.cancel"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "components\\MainPage.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "mainpage.mdifiledocument",
+        "mainpage.mdibell"
+      ]
+    },
+    {
+      "file": "components\\MyModal.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "mymodal.save_changes",
+        "mymodal.close"
+      ]
+    },
+    {
+      "file": "components\\MySelect.vue",
+      "existingKeys": [
+        "site.add"
+      ],
+      "newKeys": [
+        "myselect.not_found"
+      ]
+    },
+    {
+      "file": "components\\theme\\dashbord\\simpleCard.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "simplecard.gingerbread_brownie_sweet_roll_cheesecake_chocolate_cake_jelly_beans_marzipan_gummies_dessert_jelly_beans_sugar_plum_cheesecake_cookie_oat_cake_souffl",
+        "simplecard.class_to_add_heading",
+        "simplecard.cardtitle",
+        "simplecard.cardheader",
+        "simplecard.you_may_also_include_any_lth1gtlth6gt_with_a",
+        "simplecard.class",
+        "simplecard.borderbottom0",
+        "simplecard.class_without_header_border",
+        "simplecard.add_a_heading_to_card_with",
+        "simplecard.content_title",
+        "simplecard.jelly_beans_sugar_plum_cheesecake_cookie_oat_cake_souffl_tart_lollipop_carrot_cake_sugar_plum_marshmallow_wafer_tiramisu_jelly_beans",
+        "simplecard.consectetur_adipisicing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua_ut_enim_ad_minim_veniam_quis_nostrud_exercitation_ullamco_laboris_nisi_ut_aliquip_ex_ea_commodo_consequat",
+        "simplecard.lorem_ipsum_dolor_sit_amet",
+        "simplecard.definition_list",
+        "simplecard.aliquam_tincidunt_mauris_eu_risus",
+        "simplecard.lorem_ipsum_dolor_sit_amet_consectetuer_adipiscing_elit",
+        "simplecard.header_level",
+        "simplecard.lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_vivamus_magna_cras_in_mi_at_felis_aliquet_congue_ut_a_est_eget_ligula_molestie_gravida_curabitur_massa_donec_eleifend_libero_at_sagittis_mollis_tellus_est_malesuada_tellus_at_luctus_turpis_elit_sit_amet_quam_vivamus_pretium_ornare_est",
+        "simplecard.header_level_2",
+        "simplecard.in_turpis_pulvinar_facilisis_ut_felis",
+        "simplecard.donec_non_enim",
+        "simplecard._ornare_sit_amet_wisi_aenean_fermentum_elit_eget_tincidunt_condimentum_eros_ipsum_rutrum_orci_sagittis_tempus_lacus_enim_ac_dui",
+        "simplecard.commodo_vitae",
+        "simplecard.mauris_placerat_eleifend_leo_quisque_sit_amet_est_et_sapien_ullamcorper_pharetra_vestibulum_erat_wisi_condimentum_sed",
+        "simplecard.aenean_ultricies_mi_vitae_est",
+        "simplecard.senectus_et_netus_et_malesuada_fames_ac_turpis_egestas_vestibulum_tortor_quam_feugiat_vitae_ultricies_eget_tempor_sit_amet_ante_donec_eu_libero_sit_amet_quam_egestas_semper",
+        "simplecard.pellentesque_habitant_morbi_tristique",
+        "simplecard.html_ipsum_presents"
+      ]
+    },
+    {
+      "file": "components\\theme\\dashbord\\starterMain.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "startermain.gingerbread_brownie_sweet_roll_cheesecake_chocolate_cake_jelly_beans_marzipan_gummies_dessert_jelly_beans_sugar_plum_cheesecake_cookie_oat_cake_souffl",
+        "startermain.class_to_add_heading",
+        "startermain.cardtitle",
+        "startermain.cardheader",
+        "startermain.you_may_also_include_any_lth1gtlth6gt_with_a",
+        "startermain.class",
+        "startermain.borderbottom0",
+        "startermain.class_without_header_border",
+        "startermain.add_a_heading_to_card_with",
+        "startermain.content_title",
+        "startermain.jelly_beans_sugar_plum_cheesecake_cookie_oat_cake_souffl_tart_lollipop_carrot_cake_sugar_plum_marshmallow_wafer_tiramisu_jelly_beans",
+        "startermain.consectetur_adipisicing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua_ut_enim_ad_minim_veniam_quis_nostrud_exercitation_ullamco_laboris_nisi_ut_aliquip_ex_ea_commodo_consequat",
+        "startermain.lorem_ipsum_dolor_sit_amet",
+        "startermain.definition_list",
+        "startermain.aliquam_tincidunt_mauris_eu_risus",
+        "startermain.lorem_ipsum_dolor_sit_amet_consectetuer_adipiscing_elit",
+        "startermain.header_level",
+        "startermain.lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_vivamus_magna_cras_in_mi_at_felis_aliquet_congue_ut_a_est_eget_ligula_molestie_gravida_curabitur_massa_donec_eleifend_libero_at_sagittis_mollis_tellus_est_malesuada_tellus_at_luctus_turpis_elit_sit_amet_quam_vivamus_pretium_ornare_est",
+        "startermain.header_level_2",
+        "startermain.in_turpis_pulvinar_facilisis_ut_felis",
+        "startermain.donec_non_enim",
+        "startermain._ornare_sit_amet_wisi_aenean_fermentum_elit_eget_tincidunt_condimentum_eros_ipsum_rutrum_orci_sagittis_tempus_lacus_enim_ac_dui",
+        "startermain.commodo_vitae",
+        "startermain.mauris_placerat_eleifend_leo_quisque_sit_amet_est_et_sapien_ullamcorper_pharetra_vestibulum_erat_wisi_condimentum_sed",
+        "startermain.aenean_ultricies_mi_vitae_est",
+        "startermain.senectus_et_netus_et_malesuada_fames_ac_turpis_egestas_vestibulum_tortor_quam_feugiat_vitae_ultricies_eget_tempor_sit_amet_ante_donec_eu_libero_sit_amet_quam_egestas_semper",
+        "startermain.pellentesque_habitant_morbi_tristique",
+        "startermain.html_ipsum_presents",
+        "startermain.hideable_navbar_option_is_available_for_fixed_navbar_with_static_navigation_only_works_in_top_and_bottom_positions_single_and_multiple_navbars",
+        "startermain.tips",
+        "startermain.to_use_pug_it_required_nodejs_and_basic_knowledge_of_using_it_using_pug_as_template_engine_to_generate_whole_template_quickly_with_your_selected_layout_and_other_custom_changes_to_getting_start_with_pug_usage_template_generating_process_please_refer_template_documentation",
+        "startermain.pug",
+        "startermain.if_you_know_just_html_select_your_choice_of_layout_from_starter_kit_folder_customize_it_with_optional_changes_like_colors_and_branding_add_required_dependency_only",
+        "startermain.html",
+        "startermain.using_template_engine_to_generate_whole_template_quickly_with_your_selected_layout_and_other_custom_changes",
+        "startermain.select_your_choice_of_layout_from_starter_kit_customize_it_with_optional_changes_like_colors_and_branding_add_required_dependency_only",
+        "startermain.each_layout_includes_basic_components_only",
+        "startermain.starter_kit_is_a_set_of_pages_with_different_layouts_useful_for_your_next_project_to_start_development_process_from_scratch_with_no_time",
+        "startermain.it_use_pug_as_template_engine_to_generate_pages_and_whole_template_quickly_using_node_js_save_your_time_for_doing_the_common_changes_for_each_page_ie_menu_branding_and_footer_by_generating_template_with_pug",
+        "startermain.every_components_in_cion_admin_are_decoupled_it_means_use_only_components_you_actually_need_remove_unnecessary_and_extra_code_easily_just_by_excluding_the_path_to_specific_scss_js_file",
+        "startermain.cion_admin_provides_you_getting_start_pages_with_different_layouts_use_the_layout_as_per_your_custom_requirements_and_just_change_the_branding_menu_content",
+        "startermain.getting_start_with_your_project_custom_requirements_using_a_ready_template_which_is_quite_difficult_and_time_taking_process_cion_admin_provides_useful_features_to_kick_start_your_project_development_with_no_efforts_"
+      ]
+    },
+    {
+      "file": "layout\\bodyView.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "layout\\footerView.vue",
+      "existingKeys": [
+        "COPYRIGHT",
+        "All rights Reserved"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "layout\\tapTop.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "layout\\theBreadcrumbs.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\AllNotification\\AllNotification.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "allnotification.no_notifications_found",
+        "allnotification.auto",
+        "allnotification.system",
+        "allnotification.unread",
+        "allnotification.all",
+        "allnotification.refresh",
+        "allnotification.mark_all_as_read",
+        "allnotification.notifications",
+        "allnotification.retry",
+        "allnotification.loading_notifications"
+      ]
+    },
+    {
+      "file": "views\\Page\\Assessment\\Assessment.vue",
+      "existingKeys": [
+        "assessment.send",
+        "assessment.template",
+        "assessment.allquestionsrequired",
+        "assessment.percentage",
+        "assessment.enteravaluebetween1%and100%",
+        "assessment.specificquestionsrequired",
+        "assessment.name",
+        "assessment.template",
+        "assessment.users",
+        "assessment.send",
+        "assessment.name",
+        "assessment.instructions",
+        "assessment.template",
+        "assessment.users",
+        "",
+        "assessment.question"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Assessment\\AssessmentForm.vue",
+      "existingKeys": [
+        "assessment.assessment",
+        "assessment.enter_answer",
+        "assessment.enter_answer",
+        "assessment.submit",
+        "assessment.email",
+        "assessment.name",
+        "Name",
+        "Institutions",
+        "Template",
+        "Users",
+        "",
+        "Question"
+      ],
+      "newKeys": [
+        "assessmentform.10003",
+        "assessmentform.please_complete_all_required_fields_marked_with_an_asterisk_"
+      ]
+    },
+    {
+      "file": "views\\Page\\AssessmentsResults\\AssessmentsResults.vue",
+      "existingKeys": [
+        "assessmentsresults.Assessment Name",
+        "assessmentsresults.User",
+        "assessmentsresults.Completion Percentage",
+        "assessmentsresults.Status",
+        "assessmentsresults.Sent Date",
+        "assessmentsresults.Approval Status ",
+        "assessmentsresultsname",
+        "assessmentsresultsemail",
+        "assessmentsresults.my_options",
+        "assessmentsresults.accept_terms_and_conditions",
+        "assessmentsresults.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\AssessmentsResults\\QuestionnaireResults.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "questionnaireresults.actions",
+        "questionnaireresults.submission_date",
+        "questionnaireresults.inherent_risk_current",
+        "questionnaireresults.responsible_party",
+        "questionnaireresults.status",
+        "questionnaireresults.category",
+        "questionnaireresults.description",
+        "questionnaireresults.subject",
+        "questionnaireresults.risk_number",
+        "questionnaireresults.risks",
+        "questionnaireresults.desired_control_maturity",
+        "questionnaireresults.current_control_maturity",
+        "questionnaireresults.associated_frameworks",
+        "questionnaireresults.maturity_assessment",
+        "questionnaireresults.control",
+        "questionnaireresults.associated_controls",
+        "questionnaireresults.compliance_assessment",
+        "questionnaireresults.no_risks_found",
+        "questionnaireresults.rejected_risks",
+        "questionnaireresults.added_risks",
+        "questionnaireresults.pending_risks",
+        "questionnaireresults.allrisks",
+        "questionnaireresults.total_number",
+        "questionnaireresults.analysis",
+        "questionnaireresults.view_file",
+        "questionnaireresults.no",
+        "questionnaireresults.yes",
+        "questionnaireresults.do_you_actively_manage_inventory_track_and_correct_all_software_on_the_network_so_that_only_authorized_software_is_installed_and_can_execute_and_that_unauthorized_and_unmanaged_software",
+        "questionnaireresults.assetname",
+        "questionnaireresults.risk_assessment",
+        "questionnaireresults.questionnaire_responses",
+        "questionnaireresults.test"
+      ]
+    },
+    {
+      "file": "views\\Page\\AssessmentTemplate\\AddQuestions.vue",
+      "existingKeys": [
+        "question.question",
+        "question.compliance",
+        "question.hasMaturity",
+        "question.type",
+        "question.hasFileAttachment",
+        "question.hasRisk",
+        "Questions"
+      ],
+      "newKeys": [
+        "addquestions.fillin_blank",
+        "addquestions.multiple_choice",
+        "addquestions.single_choice",
+        "addquestions.are_you_sure_you_want_to_unlink_this_question_"
+      ]
+    },
+    {
+      "file": "views\\Page\\AssessmentTemplate\\AssessmentTemplate.vue",
+      "existingKeys": [
+        "assessmenttemplate.questions",
+        "assessmenttemplate.name",
+        "assessmenttemplate.created_at",
+        "assessmenttemplate.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Asset\\Asset.vue",
+      "existingKeys": [
+        "asset.risk_mngt",
+        "asset.asset_mngt",
+        "asset.assets",
+        "asset.asset",
+        "asset.ip_address",
+        "asset.enter_ip_address",
+        "asset.category",
+        "common.all",
+        "asset.location",
+        "common.all",
+        "asset.region",
+        "common.all",
+        "asset.asset_value",
+        "common.calculate",
+        "asset.asset_value_calculation",
+        "asset.confidentiality",
+        "asset.integrity",
+        "asset.availability",
+        "common.save",
+        "asset.name",
+        "asset.ip_address",
+        "asset.asset_value",
+        "asset.category",
+        "asset.location",
+        "asset.operating_system",
+        "asset.environment_category",
+        "asset.owner",
+        "asset.model",
+        "asset.region",
+        "asset.name",
+        "asset.enter_name",
+        "asset.tags",
+        "asset.enter_tags",
+        "asset.vendor_name",
+        "asset.enter_vendor_name",
+        "asset.ip_address",
+        "asset.enter_ip_address",
+        "asset.subnet_mask",
+        "asset.enter_subnet_mask",
+        "asset.mac_address",
+        "asset.enter_mac_address",
+        "asset.firmware",
+        "asset.enter_firmware",
+        "asset.url",
+        "asset.enter_url",
+        "asset.type",
+        "asset.physical",
+        "asset.virtual",
+        "asset.select_type",
+        "common.start_date",
+        "common.select_start_date",
+        "common.end_date",
+        "common.select_end_date",
+        "asset.alert_period",
+        "asset.enter_alert_period",
+        "asset.operating_system",
+        "asset.select_os",
+        "asset.os_version",
+        "asset.enter_os_version",
+        "asset.model",
+        "asset.enter_model",
+        "asset.location",
+        "asset.select_location",
+        "asset.rack_location",
+        "asset.enter_rack_location",
+        "asset.city",
+        "asset.enter_city",
+        "asset.vlan",
+        "asset.enter_vlan",
+        "asset.project_vlan",
+        "asset.enter_project_vlan",
+        "asset.asset_value",
+        "asset.enter_asset_value",
+        "asset.asset_category",
+        "asset.select_asset_category",
+        "asset.asset_environment_category",
+        "asset.select_environment_category",
+        "asset.host_region",
+        "asset.select_host_region",
+        "asset.owner",
+        "asset.select_owner",
+        "asset.teams",
+        "asset.select_teams",
+        "asset.details",
+        "asset.enter_details"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\assetCategory\\assetCategory.vue",
+      "existingKeys": [
+        "assetcategory.name",
+        "assetcategory.date",
+        "assetcategoryname"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\AssetEnvironmentCategory\\AssetEnvironmentCategory.vue",
+      "existingKeys": [
+        "assetenvironmentcategory.name",
+        "assetenvironmentcategory.created at",
+        "assetenvironmentcategory.name",
+        "assetenvironmentcategory.Please enter name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\AssetGroup\\AssetGroup.vue",
+      "existingKeys": [
+        "assetgroup.name",
+        "assetgroup.assets",
+        "assetgroup.name",
+        "assetgroup.assets"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\AssetValuation\\AssetValuation.vue",
+      "existingKeys": [
+        "assetvaluation.name",
+        "assetvaluation.min_value",
+        "assetvaluation.max_value",
+        "assetvaluation.name",
+        "assetvaluation.Please enter name",
+        "assetvaluation.min_value",
+        "assetvaluation.Please enter min value",
+        "assetvaluation.max_value",
+        "assetvaluation.Please enter max value"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\assetValueLevel\\assetValueLevel.vue",
+      "existingKeys": [
+        "assetvaluelevel.level",
+        "assetvaluelevel.value",
+        "assetvaluelevel.level",
+        "assetvaluelevel.value"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\AssetValueQuestion\\AssetValueQuestion.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "assetvaluequestion.add_answer_",
+        "assetvaluequestion.add_question_",
+        "assetvaluequestion.update",
+        "assetvaluequestion.save",
+        "assetvaluequestion.answers_to_all_questions",
+        "assetvaluequestion.questions",
+        "assetvaluequestion.add_",
+        "assetvaluequestion.no",
+        "assetvaluequestion.yes",
+        "assetvaluequestion.availability",
+        "assetvaluequestion.integrity",
+        "assetvaluequestion.confidentiality"
+      ]
+    },
+    {
+      "file": "views\\Page\\AuditPlan\\AuditPlan.vue",
+      "existingKeys": [
+        "auditplan.Sedation",
+        "auditplan.Basic Information",
+        "auditplan.Assign Users",
+        "auditplan.Assign Teams",
+        "auditplan.Schedule",
+        "auditplan.Cancel",
+        "auditplan.Open",
+        "auditplan.Close",
+        "auditplan.Export",
+        "auditplan.Proceed Anyway",
+        "auditplan.audit_name",
+        "auditplan.Regulator",
+        "auditplan.Framework",
+        "auditplan.Auditer",
+        "auditplan.TypeOfResponsible",
+        "auditplan.Assistant",
+        "auditplan.Start-Date",
+        "auditplan.Due-Date",
+        "auditplan.PeriodicalTime",
+        "auditplan.AuditNumberInitiated"
+      ],
+      "newKeys": [
+        "auditplan.error",
+        "auditplan.open_controls_detected"
+      ]
+    },
+    {
+      "file": "views\\Page\\AuditPlan\\SedationModal.vue",
+      "existingKeys": [
+        "auditpolicycompliance.Sedation",
+        "auditpolicycompliance.Domains and Families:",
+        "auditplan.Loading...",
+        "auditplan.Loading...",
+        "auditplan.Saving...",
+        "auditplan.Save changes"
+      ],
+      "newKeys": [
+        "sedationmodal.cancel",
+        "sedationmodal.error",
+        "sedationmodal.success"
+      ]
+    },
+    {
+      "file": "views\\Page\\AuditPolicyCompliance\\AuditPolicyCompliance.vue",
+      "existingKeys": [
+        "auditpolicycompliance.Basic Information",
+        "auditpolicycompliance.Schedule & Timeline",
+        "auditpolicycompliance.Requires File Upload",
+        "auditpolicycompliance.Team Assignments",
+        "auditpolicycompliance.All fields marked with * are required",
+        "auditpolicycompliance.No auditees available",
+        "auditpolicycompliance.There are no auditees assigned to this audit.",
+        "auditpolicycompliance.Audit-Name",
+        "auditpolicycompliance.Document-Type",
+        "auditpolicycompliance.Document",
+        "auditpolicycompliance.Auditer",
+        "auditpolicycompliance.Auditees",
+        "auditpolicycompliance.Start-Date",
+        "auditpolicycompliance.Due-Date",
+        "auditpolicycompliance.PeriodicalTime",
+        "auditpolicycompliance.Audit-Name",
+        "auditpolicycompliance.Document-Type",
+        "auditpolicycompliance.Document",
+        "auditpolicycompliance.Auditer",
+        "auditpolicycompliance.Auditees",
+        "auditpolicycompliance.Start-Date",
+        "auditpolicycompliance.Due-Date",
+        "auditpolicycompliance.PeriodicalTime"
+      ],
+      "newKeys": [
+        "auditpolicycompliance.error"
+      ]
+    },
+    {
+      "file": "views\\Page\\AuditPolicyCompliance\\ComplianceResultAudit.vue",
+      "existingKeys": [
+        "auditpolicycompliance.Approve All.",
+        "auditpolicycompliance.Calculate Total.",
+        "auditpolicycompliance.Send Results.",
+        "auditpolicycompliance.Export Data.",
+        "auditpolicycompliance.Import Data.",
+        "auditpolicycompliance.policies found for this audit",
+        "auditpolicycompliance.No Policies Found",
+        "auditpolicycompliance.There are no policies associated with this audit.",
+        "auditpolicycompliance.Loading policies...",
+        "auditpolicycompliance.Upload Evidence",
+        "auditpolicycompliance.Attach supporting files",
+        "auditpolicycompliance.Update Status",
+        "auditpolicycompliance.Change compliance status",
+        "auditpolicycompliance.Add Comment",
+        "auditpolicycompliance.Provide feedback",
+        "auditpolicycompliance.Approve",
+        "auditpolicycompliance..Mark ascompliant",
+        "auditpolicycompliance.Reject",
+        "auditpolicycompliance.Mark as non-compliant",
+        "auditpolicycompliance.Loading audit data...",
+        "auditpolicycompliance.Updating...",
+        "auditpolicycompliance.Update Status"
+      ],
+      "newKeys": [
+        "complianceresultaudit.total_status",
+        "complianceresultaudit.mdichevronright",
+        "complianceresultaudit.due_date",
+        "complianceresultaudit.mdicalendaralert",
+        "complianceresultaudit.started",
+        "complianceresultaudit.mdicalendarstart",
+        "complianceresultaudit.document",
+        "complianceresultaudit.mdifiledocument",
+        "complianceresultaudit.category",
+        "complianceresultaudit.mdifolderstar",
+        "complianceresultaudit.audit",
+        "complianceresultaudit.mdiclipboardcheck",
+        "complianceresultaudit.error",
+        "complianceresultaudit.success",
+        "complianceresultaudit.update_failed",
+        "complianceresultaudit.are_you_sure",
+        "complianceresultaudit.compliance_history",
+        "complianceresultaudit.view_policy",
+        "complianceresultaudit.actions",
+        "complianceresultaudit.last_updated",
+        "complianceresultaudit.auditer_status",
+        "complianceresultaudit.auditee_status",
+        "complianceresultaudit.pending_status",
+        "complianceresultaudit.policy_name"
+      ]
+    },
+    {
+      "file": "views\\Page\\AuditPolicyCompliance\\EvidenceModal.vue",
+      "existingKeys": [
+        "auditpolicycompliance.Evidence Vault",
+        "auditpolicycompliance.Secure compliance documentation management",
+        "auditpolicycompliance.Evidence Repository",
+        "auditpolicycompliance.Refresh",
+        "auditpolicycompliance.Loading evidence...",
+        "auditpolicycompliance.No Evidence Submitted",
+        "auditpolicycompliance.Start by uploading your first compliance document",
+        "auditpolicycompliance.Add Evidence",
+        "auditpolicycompliance.Cancel",
+        "auditpolicycompliance.Confirm Deletion",
+        "auditpolicycompliance.This action is irreversible",
+        "auditpolicycompliance.Are you sure you want to permanently delete this evidence? All associated data will be lost.",
+        "auditpolicycompliance.Keep Evidence",
+        "auditpolicycompliance.Delete Permanently"
+      ],
+      "newKeys": [
+        "evidencemodal.mdifiledocument",
+        "evidencemodal.requirement_name",
+        "evidencemodal.mdiclose",
+        "evidencemodal.mdishieldcheck",
+        "evidencemodal.error",
+        "evidencemodal.success",
+        "evidencemodal.actions",
+        "evidencemodal.updated_at",
+        "evidencemodal.description",
+        "evidencemodal.name"
+      ]
+    },
+    {
+      "file": "views\\Page\\AuditPolicyCompliance\\ImportAuditResult.vue",
+      "existingKeys": [
+        "auditpolicycompliance.Upload Audit Results",
+        "auditpolicycompliance.Import audit compliance data from Excel/CSV",
+        "auditpolicycompliance.Supported formats: .xlsx, .xls, .csv (Max size: 5MB)",
+        "auditpolicycompliance.Cancel"
+      ],
+      "newKeys": [
+        "importauditresult.mdiclose",
+        "importauditresult.upload_failed",
+        "importauditresult.success"
+      ]
+    },
+    {
+      "file": "views\\Page\\AuditPolicyComplianceResult\\AuditPolicyComplianceResult.vue",
+      "existingKeys": [
+        "auditpolicycomplianceresult.email",
+        "auditpolicycomplianceresult.name",
+        "auditpolicycomplianceresultname",
+        "auditpolicycomplianceresultemail",
+        "auditpolicycomplianceresult.my_options",
+        "auditpolicycomplianceresult.accept_terms_and_conditions",
+        "auditpolicycomplianceresult.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\AuditRemidation\\AuditRemidation.vue",
+      "existingKeys": [
+        "auditRemidation.ResponsibleUser",
+        "auditRemidation.ControlAuditName",
+        "auditRemidation.CorrectiveActionPlan",
+        "auditRemidation.budgetary",
+        "auditRemidation.status",
+        "auditRemidation.Due-Date",
+        "auditRemidation.comments",
+        "auditRemidation.Created_at",
+        "auditRemidation.Due Date",
+        "auditRemidation.Status",
+        "auditRemidation.Approved",
+        "auditRemidation.Rejected",
+        "auditRemidation.Budgetary",
+        "auditRemidation.Corrective Action Plan",
+        "auditRemidation.Remediation Comments"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Auth\\ForgotPassword.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "forgotpassword.sign_in",
+        "forgotpassword.remember_your_password",
+        "forgotpassword.reset_password",
+        "forgotpassword.confirm_password",
+        "forgotpassword.new_password",
+        "forgotpassword.create_new_password",
+        "forgotpassword.resend",
+        "forgotpassword.didnt_receive_the_otp",
+        "forgotpassword.enter_otp",
+        "forgotpassword.send_otp",
+        "forgotpassword.email_address",
+        "forgotpassword.enter_your_email_address_to_receive_an_otp_and_reset_your_password",
+        "forgotpassword.reset_your_password"
+      ]
+    },
+    {
+      "file": "views\\Page\\Auth\\login.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "login.all_rights_reserved",
+        "login.cyber_mode",
+        "login.forgot_password",
+        "login.sign_in",
+        "login.remember_me",
+        "login.password",
+        "login.email_or_phone",
+        "login.please_login_to_your_account",
+        "login.welcome_to_cyber_mode"
+      ]
+    },
+    {
+      "file": "views\\Page\\Campaign\\Campaign.vue",
+      "existingKeys": [
+        "campaign.Total Campaigns",
+        "campaign.Pending Campaigns",
+        "campaign.Approved Campaigns",
+        "campaign.Completed Campaigns",
+        "campaign.Ondemand Campaigns",
+        "campaign.Schedualed Campaigns",
+        "campaign.All Campaigns",
+        "campaign.Simulated Phishing",
+        "campaign.Security Awareness",
+        "campaign.Simulated Phishing & Security Awareness",
+        "campaign.users",
+        "campaign.users",
+        "campaign.modules",
+        "campaign.modules",
+        "campaign.templates",
+        "campaign.templates",
+        "campaign.modules",
+        "campaign.Send",
+        "campaign.Approve",
+        "campaign.Reject",
+        "campaign.View",
+        "campaign.Create Campaign",
+        "campaign.Name",
+        "campaign.type",
+        "campaign.Available Groups",
+        "campaign.Selected Groups",
+        "campaign.Filter Employees",
+        "campaign.Filter Selected Employees",
+        "campaign.Full Name",
+        "campaign.Email",
+        "campaign.Select",
+        "campaign.No users found in these groups",
+        "campaign.Confirm Selection",
+        "campaign.Select Phishing Templates",
+        "campaign.Phishing Delivery Schedule",
+        "campaign.Deliver Immediately",
+        "campaign.Setup Schedule",
+        "campaign.Schedule Later",
+        "campaign.Note",
+        "campaign.This schedule is used only for email delivery We will capture employee interactions and assign trainings as long as a campaign remains active isnt updated or deleted",
+        "campaign.Schedule Date From",
+        "campaign.Schedule Date To",
+        "campaign.Campaign Summary",
+        "campaign.Basic Information",
+        "campaign.Campaign Name",
+        "campaign.Campaign Type",
+        "campaign.Delivery Schedule Type",
+        "campaign.Schedule Details",
+        "campaign.Start Date",
+        "campaign.End Date",
+        "campaign.Phishing Templates Details",
+        "campaign.Selected Templates",
+        "campaign.Selected Training Modules",
+        "campaign.Target Audience",
+        "campaign.Selected Groups",
+        "campaign.Selected Users",
+        "campaign.No users selected",
+        "campaign.Back",
+        "campaign.Submit",
+        "campaign.name",
+        "campaign.Available Groups",
+        "campaign.Selected Groups",
+        "campaign.Filter Employees",
+        "campaign.Filter Selected Employees",
+        "campaign.Full Name",
+        "campaign.Email",
+        "campaign.Select",
+        "campaign.No users found in these groups",
+        "campaign.Confirm Selection",
+        "campaign.Filter By Course",
+        "campaign.Filter By Level",
+        "campaign.Day Until Due",
+        "campaign.Select Training Modules",
+        "campaign.Campaign Summary",
+        "campaign.Basic Information",
+        "campaign.Campaign Name",
+        "campaign.Campaign Type",
+        "campaign.Delivery Schedule Type",
+        "campaign.Schedule Details",
+        "campaign.Start Date",
+        "campaign.End Date",
+        "campaign.Phishing Templates Details",
+        "campaign.Selected Templates",
+        "campaign.Selected Training Modules",
+        "campaign.Target Audience",
+        "campaign.Selected Groups",
+        "campaign.Selected Users",
+        "campaign.No users selected",
+        "campaign.Back",
+        "campaign.Next",
+        "campaign.Submit",
+        "campaign.Available Groups",
+        "campaign.Selected Groups",
+        "campaign.Filter Employees",
+        "campaign.Filter Selected Employees",
+        "campaign.Full Name",
+        "campaign.Email",
+        "campaign.Select",
+        "campaign.No users found in these groups",
+        "campaign.Confirm Selection",
+        "campaign.Select Phishing Templates",
+        "campaign.Phishing Delivery Schedule",
+        "campaign.Deliver Immediately",
+        "campaign.Setup Schedule",
+        "campaign.Schedule Later",
+        "campaign.Note",
+        "campaign.This schedule is used only for email delivery We will capture employee interactions and assign trainings as long as a campaign remains active isnt updated or deleted",
+        "campaign.Schedule Date From",
+        "campaign.Schedule Date To",
+        "campaign.Filter By Course",
+        "campaign.Filter By Level",
+        "campaign.Day Until Due",
+        "campaign.Select Training Modules",
+        "campaign.Campaign Summary",
+        "campaign.Basic Information",
+        "campaign.Campaign Name",
+        "campaign.Campaign Type",
+        "campaign.Delivery Schedule Type",
+        "campaign.Schedule Details",
+        "campaign.Start Date",
+        "campaign.End Date",
+        "campaign.Phishing Templates Details",
+        "campaign.Selected Templates",
+        "campaign.Selected Training Modules",
+        "campaign.Target Audience",
+        "campaign.Selected Groups",
+        "campaign.Selected Users",
+        "campaign.No users selected",
+        "campaign.Back",
+        "campaign.Next",
+        "campaign.Submit",
+        "campaign.Campaign Details",
+        "campaign.Campaign Details",
+        "campaign.Basic Information",
+        "campaign.Campaign Name",
+        "campaign.Campaign Type",
+        "campaign.Delivery Schedule Type",
+        "campaign.Rejected Comment",
+        "campaign.Schedule Details",
+        "campaign.Start Date",
+        "campaign.End Date",
+        "campaign.Phishing Templates Details",
+        "campaign.Selected Templates",
+        "campaign.Selected Training Modules",
+        "campaign.Target Audience",
+        "campaign.Selected Users",
+        "campaign.No users selected",
+        "campaign.Reject Comment",
+        "campaign.Comment",
+        "campaign.Submit",
+        "campaign.name",
+        "campaign.type",
+        "campaign.deliveryStatus",
+        "campaign.dateFrom",
+        "campaign.dateTo",
+        "campaign.status"
+      ],
+      "newKeys": [
+        "campaign.simulated_security_both",
+        "campaign.security_awareness",
+        "campaign.simulated_phishing",
+        "campaign.are_you_sure",
+        "campaign.error",
+        "campaign.success"
+      ]
+    },
+    {
+      "file": "views\\Page\\CampaignSetting\\CampaignSetting.vue",
+      "existingKeys": [
+        "campaignsetting.Type",
+        "campaignsetting.securityAwarenessRate",
+        "campaignsetting.securityAwarenessRate",
+        "campaignsetting.Please Enter Security Awareness Rate",
+        "campaignsetting.type"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\CampaignStatistics\\CampaignStatistics.vue",
+      "existingKeys": [
+        "campaignstatisticsname",
+        "campaignstatisticsname",
+        "campaignstatisticsemail",
+        "campaignstatistics.my_options",
+        "campaignstatistics.accept_terms_and_conditions",
+        "campaignstatistics.description"
+      ],
+      "newKeys": [
+        "campaignstatistics.rate",
+        "campaignstatistics.submit_form_at",
+        "campaignstatistics.click_link_at",
+        "campaignstatistics.downloaded_at",
+        "campaignstatistics.opened_at",
+        "campaignstatistics.received_at",
+        "campaignstatistics.user_name",
+        "campaignstatistics.templete_name",
+        "campaignstatistics.campaignname"
+      ]
+    },
+    {
+      "file": "views\\Page\\Category\\Category.vue",
+      "existingKeys": [
+        "governance.governance",
+        "task.task_mngt",
+        "category.categories",
+        "category.category",
+        "category.name",
+        "category.description",
+        "category.name",
+        "category.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\CenterPolicy\\CenterPolicy.vue",
+      "existingKeys": [
+        "centerpolicy.policy-name",
+        "centerpolicy.document"
+      ],
+      "newKeys": [
+        "centerpolicy.error",
+        "centerpolicy.successfully"
+      ]
+    },
+    {
+      "file": "views\\Page\\CertifiateTemplete\\CertifiateTemplete.vue",
+      "existingKeys": [
+        "certifiatetemplete.View Users",
+        "certifiatetemplete.name",
+        "certifiatetemplete.Please enter template name",
+        "certifiatetemplete.course",
+        "certifiatetemplete.Select Course",
+        "certifiatetemplete.level",
+        "certifiatetemplete.Select Level",
+        "certifiatetemplete.module",
+        "certifiatetemplete.Select Module",
+        "certifiatetemplete.text",
+        "certifiatetemplete.background",
+        "certifiatetemplete.Leave empty to keep existing background image",
+        "certifiatetemplete.Next",
+        "certifiatetemplete.Cancel",
+        "certifiatetemplete.Elements Control",
+        "certifiatetemplete.Click eye icon to toggle visibility",
+        "certifiatetemplete.QR Code",
+        "certifiatetemplete.Save Template",
+        "certifiatetemplete.Back to Edit",
+        "certifiatetemplete.Reset Positions",
+        "certifiatetemplete.Certificate Preview",
+        "certifiatetemplete.Close Preview",
+        "certifiatetemplete.Users who received this certificate",
+        "certifiatetemplete.User Name",
+        "certifiatetemplete.Phone",
+        "certifiatetemplete.Certificate",
+        "certifiatetemplete.View Certificate",
+        "certifiatetemplete.No users have received this certificate yet",
+        "certifiatetemplete.Close",
+        "certifiatetemplete.name",
+        "certifiatetemplete.Users",
+        "processing",
+        "please_wait",
+        "success",
+        "Template updated successfully",
+        "Template created successfully",
+        "error",
+        "Failed to save template"
+      ],
+      "newKeys": [
+        "certifiatetemplete.failed_to_load_modules",
+        "certifiatetemplete.loading_modules",
+        "certifiatetemplete.failed_to_load_levels",
+        "certifiatetemplete.loading_levels"
+      ]
+    },
+    {
+      "file": "views\\Page\\ChangeRequest\\ChangeRequest.vue",
+      "existingKeys": [
+        "changerequest.title",
+        "changerequest.description",
+        "changerequest.createdBy",
+        "changerequest.file",
+        "changerequest.status",
+        "changerequest.reason",
+        "changerequest.created_at",
+        "changerequest.name",
+        "changerequest.description",
+        "changerequest.file"
+      ],
+      "newKeys": [
+        "changerequest.created_by",
+        "changerequest.status"
+      ]
+    },
+    {
+      "file": "views\\Page\\ChangeRequest\\ChangeRequestResponsibleDepartment.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "changerequestresponsibledepartment.update",
+        "changerequestresponsibledepartment.change_requests_responsible_department"
+      ]
+    },
+    {
+      "file": "views\\Page\\Color\\Color.vue",
+      "existingKeys": [
+        "color.hexcode",
+        "color.name",
+        "color.name",
+        "color.hexcode"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Control\\Control.vue",
+      "existingKeys": [
+        "control.All",
+        "control.All",
+        "control.All",
+        "control.All",
+        "control.Not Applicable",
+        "control.Not Implemented",
+        "control.Implemented",
+        "control.Partially Implemented",
+        "control.Requirements",
+        "control.Edit",
+        "control.Delete",
+        "control.framework",
+        "control.domain",
+        "control.family",
+        "controls.parent",
+        "control.Add Requirement",
+        "control.Select a requirement type",
+        "control.Type 1",
+        "control.Type 2",
+        "control.Type 3",
+        "control.name",
+        "control.Description",
+        "control.Responsible Type",
+        "control.Team",
+        "control.User",
+        "control.Department Manager",
+        "control.Select",
+        "control.Submit",
+        "control.Add New Control Mapping",
+        "control.Control",
+        "control.Framework",
+        "control.Action",
+        "control.No Data Found",
+        "control.Add Mapping",
+        "control.Select Framework",
+        "control.Control",
+        "control.Select Control",
+        "control.Submit",
+        "control.name",
+        "control.description",
+        "control.framework",
+        "control.domain",
+        "control.subdomain",
+        "control.Control Status",
+        "control.requirement",
+        "control.short_name",
+        "control.long name",
+        "control.control number",
+        "control.framework",
+        "control.domain",
+        "control.family",
+        "control.control class",
+        "control.control priority",
+        "control.control-owner",
+        "control.control-maturity",
+        "control.control_type",
+        "control.control_phase",
+        "control.mitigation percent",
+        "control.desired maturity",
+        "control.parent",
+        "control.approximate time",
+        "control.description",
+        "control.supplemental guidance",
+        "control.test steps",
+        "control.expected results"
+      ],
+      "newKeys": [
+        "control.status",
+        "control.subdomain",
+        "control.domain",
+        "control.framework",
+        "control.due_date",
+        "control.expiration_date",
+        "control.responsible",
+        "control.description",
+        "control.name",
+        "control.mapping_control_id",
+        "control.control_id"
+      ]
+    },
+    {
+      "file": "views\\Page\\Control\\ViewRequirements.vue",
+      "existingKeys": [
+        "controlrequirement.Frameworks",
+        "controlrequirement.Responsabile",
+        "controlrequirement.Users",
+        "controlrequirement.department_manager",
+        "controlrequirement.Team",
+        "Available Requirements",
+        "Name",
+        "Description",
+        "Expiration Period",
+        "No Available Requirements",
+        "Showing",
+        "requirements",
+        "link Selected Requirements",
+        "controlrequirement.users",
+        "controlrequirement.department_managers",
+        "controlrequirement.teams",
+        "name",
+        "description",
+        "frameworks",
+        "controls",
+        "created_at",
+        "due_date",
+        "expire_days",
+        "responsible_type",
+        "responsible",
+        "Name",
+        "Description",
+        "controlrequirement.due_date",
+        "controlrequirement.expire_days",
+        "error_loading_requirements"
+      ],
+      "newKeys": [
+        "viewrequirements.are_you_sure_you_want_to_unlink_this_requirement_"
+      ]
+    },
+    {
+      "file": "views\\Page\\ControlType\\ControlType.vue",
+      "existingKeys": [
+        "Name",
+        "Created_at",
+        "Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Course\\Course.vue",
+      "existingKeys": [
+        "course.addcourse",
+        "course.loadingcourses...",
+        "course.mandatory",
+        "course.optional",
+        "course.campaign",
+        "course.levels",
+        "course.trainingmodules",
+        "course.questions",
+        "course.statements",
+        "course.daystocomplete",
+        "course.lastupdateddate",
+        "course.managecourse",
+        "course.addcourse",
+        "course.name",
+        "course.description",
+        "course.coverimage",
+        "course.courseclassification",
+        "course.mandatory",
+        "course.campaign",
+        "course.optional",
+        "course.departments",
+        "course.all",
+        "course.teams",
+        "course.all",
+        "course.users",
+        "course.all",
+        "course.daystocomplete",
+        "course.disablemenu",
+        "course.save",
+        "course.managecourse",
+        "course.courselevels",
+        "course.addlevel",
+        "course.level",
+        "course.addtrainingmodule",
+        "course.editlevel",
+        "course.deletelevel",
+        "course.coursedetails",
+        "course.name",
+        "course.description",
+        "course.coverimage",
+        "course.courseclassification",
+        "course.mandatory",
+        "course.optional",
+        "course.campaign",
+        "course.departments",
+        "course.teams",
+        "course.users",
+        "course.daystocomplete",
+        "course.disablemenu",
+        "course.updatecourse",
+        "course.leveltitle",
+        "course.levelorder",
+        "course.levelclassification",
+        "course.mandatory",
+        "course.campaign",
+        "course.optional",
+        "course.departments",
+        "course.teams",
+        "course.users",
+        "course.daystocomplete",
+        "course.disablemenu",
+        "course.addnewtrainingmodule",
+        "course.name",
+        "course.passingscore",
+        "course.moduleorder",
+        "course.coverimage",
+        "course.Training_Questions_and_Statements",
+        "course.statement",
+        "course.statement",
+        "course.statement",
+        "course.content",
+        "course.content",
+        "course.additionalcontent",
+        "course.selecttype",
+        "course.embeddedimage",
+        "course.embeddedvideo",
+        "course.embeddedpdf",
+        "course.question",
+        "course.question",
+        "course.question",
+        "course.questiontype",
+        "course.singlechoice",
+        "course.trueorfalse",
+        "course.correctanswer",
+        "course.true",
+        "course.false",
+        "course.options",
+        "course.description",
+        "course.description",
+        "course.addquestion",
+        "course.addstatement",
+        "course.save"
+      ],
+      "newKeys": [
+        "course.compliance_mapping",
+        "course.completion_time"
+      ]
+    },
+    {
+      "file": "views\\Page\\Department\\Department.vue",
+      "existingKeys": [
+        "department.type",
+        "department.relation",
+        "department.manager",
+        "department.view",
+        "department.color",
+        "department.select_color",
+        "department.manager",
+        "department.select_manager",
+        "department.view",
+        "department.name",
+        "department.type",
+        "department.parent",
+        "department.children",
+        "department.manager",
+        "department.actual_number_of_employees",
+        "department.number_of_employees",
+        "department.code",
+        "department.vision",
+        "department.message",
+        "department.mission",
+        "department.objectives",
+        "department.responsibilities",
+        "department.type",
+        "department.name",
+        "department.code",
+        "department.parent",
+        "department.children",
+        "department.number_of_employees",
+        "department.actual_number_of_employees",
+        "department.manager",
+        "department.created",
+        "department.name",
+        "department.code",
+        "department.parent_id",
+        "department.manager_id",
+        "department.job_ids",
+        "department.number_of_employees",
+        "department.vision",
+        "department.message",
+        "department.mission",
+        "department.objectives",
+        "department.responsibilities",
+        "department.job_ids"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Document\\Document.vue",
+      "existingKeys": [
+        "controlrequirement.Frameworks",
+        "document.name",
+        "documentname",
+        "document.file",
+        "document.expiration",
+        "document.filePreview",
+        "document.category",
+        "document.framework",
+        "document.teams",
+        "document.stakeholders",
+        "document.owner",
+        "document.content",
+        "document.clauses"
+      ],
+      "newKeys": [
+        "document.new_document",
+        "document.type",
+        "document.name",
+        "document.new_category",
+        "document.categories",
+        "document.others",
+        "document.policy",
+        "document.documentations_categories",
+        "document.12_increase_from_last_month",
+        "document.approved_documents",
+        "document.in_review_documents",
+        "document.draft_documents",
+        "document.total_documents",
+        "document.creation_date",
+        "document.transitions",
+        "document.teams",
+        "document.controls",
+        "document.frameworks"
+      ]
+    },
+    {
+      "file": "views\\Page\\DocumentCategory\\DocumentCategory.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "documentcategory.cancel",
+        "documentcategory.select",
+        "documentcategory.workflow",
+        "documentcategory.workflow_category",
+        "documentcategory.other",
+        "documentcategory.procedure",
+        "documentcategory.policy",
+        "documentcategory.standard",
+        "documentcategory.type",
+        "documentcategory.name"
+      ]
+    },
+    {
+      "file": "views\\Page\\Domain\\Domain.vue",
+      "existingKeys": [
+        "domain.Add New Domain",
+        "domain.Domain Hierarchy",
+        "domain.Loading...",
+        "domain.name",
+        "domain.order",
+        "domain.domain",
+        "domain.subdomain",
+        "domain.domainname",
+        "domain.order",
+        "domain.my_options"
+      ],
+      "newKeys": [
+        "domain.customswaltitle"
+      ]
+    },
+    {
+      "file": "views\\Page\\EmailConfig\\EmailConfig.vue",
+      "existingKeys": [
+        "emailconfig.email_type",
+        "emailconfig.smtp_username",
+        "emailconfig.smtp_from_username",
+        "emailconfig.smtp_username",
+        "emailconfig.smtp_server",
+        "emailconfig.smtp_port",
+        "emailconfig.ssl_tls",
+        "emailconfig.SMTP",
+        "emailconfig.SMTPUserName",
+        "emailconfig.SmtpFromUsername",
+        "emailconfig.SMTPPassword",
+        "emailconfig.SMTPServer",
+        "emailconfig.SMTPPort",
+        "emailconfig.SMTPSecurity"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Errors\\401.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "401.support_team",
+        "401.if_you_believe_you_should_have_access_to_this_page_please_contact_your_system_administrator_or",
+        "401.return_to_dashboard",
+        "401.go_back",
+        "401.you_dont_have_permission_to_access_this_resource_please_make_sure_you_have_the_necessary_access_rights",
+        "401.unauthorized_access"
+      ]
+    },
+    {
+      "file": "views\\Page\\Errors\\404.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "404.return_to_dashboard",
+        "404.go_back",
+        "404.the_page_you_are_looking_for_doesnt_exist_or_has_been_moved",
+        "404.page_not_found"
+      ]
+    },
+    {
+      "file": "views\\Page\\Evidence\\Evidence.vue",
+      "existingKeys": [
+        "evidence.email",
+        "evidence.name",
+        "evidencename",
+        "evidenceemail",
+        "evidence.my_options",
+        "evidence.accept_terms_and_conditions",
+        "evidence.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Exception\\Exception.vue",
+      "existingKeys": [
+        "exception.statistics",
+        "exception.policyexceptions",
+        "exception.controlexceptions",
+        "exception.riskexceptions",
+        "exception.policyexception",
+        "exception.controlexception",
+        "exception.riskexception",
+        "exception.unapprovedexception",
+        "exception.days",
+        "exception.policy",
+        "exception.risk",
+        "exception.control",
+        "exception.overview",
+        "exception.changestatus",
+        "exception.delete",
+        "exception.policy",
+        "exception.risk",
+        "exception.regulator",
+        "exception.framework",
+        "exception.control",
+        "exception.exceptionapproval",
+        "exception.action",
+        "exception.selectaction",
+        "exception.accept",
+        "exception.reject",
+        "exception.rejectionreason",
+        "exception.save",
+        "exception.exceptionname",
+        "exception.description",
+        "exception.status",
+        "exception.pending",
+        "exception.rejected",
+        "exception.approved",
+        "exception.exceptiontype",
+        "exception.policyexception",
+        "exception.riskexception",
+        "exception.controlexception",
+        "exception.exceptionduration",
+        "exception.days",
+        "exception.duedate",
+        "exception.stakeholders",
+        "exception.rejectionreason",
+        "exception.createdat",
+        "exception.lastupdate",
+        "exception.name",
+        "exception.requestor",
+        "exception.duration",
+        "exception.type",
+        "exception.status",
+        "exception.name",
+        "exception.type",
+        "",
+        "",
+        "exception.regulator",
+        "exception.framework",
+        "exception.control",
+        "exception.stakeholders",
+        "exception.duration",
+        "exception.description",
+        "exception.justification"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ExceptionSetting\\ExceptionSetting.vue",
+      "existingKeys": [
+        "exceptionsetting.Type",
+        "exceptionsetting.Policy Acceptor Type",
+        "exceptionsetting.Owner",
+        "exceptionsetting.User",
+        "exceptionsetting.Policy Acceptor",
+        "exceptionsetting.Select",
+        "exceptionsetting.Risk Acceptor Type",
+        "exceptionsetting.Owner",
+        "exceptionsetting.User",
+        "exceptionsetting.Risk Acceptor",
+        "exceptionsetting.Select",
+        "exceptionsetting.control Acceptor Type",
+        "exceptionsetting.Owner",
+        "exceptionsetting.User",
+        "exceptionsetting.Control Acceptor",
+        "exceptionsetting.Select",
+        "exceptionsetting.policy_acceptor_type",
+        "exceptionsetting.policyAcceptor",
+        "exceptionsetting.risk_acceptor_type",
+        "exceptionsetting.riskAcceptor",
+        "exceptionsetting.control_acceptor_type",
+        "exceptionsetting.controlAcceptor",
+        "exceptionsetting.policy Acceptor Type",
+        "exceptionsetting.Select Options for Policy Acceptor Type",
+        "exceptionsetting.policy acceptor",
+        "exceptionsetting.Please select Policy Acceptor",
+        "exceptionsetting.risk Acceptor Type",
+        "exceptionsetting.Select Options for risk Acceptor Type",
+        "exceptionsetting.risk acceptor",
+        "exceptionsetting.Please select risk Acceptor",
+        "exceptionsetting.control Acceptor Type",
+        "exceptionsetting.Select Options for control Acceptor Type",
+        "exceptionsetting.control acceptor",
+        "exceptionsetting.Please select control Acceptor",
+        "exceptionsetting.type"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\FrameworkControlTestAudit\\componentResultAudit\\AuditInfoComponent.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "auditinfocomponent.mdialertcircle",
+        "auditinfocomponent.mdicalendarclock",
+        "auditinfocomponent.due_date",
+        "auditinfocomponent.mdicalendarstart",
+        "auditinfocomponent.start_date",
+        "auditinfocomponent.audit_schedule",
+        "auditinfocomponent.mdicalendarcheck",
+        "auditinfocomponent.mdiprogresscheck",
+        "auditinfocomponent.control_status",
+        "auditinfocomponent.mdiidentifier",
+        "auditinfocomponent.control_number",
+        "auditinfocomponent.control_description",
+        "auditinfocomponent.control_information",
+        "auditinfocomponent.mdiinformationoutline",
+        "auditinfocomponent.mdiupdate",
+        "auditinfocomponent.mdicalendarrange",
+        "auditinfocomponent.mdiclipboardtextoutline"
+      ]
+    },
+    {
+      "file": "views\\Page\\FrameworkControlTestAudit\\componentResultAudit\\AuditRemidationComponent.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "auditremidationcomponent.mdiaccount",
+        "auditremidationcomponent.assistants",
+        "auditremidationcomponent.summary",
+        "auditremidationcomponent.closed",
+        "auditremidationcomponent.open",
+        "auditremidationcomponent.select_status",
+        "auditremidationcomponent.audit_status",
+        "auditremidationcomponent.no",
+        "auditremidationcomponent.yes",
+        "auditremidationcomponent.remediation_needed",
+        "auditremidationcomponent.audit_remediation"
+      ]
+    },
+    {
+      "file": "views\\Page\\FrameworkControlTestAudit\\componentResultAudit\\AuditResultComponent.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "auditresultcomponent.update_status",
+        "auditresultcomponent.mdicheckcircle",
+        "auditresultcomponent.select_control_status",
+        "auditresultcomponent.control_implementation_status",
+        "auditresultcomponent.update_control_status",
+        "auditresultcomponent.mdiclipboardcheckoutline",
+        "auditresultcomponent.evidence_status",
+        "auditresultcomponent.mdichartpie",
+        "auditresultcomponent.requirement_status",
+        "auditresultcomponent.audit_results_overview",
+        "auditresultcomponent.error",
+        "auditresultcomponent.success"
+      ]
+    },
+    {
+      "file": "views\\Page\\FrameworkControlTestAudit\\componentResultAudit\\AuditTrailComponent.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "audittrailcomponent.no_specific_changes_detected",
+        "audittrailcomponent.removed",
+        "audittrailcomponent.added",
+        "audittrailcomponent.to",
+        "audittrailcomponent.from",
+        "audittrailcomponent.changes_made",
+        "audittrailcomponent.browser",
+        "audittrailcomponent.ip_address",
+        "audittrailcomponent.user",
+        "audittrailcomponent.action",
+        "audittrailcomponent.date",
+        "audittrailcomponent.basic_information",
+        "audittrailcomponent.mdiclose",
+        "audittrailcomponent.audit_log_details",
+        "audittrailcomponent.view_details",
+        "audittrailcomponent.no_changes_detected",
+        "audittrailcomponent.details",
+        "audittrailcomponent.changes",
+        "audittrailcomponent.changed_by",
+        "audittrailcomponent.audit_trail"
+      ]
+    },
+    {
+      "file": "views\\Page\\FrameworkControlTestAudit\\componentResultAudit\\mainStep.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "mainstep.audit_trail",
+        "mainstep.audit_remidation",
+        "mainstep.audit_result",
+        "mainstep.requirement_achievement",
+        "mainstep.audit_info"
+      ]
+    },
+    {
+      "file": "views\\Page\\FrameworkControlTestAudit\\componentResultAudit\\RequirementAchievementComponent.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "requirementachievementcomponent.mdidotsvertical",
+        "requirementachievementcomponent.na",
+        "requirementachievementcomponent.actions",
+        "requirementachievementcomponent.evidence_count",
+        "requirementachievementcomponent.status",
+        "requirementachievementcomponent.responsible",
+        "requirementachievementcomponent.due_date",
+        "requirementachievementcomponent.description",
+        "requirementachievementcomponent.requirement_name",
+        "requirementachievementcomponent.requirements_achievement",
+        "requirementachievementcomponent.mdiclipboardcheck",
+        "requirementachievementcomponent.add_requirement",
+        "requirementachievementcomponent.error",
+        "requirementachievementcomponent.success",
+        "requirementachievementcomponent.validation_error",
+        "requirementachievementcomponent.name"
+      ]
+    },
+    {
+      "file": "views\\Page\\FrameworkControlTestAudit\\FrameworkControlTestAudit.vue",
+      "existingKeys": [
+        "frameworkcontroltestaudit.AuditName",
+        "frameworkcontroltestaudit.Famework",
+        "frameworkcontroltestaudit.control",
+        "frameworkcontroltestaudit.ComplianceName",
+        "frameworkcontroltestaudit.AuditResult",
+        "frameworkcontroltestaudit.AuditNumber",
+        "frameworkcontroltestaudit.Tester",
+        "frameworkcontroltestaudit.IntiationDate",
+        "frameworkcontroltestaudit.LastDate",
+        "frameworkcontroltestaudit.NextDate",
+        "frameworkcontroltestaudit.AuditStatus"
+      ],
+      "newKeys": [
+        "frameworkcontroltestaudit.error",
+        "frameworkcontroltestaudit.successfully",
+        "frameworkcontroltestaudit.please_select_a_framework"
+      ]
+    },
+    {
+      "file": "views\\Page\\FrameworkInstall\\FrameworkInstall.vue",
+      "existingKeys": [
+        "frameworkinstall.Select Regulation and Framework",
+        "frameworkinstall.Regulation",
+        "frameworkinstall.Select Regulation",
+        "frameworkinstall.NCA",
+        "frameworkinstall.ISO",
+        "frameworkinstall.SAMA",
+        "frameworkinstall.CMA",
+        "frameworkinstall.Framework",
+        "frameworkinstall.Select Framework",
+        "frameworkinstall.Install",
+        "frameworkinstall.Choose Options",
+        "frameworkinstall.Mapping Related Doc",
+        "frameworkinstall.Install Controls evidences",
+        "frameworkinstall.Mapping evidences For Related Required Framework",
+        "frameworkinstall.Cancel",
+        "frameworkinstall.Deploy",
+        "frameworkinstall.Frameworks Installed",
+        "frameworkinstall.Framework Name",
+        "frameworkinstall.Controls",
+        "frameworkinstall.Mapping evidences For Related Required Framework",
+        "frameworkinstall.Mapping Related Doc",
+        "frameworkinstall.Install Controls evidences",
+        "frameworkinstall.Created At"
+      ],
+      "newKeys": [
+        "frameworkinstall.info",
+        "frameworkinstall.error",
+        "frameworkinstall.success",
+        "frameworkinstall.are_you_sure"
+      ]
+    },
+    {
+      "file": "views\\Page\\Frameworks\\FrameworkDetails.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "frameworkdetails.next",
+        "frameworkdetails.previous",
+        "frameworkdetails.showing_0_to_0_of_0_entries",
+        "frameworkdetails.processing",
+        "frameworkdetails.actions",
+        "frameworkdetails.audit_number_initiated",
+        "frameworkdetails.closed_percentage",
+        "frameworkdetails.next_initiate_date",
+        "frameworkdetails.periodical_time",
+        "frameworkdetails.due_date",
+        "frameworkdetails.start_date",
+        "frameworkdetails.assistant",
+        "frameworkdetails.type_of_responsible",
+        "frameworkdetails.auditor",
+        "frameworkdetails.framework",
+        "frameworkdetails.regulator",
+        "frameworkdetails.id",
+        "frameworkdetails.search",
+        "frameworkdetails.entries",
+        "frameworkdetails.show",
+        "frameworkdetails.audits",
+        "frameworkdetails.audit_history",
+        "frameworkdetails.view_details",
+        "frameworkdetails.update",
+        "frameworkdetails.description",
+        "frameworkdetails.icon",
+        "frameworkdetails.sub_domain",
+        "frameworkdetails.domain",
+        "frameworkdetails.title",
+        "frameworkdetails.owner",
+        "frameworkdetails.update_framework",
+        "frameworkdetails.loading_framework_details",
+        "frameworkdetails.delete",
+        "frameworkdetails.edit",
+        "frameworkdetails.0_",
+        "frameworkdetails.current",
+        "frameworkdetails.compliance_audit"
+      ]
+    },
+    {
+      "file": "views\\Page\\Frameworks\\Frameworks.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "frameworks.add_framework",
+        "frameworks.details",
+        "frameworks.submit",
+        "frameworks.description",
+        "frameworks.icon",
+        "frameworks.sub_domain",
+        "frameworks.domain",
+        "frameworks.title",
+        "frameworks.owner",
+        "frameworks.times"
+      ]
+    },
+    {
+      "file": "views\\Page\\GeneralSettings\\GeneralSettings.vue",
+      "existingKeys": [
+        "name",
+        "author",
+        "author_abbreviation",
+        "website",
+        "owner",
+        "logo",
+        "favicon",
+        "images",
+        "generalsettings.type",
+        "generalsetting.name",
+        "name",
+        "author",
+        "author_abbreviation",
+        "owner",
+        "website",
+        "logo",
+        "generalsetting.FullImagePathLogo",
+        "favicon",
+        "generalsetting.FullImagePathFavicon",
+        "images",
+        "generalsetting.FullImagePathImages",
+        "generalsetting.type"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Hierarchy\\Hierarchy.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "hierarchy.loading",
+        "hierarchy.error",
+        "hierarchy.success"
+      ]
+    },
+    {
+      "file": "views\\Page\\hostRegion\\hostRegion.vue",
+      "existingKeys": [
+        "hostregion.name",
+        "hostregion.date",
+        "Host-Region Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Incident\\Incident.vue",
+      "existingKeys": [
+        "incident.closed",
+        "incident.inprogress",
+        "incident.open",
+        "incident.edit",
+        "incident.response",
+        "incident.comments",
+        "incident.delete",
+        "incident.casetype",
+        "incident.selectacasetype",
+        "incident.direction",
+        "incident.selectacasedirection",
+        "incident.attack",
+        "incident.selectanattack",
+        "incident.detectedby",
+        "incident.selectadetector",
+        "incident.detectedon",
+        "incident.now",
+        "incident.incidentsconfigurations",
+        "incident.addcasetype",
+        "incident.save",
+        "incident.addcasedirection",
+        "incident.save",
+        "incident.addattack",
+        "incident.save",
+        "incident.adddetector",
+        "incident.save",
+        "incident.addincidentscore",
+        "incident.scorecriteria",
+        "incident.nocriteriadefinedyet.",
+        "incident.name",
+        "incident.point",
+        "incident.classifications",
+        "incident.noclassificationsdefinedyet.",
+        "incident.priority",
+        "incident.value",
+        "incident.color",
+        "incident.sla(hours)",
+        "incident.description",
+        "incident.incidentscoredefinition",
+        "incident.definecriteria",
+        "incident.scoringsystem",
+        "incident.classifyincident",
+        "incident.addcriteria",
+        "incident.save",
+        "incident.predefinedcriteria",
+        "incident.save",
+        "incident.prioritymustbeunique",
+        "incident.value",
+        "incident.valuemustbeunique",
+        "incident.valuecannotexceedtotalscore",
+        "incident.valuemustbeatleast1",
+        "incident.sla(hours)",
+        "incident.color",
+        "incident.unique",
+        "incident.addclassification",
+        "incident.save",
+        "incident.back",
+        "incident.next",
+        "incident.end",
+        "incident.addcontainmentcategory",
+        "incident.save",
+        "incident.adderadicationcategory",
+        "incident.save",
+        "incident.addrecoverycategory",
+        "incident.save",
+        "incident.addplaybook",
+        "Name",
+        "Type",
+        "Responsibles",
+        "incident.actions",
+        "incident.actions",
+        "incident.addaction",
+        "incident.name",
+        "incident.category",
+        "incident.actions",
+        "incident.cancel",
+        "incident.actioncategory",
+        "incident.actionname",
+        "incident.name",
+        "incident.responsibletype",
+        "incident.user",
+        "incident.team",
+        "incident.responsibles(csirt)",
+        "incident.save",
+        "incident.name",
+        "incident.responsibletype",
+        "incident.user",
+        "incident.team",
+        "incident.responsibles",
+        "incident.cancel",
+        "Name",
+        "Type",
+        "Responsibles",
+        "Actions",
+        "incident.noiradefinedyet.",
+        "incident.cancel",
+        "incident.incidentresponse",
+        "incident.detection",
+        "incident.association",
+        "incident.assessment",
+        "incident.assignment",
+        "incident.playbook",
+        "incident.summary",
+        "incident.details",
+        "incident.file",
+        "incident.reporter",
+        "incident.type",
+        "incident.direction",
+        "incident.attack",
+        "incident.detector",
+        "incident.detectiontime",
+        "incident.status",
+        "incident.open",
+        "incident.inprogress",
+        "incident.closed",
+        "incident.relatedincidents",
+        "incident.relatedrisks",
+        "incident.affectedassets",
+        "incident.sourcetag",
+        "incident.destinationtag",
+        "incident.supportingfiles(multiple)",
+        "incident.uploadedfiles",
+        "incident.incidentassessment",
+        "incident.criterion",
+        "incident.description",
+        "incident.severitylevel",
+        "incident.totalassessmentscore",
+        "incident.casetype",
+        "incident.selectcasetype",
+        "incident.reporter",
+        "incident.selectreporter",
+        "incident.owner",
+        "incident.selectowner",
+        "incident.playbook",
+        "incident.selectplaybook",
+        "incident.evidences",
+        "incident.name",
+        "incident.file",
+        "incident.storage",
+        "incident.relatedaction",
+        "incident.uploader",
+        "incident.no_evidence_available_for_this_stage.",
+        "incident.evidences",
+        "incident.name",
+        "incident.file",
+        "incident.stage",
+        "incident.relatedaction",
+        "incident.uploader",
+        "incident.no_evidence_available_for_this_stage.",
+        "incident.evidences",
+        "incident.name",
+        "incident.file",
+        "incident.stage",
+        "incident.relatedaction",
+        "incident.uploader",
+        "incident.no_evidence_available_for_this_stage.",
+        "incident.back",
+        "incident.next",
+        "incident.save",
+        "incident.addevidence",
+        "incident.evidencename",
+        "incident.uploadfile",
+        "incident.save",
+        "incident.comments",
+        "incident.postcomment",
+        "incident.save",
+        "incident.cancel",
+        "incident.reply",
+        "incident.cancel",
+        "incident.save",
+        "incident.cancel",
+        "incident.previous",
+        "incident.next",
+        "incident.close",
+        "incident.summary",
+        "incident.type",
+        "incident.direction",
+        "incident.attack",
+        "incident.detector",
+        "incident.class",
+        "incident.detectedon",
+        "incident.reporter",
+        "incident.status",
+        "incident.summary",
+        "incident.details",
+        "incident.casetype",
+        "incident.direction",
+        "incident.attack",
+        "incident.detectedby",
+        "incident.detectedat",
+        "Status",
+        "incident.supportdocument"
+      ],
+      "newKeys": [
+        "incident.validation_error",
+        "incident.cannot_delete",
+        "incident.are_you_sure_",
+        "incident.error",
+        "incident.deleted",
+        "incident.are_you_sure",
+        "incident.duplicate_action",
+        "incident.duplicate_category",
+        "incident.invalid_action",
+        "incident.invalid_input",
+        "incident.success",
+        "incident.duplicate_criteria_name",
+        "incident.cannot_close_incident",
+        "incident.incomplete_assessment",
+        "incident.invalid_assessment",
+        "incident.token_expired",
+        "incident.duplicate_evidence",
+        "incident.confirm_action_completion",
+        "incident.invalid_file_type",
+        "incident.file_too_large",
+        "incident.warning",
+        "incident.review",
+        "incident.assignment",
+        "incident.assessment",
+        "incident.association",
+        "incident.detection",
+        "incident.classify_incident",
+        "incident.scoring_system",
+        "incident.define_criteria",
+        "incident.recoveries",
+        "incident.eradications",
+        "incident.containments",
+        "incident.ira",
+        "incident.playbook",
+        "incident.playbook_stages",
+        "incident.incident_score",
+        "incident.sitelocation",
+        "incident.detected_by",
+        "incident.attacks",
+        "incident.case_direction",
+        "incident.case_type"
+      ]
+    },
+    {
+      "file": "views\\Page\\Incident\\Incident1.vue",
+      "existingKeys": [
+        "Name",
+        "Type",
+        "Responsibles",
+        "Name",
+        "Category",
+        "Operations",
+        "Cancel",
+        "Name",
+        "Type",
+        "Responsibles",
+        "Actions",
+        "Cancel",
+        "Summary",
+        "Type",
+        "Direction",
+        "Attack",
+        "Detector",
+        "Detected At",
+        "Status",
+        "Summary",
+        "Details",
+        "Case Type",
+        "Direction",
+        "Attack",
+        "Detected By",
+        "Detected At",
+        "Status"
+      ],
+      "newKeys": [
+        "incident1.error",
+        "incident1.are_you_sure",
+        "incident1.deleted",
+        "incident1.success",
+        "incident1.invalid_action",
+        "incident1.invalid_input",
+        "incident1.duplicate_criteria_name",
+        "incident1.incomplete_assessment",
+        "incident1.invalid_assessment",
+        "incident1.validation_error",
+        "incident1.invalid_file_type",
+        "incident1.file_too_large",
+        "incident1.review",
+        "incident1.assignment",
+        "incident1.assessment",
+        "incident1.association",
+        "incident1.detection",
+        "incident1.classify_incident",
+        "incident1.scoring_system",
+        "incident1.define_criteria",
+        "incident1.recoveries",
+        "incident1.eradications",
+        "incident1.containments",
+        "incident1.ira",
+        "incident1.play_book",
+        "incident1.play_book_category",
+        "incident1.incident_score",
+        "incident1.sitelocation",
+        "incident1.detected_by",
+        "incident1.attacks",
+        "incident1.case_direction",
+        "incident1.case_type"
+      ]
+    },
+    {
+      "file": "views\\Page\\IncidentSetting\\IncidentSetting.vue",
+      "existingKeys": [
+        "incidentsetting.email",
+        "incidentsetting.name",
+        "incidentsettingname",
+        "incidentsettingemail",
+        "incidentsetting.my_options",
+        "incidentsetting.accept_terms_and_conditions",
+        "incidentsetting.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Job\\Job.vue",
+      "existingKeys": [
+        "job.governance",
+        "job.hierarchy",
+        "job.job",
+        "job.job",
+        "job.position",
+        "job.chooseaposition",
+        "job.all",
+        "job.nousersassigned",
+        "job.overview",
+        "job.overview",
+        "job.name",
+        "job.description",
+        "job.createdat",
+        "job.updatedat",
+        "job.relatedposition",
+        "job.relateddepartments",
+        "job.name",
+        "job.code",
+        "job.description",
+        "job.departments",
+        "job.position",
+        "job.users",
+        "job.name",
+        "job.code",
+        "job.departments",
+        "job.position",
+        "job.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Kpi\\Kpi.vue",
+      "existingKeys": [
+        "kpi.Type",
+        "kpi.All",
+        "kpi.Time",
+        "kpi.Percentage",
+        "kpi.Number",
+        "kpi.Department",
+        "kpi.All",
+        "kpi.Period",
+        "kpi.All",
+        "kpi.3 Months",
+        "kpi.6 Months",
+        "kpi.9 Months",
+        "kpi.12 Months",
+        "kpi.Initiate KPI",
+        "kpi.List KPI Assessments",
+        "kpi.Assessments Details",
+        "kpi.Kpi Value",
+        "kpi.Department Value",
+        "kpi.CreatedBy",
+        "kpi.Initiated Date",
+        "kpi.Assessment By",
+        "kpi.Assessment Date",
+        "kpi.No Data Found",
+        "kpi.Close",
+        "kpi.title",
+        "kpi.Description",
+        "kpi.type",
+        "kpi.value",
+        "kpi.period",
+        "kpi.Department",
+        "kpi.kpi_owner",
+        "kpi.CreatedBy",
+        "kpi.created_date",
+        "kpi.title",
+        "kpi.Please enter title",
+        "kpi.type",
+        "kpi.Please select type",
+        "kpi.Select One",
+        "kpi.value",
+        "kpi.Please enter value",
+        "kpi.period",
+        "kpi.Please select period",
+        "kpi.Select One",
+        "kpi.department",
+        "kpi.Please select department",
+        "kpi.Select One",
+        "kpi.description",
+        "kpi.Please enter description"
+      ],
+      "newKeys": [
+        "kpi.are_you_sure"
+      ]
+    },
+    {
+      "file": "views\\Page\\KpiAssessment\\KpiAssessment.vue",
+      "existingKeys": [
+        "kpiassessment.Set Value",
+        "kpiassessment.ReAssign Assessment",
+        "kpiassessment.ReAssign Assessment",
+        "kpiassessment.Select User",
+        "kpiassessment.Save",
+        "kpiassessment.Close",
+        "kpiassessment.KpiTitle",
+        "kpiassessment.KpiValue",
+        "kpiassessment.DepartmentValue",
+        "kpiassessment.KpiType",
+        "kpiassessment.Comments",
+        "kpiassessment.KpiDepartmentName",
+        "kpiassessment.CreatedBy",
+        "kpiassessment.InitiatedDate",
+        "kpiassessment.AssesmentBy",
+        "kpiassessment.AssesmentDate",
+        "otherNewActions",
+        "kpiassessment.value",
+        "kpiassessment.assessmentDate",
+        "kpiassessment.comment"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Language\\Language.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "language.add_language",
+        "language.no_data_available",
+        "language.flag",
+        "language.rtl",
+        "language.name",
+        "language.code",
+        "language.actions"
+      ]
+    },
+    {
+      "file": "views\\Page\\Ldap\\ImportDepartment.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "importdepartment.department_hierarchy"
+      ]
+    },
+    {
+      "file": "views\\Page\\Ldap\\ImportUsers.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "importusers.users_hierarchy"
+      ]
+    },
+    {
+      "file": "views\\Page\\Ldap\\Ldap.vue",
+      "existingKeys": [
+        "ldap.hosts",
+        "ldap.port",
+        "ldap.base_dn",
+        "ldap.username",
+        "ldap.password",
+        "ldap.filter",
+        "ldap.version",
+        "ldap.timeout",
+        "ldap.ssl",
+        "ldap.tls",
+        "ldap.follow"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\LmsLevel\\LmsLevel.vue",
+      "existingKeys": [
+        "lmslevel.email",
+        "lmslevel.name",
+        "lmslevelname",
+        "lmslevelemail",
+        "lmslevel.my_options",
+        "lmslevel.accept_terms_and_conditions",
+        "lmslevel.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\LmsModule\\LmsModule.vue",
+      "existingKeys": [
+        "lmsmodule.email",
+        "lmsmodule.name",
+        "lmsmodulename",
+        "lmsmoduleemail",
+        "lmsmodule.my_options",
+        "lmsmodule.accept_terms_and_conditions",
+        "lmsmodule.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\LmsUserAnswer\\LmsUserAnswer.vue",
+      "existingKeys": [
+        "lmsuseranswer.email",
+        "lmsuseranswer.name",
+        "lmsuseranswername",
+        "lmsuseransweremail",
+        "lmsuseranswer.my_options",
+        "lmsuseranswer.accept_terms_and_conditions",
+        "lmsuseranswer.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Location\\Location.vue",
+      "existingKeys": [
+        "location.name",
+        "location.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Log\\components\\ViewLog.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "viewlog.close",
+        "viewlog.data",
+        "viewlog.old_data",
+        "viewlog.action_date",
+        "viewlog.operating_system",
+        "viewlog.browser",
+        "viewlog.ip_address",
+        "viewlog.service_name",
+        "viewlog.action",
+        "viewlog.class",
+        "viewlog.mdiclose",
+        "viewlog.view_log"
+      ]
+    },
+    {
+      "file": "views\\Page\\Log\\Log.vue",
+      "existingKeys": [
+        "log.action",
+        "log.ip_address",
+        "log.class",
+        "log.operating_system",
+        "log.action_date"
+      ],
+      "newKeys": [
+        "log.view"
+      ]
+    },
+    {
+      "file": "views\\Page\\LogSetting\\LogSetting.vue",
+      "existingKeys": [
+        "logsetting.action",
+        "logsetting.class",
+        "logsetting.status"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Maturity\\Maturity.vue",
+      "existingKeys": [
+        "maturity.name",
+        "maturityname"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\MyCertifiate\\MyCertifiate.vue",
+      "existingKeys": [
+        "template_name",
+        "module_name",
+        "date",
+        "actions"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\notification\\notification.vue",
+      "existingKeys": [
+        "notification.type",
+        "notification.description",
+        "notification.my_options",
+        "notification.my_options",
+        "notification.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\NotificationSetting\\NotificationSetting.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "notificationsetting.save",
+        "notificationsetting.cancel",
+        "notificationsetting.status",
+        "notificationsetting.roles",
+        "notificationsetting.jobs",
+        "notificationsetting.departments",
+        "notificationsetting.users",
+        "notificationsetting.related_users",
+        "notificationsetting.message",
+        "notificationsetting.subject",
+        "notificationsetting.update_notification_settings",
+        "notificationsetting.edit",
+        "notificationsetting.refresh_actions",
+        "notificationsetting.auto_notifications",
+        "notificationsetting.email_notifications",
+        "notificationsetting.system_notifications"
+      ]
+    },
+    {
+      "file": "views\\Page\\operatingSystem\\operatingSystem.vue",
+      "existingKeys": [
+        "operatingsystem.name",
+        "operatingsystem.date",
+        "Operating-System Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Permission\\Permission.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "permission.load_permission",
+        "permission.method_name",
+        "permission.controller_name",
+        "permission.scanned_directives"
+      ]
+    },
+    {
+      "file": "views\\Page\\PhishingCategory\\PhishingCategory.vue",
+      "existingKeys": [
+        "phishingcategoryname"
+      ],
+      "newKeys": [
+        "phishingcategory._add_new_category"
+      ]
+    },
+    {
+      "file": "views\\Page\\PhishingCategory\\PhishingWebsitePage.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\PhishingDomain\\PhishingDomain.vue",
+      "existingKeys": [
+        "phishingdomainname"
+      ],
+      "newKeys": [
+        "phishingdomain._add_new_domain"
+      ]
+    },
+    {
+      "file": "views\\Page\\PhishingDomain\\PhishingWebsitePage.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\PhishingGroup\\PhishingGroup.vue",
+      "existingKeys": [
+        "phishinggroup.Mange",
+        "phishinggroup.Group Details",
+        "phishinggroup.Edit Group",
+        "phishinggroup.Delete Group",
+        "phishinggroup.Department Employees",
+        "phishinggroup.No employees found in this department",
+        "phishinggroup.Try another department or add new employees",
+        "phishinggroup.Employees In Group",
+        "phishinggroup.Drag employees here",
+        "phishinggroup.Total selected",
+        "phishinggroup.Cancel",
+        "phishinggroup.Confirm Selection",
+        "phishinggroup.name",
+        "phishinggroup.Action",
+        "phishinggroup.Name",
+        "phishinggroup.Please enter name"
+      ],
+      "newKeys": [
+        "phishinggroup.error",
+        "phishinggroup.success",
+        "phishinggroup.saving",
+        "phishinggroup.loading"
+      ]
+    },
+    {
+      "file": "views\\Page\\PhishingSenderProfile\\PhishingSenderProfile.vue",
+      "existingKeys": [
+        "phishingsenderprofile.name",
+        "phishingsenderprofile.fromDisplayName",
+        "phishingsenderprofile.fromAddressName",
+        "phishingsenderprofilename",
+        "phishingsenderprofileemail",
+        "phishingsenderprofile.my_options",
+        "phishingsenderprofile.accept_terms_and_conditions",
+        "phishingsenderprofile.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\PhishingTemplate\\PhishingTemplate.vue",
+      "existingKeys": [
+        "phishingtemplate.Add New Template",
+        "phishingtemplate.No templates found",
+        "phishingtemplate.edit template",
+        "phishingtemplate.create template",
+        "phishingtemplate.cancel",
+        "phishingtemplate.save",
+        "phishingtemplate.name",
+        "phishingtemplate.description",
+        "phishingtemplate.name",
+        "phishingtemplate.Enter the template name",
+        "phishingtemplate.description",
+        "phishingtemplate.Enter a description for this template",
+        "phishingtemplate.sender_profile",
+        "phishingtemplate.Select the sender profile",
+        "phishingtemplate.phishing_website",
+        "phishingtemplate.Select the phishing website",
+        "phishingtemplate.attachment",
+        "phishingtemplate.subject",
+        "phishingtemplate.Enter the email subject line",
+        "phishingtemplate.body",
+        "phishingtemplate.Enter the email body content",
+        "validation_error",
+        "please_fill_all_required_fields",
+        "success",
+        "updated_successfully",
+        "created_successfully",
+        "phishingtemplate.error_occurred_while_saving",
+        "phishingtemplate.error"
+      ],
+      "newKeys": [
+        "phishingtemplate.open_in_new_tab"
+      ]
+    },
+    {
+      "file": "views\\Page\\PhishingTemplate\\PhishingTemplateDetail.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "phishingtemplatedetail.no_template_data_found"
+      ]
+    },
+    {
+      "file": "views\\Page\\PhishingWebsitePage\\PhishingWebsitePage.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "phishingwebsitepage._add_new_website"
+      ]
+    },
+    {
+      "file": "views\\Page\\PhishingWebsitePage\\PreviewWebsitePage.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Position\\Position.vue",
+      "existingKeys": [
+        "position.name",
+        "position.code",
+        "position.description",
+        "position.jobs",
+        "position.name",
+        "position.code",
+        "position.description"
+      ],
+      "newKeys": [
+        "position.all",
+        "position.job"
+      ]
+    },
+    {
+      "file": "views\\Page\\Question\\Question.vue",
+      "existingKeys": [
+        "question.question",
+        "question.hasCompliance",
+        "question.hasMaturity",
+        "question.type",
+        "question.hasFileAttachment",
+        "question.hasRisk",
+        "Question",
+        "Regulator",
+        "Framework",
+        "Control",
+        "",
+        "Question Type",
+        "A",
+        "File Attachment"
+      ],
+      "newKeys": [
+        "question.fillin_blank",
+        "question.multiple_choice",
+        "question.single_choice"
+      ]
+    },
+    {
+      "file": "views\\Page\\Regulator\\cardData9.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "carddata9.cancel",
+        "carddata9.submit",
+        "carddata9.cion_theme",
+        "carddata9.value_of_the_class",
+        "carddata9.class"
+      ]
+    },
+    {
+      "file": "views\\Page\\Regulator\\Regulator copy.vue",
+      "existingKeys": [
+        "regulatorname",
+        "regulatorname",
+        "name",
+        "useremail",
+        "user.accept_terms_and_conditions"
+      ],
+      "newKeys": [
+        "regulator copy.edit_regulator",
+        "regulator copy.add_framework",
+        "regulator copy.details",
+        "regulator copy.add_regulator"
+      ]
+    },
+    {
+      "file": "views\\Page\\Regulator\\Regulator.vue",
+      "existingKeys": [
+        "regulator.name",
+        "regulator.name",
+        "regulator.logo",
+        "regulator.fullLogoPath",
+        "regulator.accept_terms_and_conditions",
+        "regulator.accept_terms_and_conditions"
+      ],
+      "newKeys": [
+        "regulator._add_framework",
+        "regulator.details",
+        "regulator.0_",
+        "regulator.delete",
+        "regulator.edit",
+        "regulator.workflowcategory",
+        "regulator._add_new_regulator"
+      ]
+    },
+    {
+      "file": "views\\Page\\Report\\Report.vue",
+      "existingKeys": [
+        "report.email",
+        "report.name",
+        "reportname",
+        "reportemail",
+        "report.my_options",
+        "report.accept_terms_and_conditions",
+        "report.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Requirement\\Evidences.vue",
+      "existingKeys": [
+        "evidence.edit",
+        "evidence.delete",
+        "evidence.nocontrols",
+        "evidence.attachsupportingdocument",
+        "evidence.currentdocument",
+        "evidence.controls",
+        "evidence.all",
+        "evidence.description",
+        "evidence.supportingfile",
+        "evidence.relatedcontrols",
+        "evidence.longname",
+        "evidence.shortname",
+        "evidence.number",
+        "evidence.status",
+        "evidence.comments",
+        "evidence.comment",
+        "evidence.save",
+        "evidence.cancel",
+        "evidence.reply",
+        "evidence.cancel",
+        "evidence.save",
+        "evidence.cancel",
+        "evidence.nocommentsyet",
+        "evidence.provideroverview",
+        "evidence.name",
+        "evidence.email",
+        "evidence.department",
+        "evidence.job",
+        "evidence.rejectevidence",
+        "evidence.comment",
+        "evidence.commentisrequired",
+        "evidence.reject",
+        "evidence.name",
+        "evidence.created_at",
+        "evidence.expired_day",
+        "evidence.provider",
+        "evidence.rejected_controls",
+        "evidence.status",
+        "evidence.action_by",
+        "Active",
+        "evidence.name",
+        "evidence.controls",
+        "evidence.description",
+        "evidence.file"
+      ],
+      "newKeys": [
+        "evidences.error",
+        "evidences.success",
+        "evidences.no_action",
+        "evidences.are_you_sure",
+        "evidences.warning"
+      ]
+    },
+    {
+      "file": "views\\Page\\Requirement\\Requirement.vue",
+      "existingKeys": [
+        "requirement.frameworks",
+        "requirement.controls",
+        "requirement.evidence",
+        "requirement.edit",
+        "requirement.delete",
+        "controlrequirement.Frameworks",
+        "controlrequirement.Responsabile",
+        "controlrequirement.Users",
+        "controlrequirement.department_manager",
+        "controlrequirement.Team",
+        "controlrequirement.users",
+        "controlrequirement.department_managers",
+        "controlrequirement.teams",
+        "name",
+        "description",
+        "frameworks",
+        "controls",
+        "controls.without.evidence",
+        "created_at",
+        "due_date",
+        "expire_days",
+        "responsible_type",
+        "responsible",
+        "evidences",
+        "Active",
+        "Name",
+        "Description",
+        "controlrequirement.due_date",
+        "controlrequirement.expire_days"
+      ],
+      "newKeys": [
+        "requirement.advanced_search_"
+      ]
+    },
+    {
+      "file": "views\\Page\\Requirement\\ViewEvidence.vue",
+      "existingKeys": [
+        "evidence.edit",
+        "evidence.delete",
+        "evidence.nocontrols",
+        "evidence.attachsupportingdocument",
+        "evidence.currentdocument",
+        "evidence.controls",
+        "evidence.all",
+        "evidence.description",
+        "evidence.supportingfile",
+        "evidence.relatedcontrols",
+        "evidence.longname",
+        "evidence.shortname",
+        "evidence.number",
+        "evidence.status",
+        "evidence.reject",
+        "evidence.accept",
+        "evidence.comments",
+        "evidence.comment",
+        "evidence.save",
+        "evidence.cancel",
+        "evidence.reply",
+        "evidence.cancel",
+        "evidence.save",
+        "evidence.cancel",
+        "evidence.nocommentsyet",
+        "evidence.provideroverview",
+        "evidence.name",
+        "evidence.email",
+        "evidence.department",
+        "evidence.job",
+        "evidence.rejectevidence",
+        "evidence.comment",
+        "evidence.commentisrequired",
+        "evidence.reject",
+        "evidence.name",
+        "evidence.created_at",
+        "evidence.due_date",
+        "evidence.provider",
+        "evidence.rejected_controls",
+        "evidence.status",
+        "action.with",
+        "evidence.name",
+        "evidence.controls",
+        "evidence.description",
+        "evidence.file"
+      ],
+      "newKeys": [
+        "viewevidence.error",
+        "viewevidence.no_access",
+        "viewevidence.success",
+        "viewevidence.action_not_allowed",
+        "viewevidence.no_action",
+        "viewevidence.are_you_sure",
+        "viewevidence.warning"
+      ]
+    },
+    {
+      "file": "views\\Page\\Review\\Review.vue",
+      "existingKeys": [
+        "review.name",
+        "review.created_at",
+        "review.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Risk\\CreateRisk\\RiskAnalysis.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Risk\\CreateRisk\\RiskEvaluationAndTreatment.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Risk\\CreateRisk\\RiskIdentification.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Risk\\CreateRisk\\RiskReview.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Risk\\CreateRisk.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "createrisk.add_risk",
+        "createrisk.error",
+        "createrisk.something_went_wrong",
+        "createrisk.risk_saved_successfully",
+        "createrisk.risk_review",
+        "createrisk.risk_evaluation_and_treatment",
+        "createrisk.risk_analysis",
+        "createrisk.risk_identification"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\Risk.vue",
+      "existingKeys": [
+        "risk.risk number",
+        "risk.subject",
+        "risk.description",
+        "category",
+        "risk.questionnaire",
+        "risk.status",
+        "risk.pesponsible party",
+        "inherent_risk_current",
+        "risk.submission date"
+      ],
+      "newKeys": [
+        "risk.submission_date",
+        "risk.inherent_risk_current",
+        "risk.subject",
+        "risk.closed_risk",
+        "risk.reopened",
+        "risk.mgmt_reviewed",
+        "risk.reject",
+        "risk.new",
+        "risk.all",
+        "risk.status",
+        "risk.mitigated_risks",
+        "risk.open_risks",
+        "risk.closed_risks",
+        "risk.100",
+        "risk.overview_risks",
+        "risk.risk_by_control",
+        "risk.risk_by_asset",
+        "risk.risk_management"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\RiskManagement\\RiskManagementAnalysis.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "riskmanagementanalysis.cancel",
+        "riskmanagementanalysis.save_details",
+        "riskmanagementanalysis.mdiclose",
+        "riskmanagementanalysis.edit_risk",
+        "riskmanagementanalysis.save",
+        "riskmanagementanalysis.close_risk",
+        "riskmanagementanalysis.set_risk_status_to",
+        "riskmanagementanalysis.kris",
+        "riskmanagementanalysis.supporting_documentation",
+        "riskmanagementanalysis.responsible_party",
+        "riskmanagementanalysis.current_impact",
+        "riskmanagementanalysis.current_likelihood",
+        "riskmanagementanalysis.impact_scope",
+        "riskmanagementanalysis.submitted_by",
+        "riskmanagementanalysis.actions",
+        "riskmanagementanalysis.change_status1",
+        "riskmanagementanalysis.status",
+        "riskmanagementanalysis.loading",
+        "riskmanagementanalysis.something_won",
+        "riskmanagementanalysis.risk_saved_successfully",
+        "riskmanagementanalysis.error_changing_risk_status",
+        "riskmanagementanalysis.risk_changed_status_successfully",
+        "riskmanagementanalysis.are_you_sure_you_want_to_change_the_status_of_this_risk"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\RiskManagement\\RiskManagementCommentAndTrail.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "riskmanagementcommentandtrail.cancel",
+        "riskmanagementcommentandtrail.save",
+        "riskmanagementcommentandtrail.mdiclose",
+        "riskmanagementcommentandtrail.close_risk",
+        "riskmanagementcommentandtrail.set_risk_status_to",
+        "riskmanagementcommentandtrail.audit_trail",
+        "riskmanagementcommentandtrail.loading",
+        "riskmanagementcommentandtrail.publish",
+        "riskmanagementcommentandtrail.comment",
+        "riskmanagementcommentandtrail.actions",
+        "riskmanagementcommentandtrail.change_status",
+        "riskmanagementcommentandtrail.status",
+        "riskmanagementcommentandtrail.error_changing_risk_status",
+        "riskmanagementcommentandtrail.risk_changed_status_successfully",
+        "riskmanagementcommentandtrail.are_you_sure_you_want_to_change_the_status_of_this_risk"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\RiskManagement\\RiskManagementEvaluation.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "riskmanagementevaluation.cancel",
+        "riskmanagementevaluation.sure_",
+        "riskmanagementevaluation.are_you_sure_to_reset_the_mitigation_of_risk_",
+        "riskmanagementevaluation.mdiclose",
+        "riskmanagementevaluation.reset_risk_mitigation",
+        "riskmanagementevaluation.save",
+        "riskmanagementevaluation.close_risk",
+        "riskmanagementevaluation.set_risk_status_to",
+        "riskmanagementevaluation.submit",
+        "riskmanagementevaluation.edit_mititgation_risk",
+        "riskmanagementevaluation.current_solution",
+        "riskmanagementevaluation.sample_imagejpg",
+        "riskmanagementevaluation.supporting_documentation",
+        "riskmanagementevaluation.security_recommendations",
+        "riskmanagementevaluation.security_requirements_",
+        "riskmanagementevaluation.mitigation_controls",
+        "riskmanagementevaluation.mitigation_percent",
+        "riskmanagementevaluation.mitigation_owner",
+        "riskmanagementevaluation.mitigation_effort",
+        "riskmanagementevaluation.mitigation_team",
+        "riskmanagementevaluation.mitigation_cost",
+        "riskmanagementevaluation.planning_strategy",
+        "riskmanagementevaluation.mitigation_date",
+        "riskmanagementevaluation.reject_mitigation",
+        "riskmanagementevaluation.accept_mitigation",
+        "riskmanagementevaluation.edit_mitigation",
+        "riskmanagementevaluation.reset_mitigation",
+        "riskmanagementevaluation.actions",
+        "riskmanagementevaluation.change_status",
+        "riskmanagementevaluation.status",
+        "riskmanagementevaluation.loading",
+        "riskmanagementevaluation.risk_mitigation_reset_failed",
+        "riskmanagementevaluation.risk_mitigation_reset_successfully",
+        "riskmanagementevaluation.risk_mitigation_status_changed_successfully",
+        "riskmanagementevaluation.error_changing_risk_status",
+        "riskmanagementevaluation.risk_changed_status_successfully",
+        "riskmanagementevaluation.error_update_risk",
+        "riskmanagementevaluation.risk_update_successfully"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\RiskManagement\\RiskManagementIdentification.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "riskmanagementidentification.mdiinformationoutline",
+        "riskmanagementidentification.current_likelihood",
+        "riskmanagementidentification.impact",
+        "riskmanagementidentification.classic_risk_scoring",
+        "riskmanagementidentification.residual_risk",
+        "riskmanagementidentification.inherent_risk",
+        "riskmanagementidentification.edit_risk",
+        "riskmanagementidentification.close_risk",
+        "riskmanagementidentification.actions",
+        "riskmanagementidentification.change_status",
+        "riskmanagementidentification.status",
+        "riskmanagementidentification.loading",
+        "riskmanagementidentification.something_won",
+        "riskmanagementidentification.risk_saved_successfully",
+        "riskmanagementidentification.error_changing_risk_status",
+        "riskmanagementidentification.risk_changed_status_successfully",
+        "riskmanagementidentification.are_you_sure_you_want_to_change_the_status_of_this_risk",
+        "riskmanagementidentification.error_updating_risk",
+        "riskmanagementidentification.risk_updated_successfully"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\RiskManagement\\RiskManagementReview.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "riskmanagementreview.cancel",
+        "riskmanagementreview.save",
+        "riskmanagementreview.mdiclose",
+        "riskmanagementreview.add_review",
+        "riskmanagementreview.sure_",
+        "riskmanagementreview.are_you_sure_to_reset_the_review_of_risk_",
+        "riskmanagementreview.reset_risk_review",
+        "riskmanagementreview.close_risk",
+        "riskmanagementreview.set_risk_status_to",
+        "riskmanagementreview.review_",
+        "riskmanagementreview.reviewer_",
+        "riskmanagementreview.review_date",
+        "riskmanagementreview.localeviewallreview",
+        "riskmanagementreview.last_review",
+        "riskmanagementreview.reset_review",
+        "riskmanagementreview.preform_a_review",
+        "riskmanagementreview.actions",
+        "riskmanagementreview.change_status",
+        "riskmanagementreview.status",
+        "riskmanagementreview.loading",
+        "riskmanagementreview.risk_review_failed",
+        "riskmanagementreview.risk_review_addedd_successfully",
+        "riskmanagementreview.risk_review_reset_failed",
+        "riskmanagementreview.risk_review_reset_successfully",
+        "riskmanagementreview.error_changing_risk_status",
+        "riskmanagementreview.risk_changed_status_successfully",
+        "riskmanagementreview.are_you_sure_you_want_to_change_the_status_of_this_risk"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\RiskManagement.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "riskmanagement.comment_and_trail",
+        "riskmanagement.risk_reviewing_and_monitoring",
+        "riskmanagement.risk_evaluation_and_treatment",
+        "riskmanagement.risk_analysis",
+        "riskmanagement.risk_identification"
+      ]
+    },
+    {
+      "file": "views\\Page\\Risk\\RiskWizard.vue",
+      "existingKeys": [],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskCalculationMatrix\\RiskCalculationMatrix.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "riskcalculationmatrix.likelihood",
+        "riskcalculationmatrix.impact",
+        "riskcalculationmatrix.save_formula",
+        "riskcalculationmatrix.risk_formula",
+        "riskcalculationmatrix.risk_calculation_matrix",
+        "riskcalculationmatrix.error",
+        "riskcalculationmatrix.updated_successfully",
+        "riskcalculationmatrix.are_you_sure_you_want_to_save_the_changes"
+      ]
+    },
+    {
+      "file": "views\\Page\\RiskCatalog\\RiskCatalog.vue",
+      "existingKeys": [
+        "catalog.name",
+        "catalog.function",
+        "catalog.description",
+        "catalog.event",
+        "catalog.name",
+        "catalog.riskgroup",
+        "catalog.riskfunction",
+        "catalog.order",
+        "catalog.event",
+        "catalog.description"
+      ],
+      "newKeys": [
+        "riskcatalog.function_two",
+        "riskcatalog.function_one",
+        "riskcatalog.all",
+        "riskcatalog.function",
+        "riskcatalog.group_two",
+        "riskcatalog.group_one",
+        "riskcatalog.group"
+      ]
+    },
+    {
+      "file": "views\\Page\\RiskCategory\\RiskCategory.vue",
+      "existingKeys": [
+        "Name",
+        "Created_At",
+        "Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskCloseReason\\RiskCloseReason.vue",
+      "existingKeys": [
+        "riskclosereason.name",
+        "riskclosereason.created_at",
+        "riskclosereason.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskFunction\\RiskFunction.vue",
+      "existingKeys": [
+        "riskfunction.name",
+        "riskfunction.created at",
+        "riskfunction.name",
+        "riskfunction.Please enter name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskGroup\\RiskGroup.vue",
+      "existingKeys": [
+        "Name",
+        "Created_At",
+        "Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskLevel\\RiskLevel.vue",
+      "existingKeys": [
+        "level.name",
+        "level.from",
+        "Color",
+        "level.name",
+        "level.from",
+        "level.color"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskMitigationEffort\\RiskMitigationEffort.vue",
+      "existingKeys": [
+        "riskmitigationeffort.name",
+        "riskmitigationeffort.created_at",
+        "riskmitigationeffort.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskPlanningStrategy\\RiskPlanningStrategy.vue",
+      "existingKeys": [
+        "Name",
+        "Created_At",
+        "Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskScoringHistory\\RiskScoringHistory.vue",
+      "existingKeys": [
+        "riskscoringhistory.email",
+        "riskscoringhistory.name",
+        "riskscoringhistoryname",
+        "riskscoringhistoryemail",
+        "riskscoringhistory.my_options",
+        "riskscoringhistory.accept_terms_and_conditions",
+        "riskscoringhistory.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\RiskSource\\RiskSource.vue",
+      "existingKeys": [
+        "risksource.name",
+        "risksource.created_at",
+        "risksource.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Role\\Role.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "role.colon",
+        "role.update",
+        "role.select_module",
+        "role.select_all",
+        "role.permissions",
+        "role.job",
+        "role.department",
+        "role.something_won",
+        "role.are_you_sure_from_type_permissions_for_this_job"
+      ]
+    },
+    {
+      "file": "views\\Page\\ShowCertificate\\ShowCertificate.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "showcertificate.loading",
+        "showcertificate.download_failed"
+      ]
+    },
+    {
+      "file": "views\\Page\\Survey\\QuestionsResponse.vue",
+      "existingKeys": [
+        "survey.singleselect",
+        "survey.multiselect",
+        "survey.overview",
+        "survey.edit",
+        "survey.delete",
+        "survey.questiontext",
+        "survey.singleselect",
+        "survey.multiselect",
+        "survey.options",
+        "survey.addoption",
+        "survey.questionoverview",
+        "survey.question",
+        "survey.questiontype",
+        "survey.singleselect",
+        "survey.multiselect",
+        "survey.createdat",
+        "survey.lastupdated",
+        "survey.options",
+        "survey.responsesoverview",
+        "survey.question",
+        "survey.userswhoansweredthisquestion",
+        "survey.outsidecybermode",
+        "survey.cybermodeuser",
+        "survey.nousershaveansweredthisquestion",
+        "Question",
+        "Type",
+        "Most.common.answer",
+        "Total.responses",
+        "Question",
+        "Question Type",
+        "A"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Survey\\Survey.vue",
+      "existingKeys": [
+        "survey.generatelink",
+        "survey.status",
+        "survey.questions",
+        "survey.result",
+        "survey.sendsurvey",
+        "survey.responses",
+        "survey.clone",
+        "survey.overview",
+        "survey.edit",
+        "survey.delete",
+        "survey.owner",
+        "survey.stakeholders",
+        "survey.teams",
+        "survey.allquestionsrequired",
+        "survey.percentage",
+        "survey.enteravaluebetween1and100",
+        "survey.changestatus",
+        "survey.action",
+        "survey.selectaction",
+        "survey.inreview",
+        "survey.approve",
+        "survey.reviewer",
+        "survey.selectareviewer",
+        "survey.privacy",
+        "survey.selectprivacy",
+        "survey.private",
+        "survey.public",
+        "survey.save",
+        "survey.surveyoverview",
+        "survey.surveyname",
+        "survey.description",
+        "survey.owner",
+        "survey.reviewer",
+        "survey.status",
+        "survey.draft",
+        "survey.approved",
+        "survey.inreview",
+        "survey.reviewfrequency",
+        "survey.days",
+        "survey.surveyprivacy",
+        "survey.approvaldate",
+        "survey.stakeholders",
+        "survey.teams",
+        "survey.questionrequirements",
+        "survey.allquestionsarerequired",
+        "survey.ofquestionsrequired",
+        "survey.nospecificrequirements",
+        "survey.lastupdated",
+        "survey.createdby",
+        "survey.emailconfigurations",
+        "survey.subject",
+        "survey.content",
+        "survey.save",
+        "survey.name",
+        "survey.description",
+        "survey.status",
+        "survey.createdat",
+        "Link",
+        "survey.name",
+        "survey.stakeholders",
+        "survey.teams",
+        "survey.owner",
+        "survey.review_frequency(days)",
+        "survey.description",
+        "survey.question"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Survey\\ViewQuestions.vue",
+      "existingKeys": [
+        "survey.singleselect",
+        "survey.multiselect",
+        "survey.overview",
+        "survey.edit",
+        "survey.delete",
+        "survey.questiontext",
+        "survey.type",
+        "survey.singleselect",
+        "survey.multiselect",
+        "survey.options",
+        "survey.addoption",
+        "survey.questionoverview",
+        "survey.question",
+        "survey.questiontype",
+        "survey.singleselect",
+        "survey.multiselect",
+        "survey.createdat",
+        "survey.lastupdated",
+        "survey.options",
+        "Question",
+        "Type",
+        "Question",
+        "Question Type",
+        "A"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\SurveyQuestion\\SurveyQuestion.vue",
+      "existingKeys": [
+        "surveyquestion.email",
+        "surveyquestion.name",
+        "surveyquestionname",
+        "surveyquestionemail",
+        "surveyquestion.my_options",
+        "surveyquestion.accept_terms_and_conditions",
+        "surveyquestion.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\SurveyResponse\\SurveyAnswer.vue",
+      "existingKeys": [
+        "survey.pleaseenteryouremail",
+        "survey.submit",
+        "survey.completed",
+        "survey.savedraft",
+        "survey.submit"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\SurveyResponse\\SurveyResponse.vue",
+      "existingKeys": [
+        "survey.userhasnotsubmittedyet",
+        "survey.cybermodeuser",
+        "survey.outsidecybermode",
+        "survey.completed",
+        "survey.drafted",
+        "survey.userresponseoverview",
+        "survey.useremail",
+        "survey.responses",
+        "survey.question",
+        "user.email",
+        "response.date",
+        "user.type",
+        "total.questions",
+        "answered.questions",
+        "Status"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\SystemSetting\\SystemSetting.vue",
+      "existingKeys": [
+        "systemsetting.email",
+        "systemsetting.name",
+        "systemsettingname",
+        "systemsettingemail",
+        "systemsetting.my_options",
+        "systemsetting.accept_terms_and_conditions",
+        "systemsetting.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\tag\\tag.vue",
+      "existingKeys": [
+        "name",
+        "name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Task\\components\\ViewTask.vue",
+      "existingKeys": [
+        "task.view_task",
+        "task.title",
+        "task.category",
+        "task.priority",
+        "task.${taskData.priority}",
+        "task.assign_type",
+        "task.users",
+        "task.teams",
+        "task.assignee",
+        "task.status",
+        "task.${taskData.status}",
+        "task.start_date",
+        "task.due_date",
+        "task.description",
+        "common.close"
+      ],
+      "newKeys": [
+        "viewtask.mdiclose"
+      ]
+    },
+    {
+      "file": "views\\Page\\Task\\Task.vue",
+      "existingKeys": [
+        "governance.governance",
+        "task.task_mngt",
+        "task.tasks",
+        "task.tasks",
+        "task.my_tasks",
+        "task.assigned_to_me",
+        "task.assigned_to_team",
+        "task.status",
+        "common.all",
+        "task.open",
+        "task.in_progress",
+        "task.completed",
+        "task.priority",
+        "common.all",
+        "task.no_priority",
+        "task.low",
+        "task.medium",
+        "task.high",
+        "task.urgent",
+        "task.category",
+        "common.all",
+        "task.users",
+        "task.teams",
+        "task.no_priority",
+        "task.low",
+        "task.medium",
+        "task.high",
+        "task.urgent",
+        "task.open",
+        "task.in_progress",
+        "task.completed",
+        "common.view",
+        "task.assign_type",
+        "task.assignee",
+        "task.title",
+        "Description",
+        "task.category",
+        "task.assign_type",
+        "task.assignee",
+        "task.start_date",
+        "task.due_date",
+        "task.priority",
+        "task.status",
+        "task.created_by",
+        "task.title",
+        "task.category",
+        "task.priority",
+        "task.assign_type",
+        "task.assignee",
+        "task.start_date",
+        "task.due_date",
+        "task.description"
+      ],
+      "newKeys": [
+        "task.team",
+        "task.user"
+      ]
+    },
+    {
+      "file": "views\\Page\\Team\\AssignUsers.vue",
+      "existingKeys": [
+        "Name",
+        "Email",
+        "Type",
+        "Status",
+        "Users"
+      ],
+      "newKeys": [
+        "assignusers.are_you_sure_you_want_to_unassign_this_user"
+      ]
+    },
+    {
+      "file": "views\\Page\\Team\\components\\ViewTeamDetails.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "viewteamdetails.close",
+        "viewteamdetails.members",
+        "viewteamdetails.name",
+        "viewteamdetails.mdiclose",
+        "viewteamdetails.team_details"
+      ]
+    },
+    {
+      "file": "views\\Page\\Team\\Team.vue",
+      "existingKeys": [
+        "team.governance",
+        "team.hierarchy",
+        "team.team",
+        "team.team",
+        "team.assignusers",
+        "team.name",
+        "team.createdat",
+        "team.updatedat",
+        "team.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Technology\\Technology.vue",
+      "existingKeys": [
+        "technology.name",
+        "technology.name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThirdPartyClassification\\ThirdPartyClassification.vue",
+      "existingKeys": [
+        "thirdPartyClassification.name",
+        "thirdPartyClassification.created at",
+        "thirdPartyClassification.name",
+        "thirdPartyClassification.Please enter name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThirdPartyContactQuestionnaireAnswer\\ThirdPartyContactQuestionnaireAnswer.vue",
+      "existingKeys": [
+        "thirdpartycontactquestionnaireanswer.third_party_profile",
+        "thirdpartycontactquestionnaireanswer.contact_name",
+        "thirdpartycontactquestionnaireanswer.assessmentname",
+        "thirdpartycontactquestionnaireanswer.status",
+        "thirdpartycontactquestionnaireanswer.submission_type",
+        "thirdpartycontactquestionnaireanswer.percentage_complete",
+        "thirdpartycontactquestionnaireanswer.approved_status",
+        "thirdpartycontactquestionnaireanswer.send_date",
+        "thirdpartycontactquestionnaireanswer.submission_date",
+        "thirdpartycontactquestionnaireanswername",
+        "thirdpartycontactquestionnaireansweremail",
+        "thirdpartycontactquestionnaireanswer.my_options",
+        "thirdpartycontactquestionnaireanswer.accept_terms_and_conditions",
+        "thirdpartycontactquestionnaireanswer.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\thirdPartyEvaluation\\thirdPartyEvaluation.vue",
+      "existingKeys": [
+        "thirdpartyevaluation.name",
+        "thirdpartyevaluationname"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThirdPartyProfile\\ThirdPartyProfile.vue",
+      "existingKeys": [
+        "thirdpartyprofile.name",
+        "thirdpartyprofile.owner",
+        "thirdpartyprofile.contract term",
+        "thirdpartyprofile.created_at",
+        "thirdpartyprofilename",
+        "thirdpartyprofileemail",
+        "thirdpartyprofile.my_options",
+        "thirdpartyprofile.accept_terms_and_conditions",
+        "thirdpartyprofile.description"
+      ],
+      "newKeys": [
+        "thirdpartyprofile.classification"
+      ]
+    },
+    {
+      "file": "views\\Page\\ThirdPartyQuestionnaire\\ThirdPartyQuestionnaire.vue",
+      "existingKeys": [
+        "thirdpartyquestionnaire.name",
+        "thirdpartyquestionnaire.profile_name",
+        "thirdpartyquestionnaire.templatename",
+        "thirdpartyquestionnaire.createdat",
+        "thirdpartyquestionnairename",
+        "thirdpartyquestionnaireemail",
+        "thirdpartyquestionnaire.my_options",
+        "thirdpartyquestionnaire.accept_terms_and_conditions",
+        "thirdpartyquestionnaire.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThirdPartyQuestionnaireResult\\ThirdPartyQuestionnaireAnswer.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "thirdpartyquestionnaireanswer.password_modal",
+        "thirdpartyquestionnaireanswer.email_modal",
+        "thirdpartyquestionnaireanswer.complete",
+        "thirdpartyquestionnaireanswer.draft",
+        "thirdpartyquestionnaireanswer.comments",
+        "thirdpartyquestionnaireanswer.assessment_instructions",
+        "thirdpartyquestionnaireanswer.remedation_note",
+        "thirdpartyquestionnaireanswer.submit",
+        "thirdpartyquestionnaireanswer.password",
+        "thirdpartyquestionnaireanswer.enter_password_which_received_at_mail",
+        "thirdpartyquestionnaireanswer.email_address",
+        "thirdpartyquestionnaireanswer.enter_your_email",
+        "thirdpartyquestionnaireanswer.you_cannot_access_this_view_because_your_assessment_is_already_completed",
+        "thirdpartyquestionnaireanswer.access_denied"
+      ]
+    },
+    {
+      "file": "views\\Page\\ThirdPartyQuestionnaireResult\\ThirdPartyQuestionnaireResult.vue",
+      "existingKeys": [
+        "thirdpartyquestionnaireresult.email",
+        "thirdpartyquestionnaireresult.name",
+        "thirdpartyquestionnaireresultname",
+        "thirdpartyquestionnaireresultemail",
+        "thirdpartyquestionnaireresult.my_options",
+        "thirdpartyquestionnaireresult.accept_terms_and_conditions",
+        "thirdpartyquestionnaireresult.description"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThirdPartyRequest\\ThirdPartyRequest copy.vue",
+      "existingKeys": [
+        "thirdpartyrequest.requested_by",
+        "thirdpartyrequest.department",
+        "thirdpartyrequest.job_title",
+        "thirdpartyrequest.third_party_profile",
+        "thirdpartyrequest.status",
+        "thirdpartyrequest.issue_date"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThirdPartyRequest\\ThirdPartyRequest.vue",
+      "existingKeys": [
+        "thirdpartyrequest.requested_by",
+        "thirdpartyrequest.department",
+        "thirdpartyrequest.job_title",
+        "thirdpartyrequest.third_party_profile",
+        "thirdpartyrequest.third_party_service",
+        "thirdpartyrequest.status",
+        "thirdpartyrequest.issue_date"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThirdPartyRequestSetting\\ThirdPartyRequestSetting.vue",
+      "existingKeys": [
+        "thirdpartyrequestsetting.Type",
+        "thirdpartyrequestsetting.Receiver Type",
+        "thirdpartyrequestsetting.Select",
+        "thirdpartyrequestsetting.Department Manager",
+        "thirdpartyrequestsetting.User",
+        "thirdpartyrequestsetting.User",
+        "thirdpartyrequestsetting.Select",
+        "thirdpartyrequestsetting.department",
+        "thirdpartyrequestsetting.Select",
+        "thirdpartyrequestsetting.position",
+        "thirdpartyrequestsetting.Select",
+        "thirdpartyrequestsetting.receiver_type",
+        "thirdpartyrequestsetting.user",
+        "thirdpartyrequestsetting.position",
+        "thirdpartyrequestsetting.receiver Type",
+        "thirdpartyrequestsetting.Select Receiver Type",
+        "thirdpartyrequestsetting.user",
+        "thirdpartyrequestsetting.Please select User",
+        "thirdpartyrequestsetting.department",
+        "thirdpartyrequestsetting.Please select Department",
+        "thirdpartyrequestsetting.position",
+        "thirdpartyrequestsetting.Please select Position",
+        "thirdpartyrequestsetting.type"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\thirdPartyService\\thirdPartyService.vue",
+      "existingKeys": [
+        "thirdpartyservice.name",
+        "thirdpartyservice.date",
+        "Third-Party Service Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\ThreatCatalog\\ThreatCatalog.vue",
+      "existingKeys": [
+        "threatcatalog.name",
+        "threatcatalog.event",
+        "threatcatalog.description",
+        "threatcatalog.name",
+        "threatcatalog.threat group",
+        "threatcatalog.order",
+        "threatcatalog.event",
+        "threatcatalog.description"
+      ],
+      "newKeys": [
+        "threatcatalog.all_groups",
+        "threatcatalog.filter_by_group"
+      ]
+    },
+    {
+      "file": "views\\Page\\threatGroup\\threatGroup.vue",
+      "existingKeys": [
+        "name",
+        "name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Translate\\Translate 2.vue",
+      "existingKeys": [
+        "translate.Name",
+        "translate.language key",
+        "translate.Action",
+        "translate.Name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Translate\\Translate.vue",
+      "existingKeys": [
+        "translate.Translate",
+        "translate.Name",
+        "translate.language key",
+        "translate.Action",
+        "translate.save",
+        "translate.cancel",
+        "translate.Name",
+        "translate.Name",
+        "translate.Please enter name"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\Translations\\components\\Form.vue",
+      "existingKeys": [
+        "i18n.key",
+        "site.delete",
+        "site.save",
+        "site.cancel"
+      ],
+      "newKeys": [
+        "form.name"
+      ]
+    },
+    {
+      "file": "views\\Page\\Translations\\Translations.vue",
+      "existingKeys": [
+        "translate.translate",
+        "site.main",
+        "settings.settings",
+        "translate.translate",
+        "site.records",
+        "site.add",
+        "site.name",
+        "site.name",
+        "translate.translate",
+        "translate.options"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\User\\components\\ViewUserDetails.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "viewuserdetails.close",
+        "viewuserdetails.username",
+        "viewuserdetails.department",
+        "viewuserdetails.phone",
+        "viewuserdetails.email",
+        "viewuserdetails.type",
+        "viewuserdetails.full_name",
+        "viewuserdetails.mdiclose",
+        "viewuserdetails.user_details"
+      ]
+    },
+    {
+      "file": "views\\Page\\User\\Profile.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "profile.update_password",
+        "profile.confirm_password",
+        "profile.new_password",
+        "profile.current_password",
+        "profile.password_management",
+        "profile.permissions",
+        "profile.user_data"
+      ]
+    },
+    {
+      "file": "views\\Page\\User\\User.vue",
+      "existingKeys": [
+        "user.department",
+        "user.job",
+        "user.teams",
+        "user.email",
+        "user.full_name",
+        "user.phone",
+        "user.type",
+        "user.status",
+        "user.is_locked",
+        "user.Department",
+        "user.Job",
+        "user.Teams",
+        "user.fullName",
+        "user.userName",
+        "user.useremail",
+        "user.phone",
+        "user.password",
+        "user.manager",
+        "user.department",
+        "user.teams",
+        "user.job",
+        "user.super"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\UserLmsTrainingModule\\UserLmsTrainingModule-copy-backup.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "userlmstrainingmodule-copy-backup.return_to_training_modules",
+        "userlmstrainingmodule-copy-backup.incorrect",
+        "userlmstrainingmodule-copy-backup.correct",
+        "userlmstrainingmodule-copy-backup.question_summary",
+        "userlmstrainingmodule-copy-backup.you_didnt_reach_the_passing_score_for_this_module",
+        "userlmstrainingmodule-copy-backup._60_scorepercentage",
+        "userlmstrainingmodule-copy-backup.finish",
+        "userlmstrainingmodule-copy-backup.next",
+        "userlmstrainingmodule-copy-backup.submit_answer",
+        "userlmstrainingmodule-copy-backup.previous",
+        "userlmstrainingmodule-copy-backup.pdf_document",
+        "userlmstrainingmodule-copy-backup.click_to_enlarge",
+        "userlmstrainingmodule-copy-backup.learning_content",
+        "userlmstrainingmodule-copy-backup.incorrect_the_correct_answer_is",
+        "userlmstrainingmodule-copy-backup.false",
+        "userlmstrainingmodule-copy-backup.true",
+        "userlmstrainingmodule-copy-backup.start",
+        "userlmstrainingmodule-copy-backup.failed",
+        "userlmstrainingmodule-copy-backup.passed",
+        "userlmstrainingmodule-copy-backup.campaign",
+        "userlmstrainingmodule-copy-backup.optional",
+        "userlmstrainingmodule-copy-backup.mandatory",
+        "userlmstrainingmodule-copy-backup.loading_training_modules_",
+        "userlmstrainingmodule-copy-backup.error",
+        "userlmstrainingmodule-copy-backup.exit_module",
+        "userlmstrainingmodule-copy-backup.success",
+        "userlmstrainingmodule-copy-backup.confirmation",
+        "userlmstrainingmodule-copy-backup.prerequisite_required",
+        "userlmstrainingmodule-copy-backup.unanswered_questions"
+      ]
+    },
+    {
+      "file": "views\\Page\\UserLmsTrainingModule\\UserLmsTrainingModule.vue",
+      "existingKeys": [
+        "lms.LoadingTrainingModules...",
+        "lms.level",
+        "lms.mandatory",
+        "lms.optional",
+        "lms.campaign",
+        "lms.course",
+        "lms.level",
+        "lms.questions",
+        "lms.statements",
+        "lms.duedate",
+        "lms.lastupdateddate",
+        "lms.passed",
+        "lms.failed",
+        "lms.start",
+        "lms.question",
+        "lms.of",
+        "lms.true",
+        "lms.false",
+        "lms.learningcontent",
+        "lms.content",
+        "lms.of",
+        "lms.clicktoenlarge",
+        "lms.pdfdocument",
+        "lms.submitanswer",
+        "lms.next",
+        "lms.finish",
+        "lms.yourscored",
+        "lms.outof",
+        "lms.passingscore",
+        "lms.youhavesuccessfullycompletedthe",
+        "lms.module",
+        "lms.you_didn't_reach_the_passing_score_for_this_module.",
+        "lms.youhavesuccessfullycompletedthe",
+        "lms.module",
+        "lms.questionsummary",
+        "lms.correct",
+        "lms.incorrect",
+        "lms.return_to_training_modules"
+      ],
+      "newKeys": [
+        "userlmstrainingmodule._60_scorepercentage",
+        "userlmstrainingmodule.previous",
+        "userlmstrainingmodule.incorrect_the_correct_answer_is",
+        "userlmstrainingmodule.correct",
+        "userlmstrainingmodule.error",
+        "userlmstrainingmodule.exit_module",
+        "userlmstrainingmodule.success",
+        "userlmstrainingmodule.submit_answer",
+        "userlmstrainingmodule.confirmation",
+        "userlmstrainingmodule.prerequisite_required",
+        "userlmstrainingmodule.unanswered_questions"
+      ]
+    },
+    {
+      "file": "views\\Page\\VSTIntegration\\VSTIntegration.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "vstintegration.status",
+        "vstintegration.qualys",
+        "vstintegration.tenable",
+        "vstintegration.type"
+      ]
+    },
+    {
+      "file": "views\\Page\\Vulnerability\\components\\ViewVulnerability.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "viewvulnerability.close",
+        "viewvulnerability.teams",
+        "viewvulnerability.creation_date",
+        "viewvulnerability.scanner_status",
+        "viewvulnerability.plugin_modification_date",
+        "viewvulnerability.plugin_publication_date",
+        "viewvulnerability.last_discovered",
+        "viewvulnerability.first_discovered",
+        "viewvulnerability.plugin_output",
+        "viewvulnerability.solution",
+        "viewvulnerability.description",
+        "viewvulnerability.synopsis",
+        "viewvulnerability.overdue",
+        "viewvulnerability.closed",
+        "viewvulnerability.inprogress",
+        "viewvulnerability.open",
+        "viewvulnerability.owner_status",
+        "viewvulnerability.notexploit",
+        "viewvulnerability.exploit",
+        "viewvulnerability.critical",
+        "viewvulnerability.informational",
+        "viewvulnerability.high",
+        "viewvulnerability.medium",
+        "viewvulnerability.low",
+        "viewvulnerability.severity",
+        "viewvulnerability.protocol",
+        "viewvulnerability.port",
+        "viewvulnerability.asset",
+        "viewvulnerability.ip_address",
+        "viewvulnerability.dns",
+        "viewvulnerability.netbios",
+        "viewvulnerability.cve",
+        "viewvulnerability.plugin_name",
+        "viewvulnerability.plugin_id",
+        "viewvulnerability.mdiclose",
+        "viewvulnerability.view_vulnerability"
+      ]
+    },
+    {
+      "file": "views\\Page\\Vulnerability\\Vulnerability.vue",
+      "existingKeys": [
+        "asset.risk_mngt",
+        "vulnerability.vulnerability_mngt",
+        "vulnerability.vulnerability",
+        "vulnerability.severity",
+        "common.all",
+        "vulnerability.low",
+        "vulnerability.medium",
+        "vulnerability.high",
+        "vulnerability.informational",
+        "vulnerability.critical",
+        "vulnerability.owner_status",
+        "common.all",
+        "common.open",
+        "common.in_progress",
+        "common.closed",
+        "common.over_due",
+        "vulnerability.scanner_status",
+        "common.all",
+        "common.open",
+        "common.in_progress",
+        "common.closed",
+        "common.over_due",
+        "vulnerability.exploit",
+        "common.all",
+        "vulnerability.exploit",
+        "vulnerability.not_exploit",
+        "vulnerability.host_region",
+        "common.all",
+        "vulnerability.asset_category",
+        "common.all",
+        "vulnerability.exploit",
+        "common.not_exploit",
+        "vulnerability.low",
+        "vulnerability.medium",
+        "vulnerability.high",
+        "vulnerability.informational",
+        "vulnerability.critical",
+        "common.open",
+        "common.in_progress",
+        "common.closed",
+        "common.over_due",
+        "common.view",
+        "asset.asset",
+        "vulnerability.select_asset",
+        "vulnerability.change_owner_status",
+        "common.save_changes",
+        "common.close",
+        "common.open",
+        "common.in_progress",
+        "common.closed",
+        "common.over_due",
+        "vulnerability.plugin_id",
+        "vulnerability.plugin_name",
+        "vulnerability.cve",
+        "vulnerability.asset",
+        "vulnerability.ip_address",
+        "vulnerability.severity",
+        "vulnerability.dns_name",
+        "vulnerability.netbios_name",
+        "vulnerability.owner_status",
+        "vulnerability.scanner_status",
+        "vulnerability.port",
+        "vulnerability.exploit",
+        "vulnerability.description",
+        "vulnerability.plugin_id",
+        "vulnerability.enter_plugin_id",
+        "vulnerability.plugin_name",
+        "vulnerability.enter_plugin_name",
+        "vulnerability.cve",
+        "vulnerability.enter_cve",
+        "vulnerability.netbios_name",
+        "vulnerability.enter_netbios_name",
+        "vulnerability.dns_name",
+        "vulnerability.enter_dns_name",
+        "vulnerability.port",
+        "vulnerability.enter_port",
+        "vulnerability.ip_address",
+        "vulnerability.select_ip_address",
+        "asset.teams",
+        "asset.select_teams",
+        "vulnerability.severity",
+        "vulnerability.low",
+        "vulnerability.medium",
+        "vulnerability.high",
+        "vulnerability.informational",
+        "vulnerability.critical",
+        "vulnerability.select_severity",
+        "vulnerability.synopsis",
+        "vulnerability.enter_synopsis",
+        "vulnerability.description",
+        "vulnerability.enter_description",
+        "vulnerability.solution",
+        "vulnerability.enter_solution",
+        "vulnerability.plugin_output",
+        "vulnerability.enter_plugin_output",
+        "vulnerability.protocol",
+        "vulnerability.enter_protocol",
+        "vulnerability.first_discovered",
+        "vulnerability.select_first_discovered",
+        "vulnerability.last_observed",
+        "vulnerability.select_last_observed",
+        "vulnerability.plugin_publication_date",
+        "vulnerability.select_plugin_publication_date",
+        "vulnerability.plugin_modification_date",
+        "vulnerability.select_plugin_modification_date",
+        "vulnerability.exploit",
+        "vulnerability.owner_status_changed"
+      ],
+      "newKeys": []
+    },
+    {
+      "file": "views\\Page\\WorkflowCategory\\MainStepsTransition.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "mainstepstransition.cancel",
+        "mainstepstransition.save",
+        "mainstepstransition.required",
+        "mainstepstransition.disabled",
+        "mainstepstransition.hidden",
+        "mainstepstransition.default",
+        "mainstepstransition.field_name",
+        "mainstepstransition.loading_fields",
+        "mainstepstransition.document_fields"
+      ]
+    },
+    {
+      "file": "views\\Page\\WorkflowCategory\\Transition.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "transition.users_with_the_specified_roles_can_execute",
+        "transition.name",
+        "transition.workflow_transition_details",
+        "transition.back_to_workflow"
+      ]
+    },
+    {
+      "file": "views\\Page\\WorkflowCategory\\Workflow.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "workflow.add_workflow",
+        "workflow.operations",
+        "workflow.workflow_",
+        "workflow.active",
+        "workflow.workflow_name"
+      ]
+    },
+    {
+      "file": "views\\Page\\WorkflowCategory\\WorkflowCategory.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "workflowcategory.cancel",
+        "workflowcategory.drag_up_and_down"
+      ]
+    },
+    {
+      "file": "views\\Page\\WorkflowCategory\\WorkflowDetailes.vue",
+      "existingKeys": [],
+      "newKeys": [
+        "workflowdetailes.add_transition",
+        "workflowdetailes.operations",
+        "workflowdetailes.transitions",
+        "workflowdetailes.step_name",
+        "workflowdetailes.step_code"
+      ]
+    }
+  ]
+}

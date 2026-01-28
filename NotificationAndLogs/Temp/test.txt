@@ -1,0 +1,143 @@
+<?php
+
+namespace Tests\Feature\@@Name@@;
+
+use App\Models\@@Name@@\@@Name@@;
+use Illuminate\Support\Facades\DB;
+use Tests\TestCase;
+
+class @@Name@@ControllerTest extends TestCase
+{
+    /**
+     * Set up the test environment.
+     * Clears the database to ensure a clean state for each test.
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->clearDatabase();
+    }
+
+    /**
+     * Clears all collections in the MongoDB database.
+     * Simulates a fresh database state before each test.
+     */
+    protected function clearDatabase(): void
+    {
+        DB::connection('mongodb')->getMongoClient()
+            ->selectDatabase(config('database.connections.mongodb.database'))
+            ->drop();
+    }
+
+    /** @test */
+    public function it_can_list_@@Name@@s()
+    {
+        // Arrange: Insert mock @@Name@@s into the database
+        @@Name@@::insert([
+            ['name' => '@@Name@@ 1'],
+
+        ]);
+
+        // Act: Send a GET request to retrieve the list of @@Name@@s
+        $response = $this->getJson(route('@@Namekebab@@.index'));
+
+        // Assert: Verify the response is successful and contains the correct data
+        $response->assertOk();
+    }
+
+    /** @test */
+    public function it_can_create_a_@@Name@@()
+    {
+        // Arrange: Prepare @@Name@@ data
+        $data = [
+            'name' => '@@Name@@',
+
+        ];
+
+        // Act: Send a POST request to create a new @@Name@@
+        $response = $this->postJson(route('@@Namekebab@@.store'), $data);
+        // Assert: Verify the @@Name@@ is created and database contains the new @@Name@@
+        $response->assertOk();
+        $this->assertDatabaseHas((new @@Name@@())->getTable(), [
+            'name' => '@@Name@@',
+
+        ]);
+    }
+
+    /** @test */
+    public function it_can_show_a_@@Name@@()
+    {
+        // Arrange: Create a test @@Name@@
+        $@@Name@@ = @@Name@@::create([
+            'name' => '@@Name@@ Test',
+
+        ]);
+
+        // Act: Send a GET request to retrieve the @@Name@@'s details
+        $response = $this->getJson(route('@@Namekebab@@.show', (string) $@@Name@@->id));
+
+        // Assert: Verify the response contains the correct @@Name@@ details
+        $response->assertOk();
+        $response->assertJsonFragment([
+            'name' => $@@Name@@->name,
+
+        ]);
+    }
+
+    /** @test */
+    public function it_can_update_a_@@Name@@()
+    {
+        // Arrange: Create a test @@Name@@
+        $@@Name@@ = @@Name@@::create([
+            'name' => '@@Name@@ Test',
+
+        ]);
+        $data = [
+            'name' => '@@Name@@',
+
+        ];
+
+        // Act: Send a PUT request to update the @@Name@@'s details
+        $response = $this->putJson(route('@@Namekebab@@.update', (string) $@@Name@@->id), $data);
+
+        // Assert: Verify the @@Name@@'s details are updated in the database
+        $response->assertOk();
+        $this->assertDatabaseHas((new @@Name@@())->getTable(), [
+            '_id' => $@@Name@@->id,
+            'name' => '@@Name@@',
+        ]);
+    }
+
+    /** @test */
+    public function it_can_soft_delete_and_force_delete_a_@@Name@@()
+    {
+        // Arrange: Create a test @@Name@@
+        $@@Name@@ = @@Name@@::create([
+            'name' => '@@Name@@ Test',
+            'email' => '@@Name@@@example.com',
+            'password' => bcrypt('password'),
+        ]);
+
+        // Act: Send a DELETE request to soft delete the @@Name@@
+        $response = $this->deleteJson(route('@@Namekebab@@.destroy', (string) $@@Name@@->id), [
+            'forceDelete' => false,
+        ]);
+
+        // Assert: Verify the @@Name@@ is soft deleted
+        $response->assertOk();
+        $this->assertSoftDeleted((new @@Name@@())->getTable(), [
+            '_id' => $@@Name@@->id,
+        ]);
+
+        // Act: Send another DELETE request to force delete the @@Name@@
+        $responseForceDelete = $this->deleteJson(route('@@Namekebab@@.destroy', (string) $@@Name@@->id), [
+            'forceDelete' => true,
+        ]);
+
+        // Assert: Verify the @@Name@@ is permanently removed from the database
+        $responseForceDelete->assertOk();
+        $this->assertDatabaseMissing((new @@Name@@())->getTable(), [
+            '_id' => $@@Name@@->id,
+        ]);
+    }
+}

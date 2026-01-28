@@ -1,0 +1,22 @@
+{
+  "modules": [
+    {
+      "name": "PhoneType",
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Name of the phone type",
+          "showInTable": true
+        },
+        {
+          "name": "description",
+          "type": "textarea",
+          "description": "Description of the phone type",
+          "showInTable": true
+        }
+      ],
+      "relationships": []
+    }
+  ]
+}
