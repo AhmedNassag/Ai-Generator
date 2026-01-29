@@ -1071,102 +1071,87 @@ async def remove_import_statement(file_path: str, module_name: str) -> bool:
 
 
 async def remove_from_router_index(frontend_path: str, module_name: str) -> bool:
-    """Remove router entry for module - Case-insensitive search."""
+    """Remove router entry for module - Case-insensitive and kebab-case aware."""
     router_index_path = Path(frontend_path) / "src" / "router" / "index.ts"
-    
+
     print(f"   ℹ️  Removing '{module_name}' from router index...")
-    
+
     if not router_index_path.exists():
         print(f"   ❌ File not found")
         return False
-    
+
     try:
         content = router_index_path.read_text(encoding="utf-8")
-        
-        # البحث عن الاسم بجميع حالات الأحرف
-        # نحتاج إلى البحث عن 'userr' (بالصغيرة) في المسار
-        
         lines = content.splitlines()
         new_lines = []
         removed = False
-        
+
+        # helper kebab-case
+        name_kebab = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', module_name).lower()
+
+        # patterns (case-insensitive)
+        import_path_re = re.compile(
+            rf'["\'][^"\']*(?:/router/modules/)?(?:{re.escape(module_name)}|{re.escape(name_kebab)})[^"\']*["\']',
+            re.IGNORECASE
+        )
+        identifier_re = re.compile(rf'\b{re.escape(module_name)}\b', re.IGNORECASE)
+        spread_re = re.compile(rf'\.\.\.{re.escape(module_name)}(,|$)', re.IGNORECASE)
+
         for line in lines:
-            original_line = line
             line_lower = line.lower()
-            
-            # 1. البحث عن import: يجب أن يحتوي على "import userr from" (بأي حالة أحرف)
-            #    ويجب أن يحتوي على "userr" في المسار
-            if 'import' in line_lower and module_name.lower() in line_lower and 'from' in line_lower:
-                # تحقق من أن الاسم يظهر ككلمة كاملة
-                if re.search(rf'\b{re.escape(module_name)}\b', line, re.IGNORECASE):
-                    # تحقق من وجود اسم الموديل في المسار (kebab-case)
-                    if re.search(rf'["\'][^"\']*{re.escape(module_name.lower())}[^"\']*["\']', line):
-                        print(f"   ✂️  Removing import: {line.strip()}")
-                        removed = True
-                        continue
-            
-            # 2. البحث عن spread operator: ...userr,
-            # نبحث عن النمط مع الفاصلة أو بدونها
-            spread_match = re.search(rf'\.\.\.{re.escape(module_name)}(,|$)', line, re.IGNORECASE)
-            if spread_match:
-                # إذا كان السطر يحتوي فقط على spread operator
+
+            # remove import lines that reference the module (path or identifier)
+            if 'import' in line_lower and 'from' in line_lower:
+                if import_path_re.search(line) or identifier_re.search(line.split('from')[0]):
+                    print(f"   ✂️  Removing import: {line.strip()}")
+                    removed = True
+                    continue
+
+            # remove spread entries (...ModuleName,)
+            if spread_re.search(line):
+                # entire-line spread
                 if re.match(rf'^\s*\.\.\.{re.escape(module_name)},?\s*$', line, re.IGNORECASE):
                     print(f"   ✂️  Removing spread: {line.strip()}")
                     removed = True
                     continue
-                
-                # إذا كان spread operator في منتصف السطر
-                # نزيل spread operator والفاصلة التي بعده
+
+                # inline spread — remove token and fix commas
                 new_line = re.sub(rf'\s*\.\.\.{re.escape(module_name)}\s*,?\s*', '', line, flags=re.IGNORECASE)
-                
-                # تنظيف الفواصل الزائدة
-                new_line = re.sub(r'^\s*,\s*', '', new_line)  # فاصلة في البداية
-                new_line = re.sub(r',\s*$', '', new_line)     # فاصلة في النهاية
-                
+                new_line = re.sub(r'^\s*,\s*', '', new_line)
+                new_line = re.sub(r',\s*$', '', new_line)
                 if new_line != line:
                     print(f"   ✂️  Modified: {line.strip()} → {new_line.strip() if new_line.strip() else '(empty)'}")
                     removed = True
                     line = new_line
-            
-            # إضافة السطر إذا بقي فيه محتوى
+
+            # keep non-empty lines
             if line.strip():
                 new_lines.append(line)
-        
+
         if not removed:
             print(f"   ℹ️  Module '{module_name}' not found")
             return True
-        
-        # كتابة المحتوى الجديد
+
         new_content = '\n'.join(new_lines)
-        
-        # تنظيف الأسطر الفارغة الزائدة
         new_content = re.sub(r'\n\n\n+', '\n\n', new_content)
         new_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', new_content)
-        
-        # إزالة المسافات الزائدة
-        new_content = '\n'.join([line.rstrip() for line in new_content.splitlines()])
-        
-        # إضافة سطر جديد في النهاية
+        new_content = '\n'.join([ln.rstrip() for ln in new_content.splitlines()])
         if new_content and not new_content.endswith('\n'):
             new_content += '\n'
-        
-        # كتابة الملف
+
         router_index_path.write_text(new_content, encoding="utf-8")
         print(f"   ✅ Successfully removed '{module_name}'")
-        
-        # التحقق النهائي
+
         final_content = router_index_path.read_text(encoding="utf-8")
         if re.search(rf'\b{re.escape(module_name)}\b', final_content, re.IGNORECASE):
-            # تحقق مما إذا كان الاسم المتبقي هو حقًا للموديل المطلوب
-            final_lines = final_content.splitlines()
-            for line in final_lines:
+            for line in final_content.splitlines():
                 if re.search(rf'\b{re.escape(module_name)}\b', line, re.IGNORECASE):
                     print(f"   ⚠️  Found potential remaining: {line.strip()}")
             return False
-        
+
         print(f"   ✓ Clean removal confirmed")
         return True
-        
+
     except Exception as error:
         print(f"   ❌ Error: {error}")
         return False
@@ -1418,7 +1403,7 @@ def convert_batch_fields(fields: List[Dict], name: str) -> Dict:
             "rules": field_info["validation"],
             "description": field.get("description", ""),
             "showInTable": field.get("showInTable", True),
-            "col": field_info["col"]
+            "col": field_info["col"],
         }
         
         if "options" in field:
@@ -2544,7 +2529,7 @@ async def wizard():
                     "col": field_info["col"],
                     "showInTable": show_in_table,
                     "tableDisplay": field_info["tableDisplay"],
-                    "description": description
+                    "description": description,
                 }
                 
                 # Handle options
