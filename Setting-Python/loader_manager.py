@@ -1,12 +1,9 @@
-# loader_manager.py - نسخة محسنة
 from PyQt5.QtWidgets import QApplication, QDesktopWidget, QWidget
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QPainter, QColor, QPen, QBrush, QFont
 import math
 
-class CSSLoader(QWidget):
-    """لودر بسيط وعملي بدون مشاكل رياضية"""
-    
+class CSSLoader(QWidget):    
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -40,17 +37,14 @@ class CSSLoader(QWidget):
         ]
         
     def _update_rotation(self):
-        """تحديث الدوران"""
         self._angle = (self._angle + 6) % 360
         self.update()
     
     def _update_dots(self):
-        """تحديث النقاط"""
         self._dots = "." * ((len(self._dots) + 1) % 4)
         self.update()
     
     def paintEvent(self, event):
-        """رسم اللودر - نسخة مبسطة وخالية من الأخطاء"""
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
         
@@ -158,35 +152,28 @@ class CSSLoader(QWidget):
         painter.drawRoundedRect(0, 0, self.width()-1, self.height()-1, 10, 10)
     
     def start(self):
-        """بدء اللودر"""
         self.rotation_timer.start()
         self.dots_timer.start()
         self.show()
     
     def stop(self):
-        """إيقاف اللودر"""
         self.rotation_timer.stop()
         self.dots_timer.stop()
         self.hide()
     
     def set_progress(self, value):
-        """تعيين التقدم"""
         self._progress = min(100, max(0, int(value)))
         self.update()
     
     def set_message(self, message):
-        """تعيين الرسالة"""
         self._message = message
         self.update()
     
     def isVisible(self):
-        """التحقق من الرؤية"""
         return super().isVisible()
 
 
-class LoaderManager:
-    """مدير للتحكم في عرض وإخفاء اللودر"""
-    
+class LoaderManager:    
     _instance = None
     _loader = None
     
@@ -197,7 +184,6 @@ class LoaderManager:
     
     @classmethod
     def show_loader(cls, parent=None, message="Processing"):
-        """عرض اللودر"""
         try:
             # Close existing loader if any
             if cls._loader is not None:
@@ -244,7 +230,6 @@ class LoaderManager:
     
     @classmethod
     def hide_loader(cls):
-        """إخفاء اللودر بسلاسة"""
         try:
             if cls._loader:
                 cls._loader.stop()
@@ -254,7 +239,6 @@ class LoaderManager:
     
     @classmethod
     def update_progress(cls, value):
-        """تحديث قيمة التقدم"""
         try:
             if cls._loader:
                 cls._loader.set_progress(value)
@@ -265,5 +249,4 @@ class LoaderManager:
     
     @classmethod
     def is_visible(cls):
-        """التحقق مما إذا كان اللودر مرئي"""
         return cls._loader and cls._loader.isVisible()
