@@ -1,5 +1,4 @@
 <?php
-@include('Modules/Category/CategoryRoutes.php');
 @include('Modules/Color/ColorRoutes.php');
 @include('Modules/Department/DepartmentRoutes.php');
 @include('Modules/Job/JobRoutes.php');

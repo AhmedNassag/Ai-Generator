@@ -15,7 +15,7 @@ if not api_key:
     # We'll leave the client init to fail or rely on the SDK's default env var lookup if we didn't pass it explicit
     # But I'll pass it explicitly to be clear.
     # If None, SDK might look for it too.
-    api_key = "your_api_key" # Replace with your OpenAI key
+    api_key = "your_openai_key" # Replace with your OpenAI key
 
 client = OpenAI(api_key=api_key)
 

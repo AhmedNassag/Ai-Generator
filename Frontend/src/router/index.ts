@@ -26,7 +26,6 @@ import Location from "@/router/modules/Location/Location";
 import Color from "@/router/modules/Color/Color";
 import Team from "@/router/modules/Team/Team";
 import EmailConfig from "@/router/modules/EmailConfig/EmailConfig";
-import Category from "@/router/modules/Category/Category";
 import Cookies from "js-cookie";
 import Errors from "./modules/Errors/Errors";
 import { useTranslations } from "@/composables/useTranslations";
@@ -46,7 +45,6 @@ const routes: Array<RouteRecordRaw> = [
       title: "Default |  ",
     },
     children: [
-      ...Category,       
       ///
       ...Dashboard,
       ...UserReport,
