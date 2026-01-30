@@ -8,3 +8,5 @@
 @include('Modules/Role/RoleRoutes.php');
 @include('Modules/Team/TeamRoutes.php');
 @include('Modules/User/UserRoutes.php');
+@include('Modules/Language/LanguageRoutes.php');
+@include('Modules/Translate/TranslateRoutes.php');

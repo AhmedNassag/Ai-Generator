@@ -1261,12 +1261,10 @@ async def delete_module(
                         print(f"   ⚠️  Could not remove from routes: {err}")
         
         if delete_frontend:
-            name_kebab = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', module_name).lower()
-            
             frontend_folders = [
-                (f"src/API/{name_kebab}", "frontend API folder"),
+                (f"src/API/{module_name}", "frontend API folder"),
                 (f"src/views/Page/{module_name}", "frontend page folder"),
-                (f"src/router/modules/{name_kebab}", "frontend router module folder")
+                (f"src/router/modules/{module_name}", "frontend router module folder")
             ]
             
             results = {
@@ -1417,7 +1415,7 @@ def convert_batch_fields(fields: List[Dict], name: str) -> Dict:
                 "optionValue": field.get("optionValue")
             })
         
-        if field.get("isMultiple", False):
+        if field.get("multiple", False):
             frontend_field["multiple"] = True
         
         frontend_fields.append(frontend_field)

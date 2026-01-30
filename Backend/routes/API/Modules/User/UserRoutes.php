@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\UserController;
@@ -8,11 +7,7 @@ use App\Http\Middleware\JwtMiddleware;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
-
-
-
 Route::middleware(CheckCanVisitAPI::class)->group(function(){
-
     Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::post('forgot-password', [AuthController::class, 'sendOTP']);
     Route::post('reset-password', [AuthController::class, 'resetPassword']);
@@ -43,7 +38,6 @@ Route::middleware(CheckCanVisitAPI::class)->group(function(){
             'status'    => false,
         ], 404);
     });
-
 });
 
 // Route::middleware(['auth:api'])->group(function () {
@@ -53,4 +47,3 @@ Route::middleware(CheckCanVisitAPI::class)->group(function(){
     Route::get('/model-fillable/{modelName}', [UserController::class, 'getFillable']);
 // });
 //});
-
