@@ -50,6 +50,8 @@ class GenerationThread(QThread):
                 self.batch_generate()
             elif self.task_type == "ai_clickup":
                 self.ai_clickup_generate()
+            elif self.task_type == "business_description":
+                self.business_description_generate()
             elif self.task_type == "delete":
                 self.delete_module()
         except Exception as e:
@@ -166,6 +168,61 @@ class GenerationThread(QThread):
                 
         except Exception as e:
             self.log_signal.emit(f"❌ Batch generation error: {str(e)}")
+            self.finished_signal.emit(False, str(e))
+
+    def business_description_generate(self):
+        """Generate modules from AI configuration provided via business description."""
+        self.log_signal.emit("Starting Business Description AI generation...")
+        try:
+            config = json.loads(self.kwargs.get("config_json", "{}"))
+            validation = fullstack_generator.validate_batch_config(config)
+
+            if not validation["isValid"]:
+                self.log_signal.emit("❌ Validation failed:")
+                for err in validation["errors"]:
+                    self.log_signal.emit(f"   • {err}")
+                self.finished_signal.emit(False, "Validation failed")
+                return
+
+            self.log_signal.emit(f"✅ Configuration validated. Found {len(config.get('modules', []))} modules")
+
+            results = []
+            total = len(config.get("modules", []))
+
+            import inspect, asyncio
+            process_func = fullstack_generator.process_batch_module
+            for i, module in enumerate(config.get("modules", []), 1):
+                self.log_signal.emit(f"\n📝 [{i}/{total}] Processing: {module['name']}")
+                self.progress_signal.emit(int((i / total) * 100))
+                args = (
+                    module,
+                    self.kwargs.get("backend_path"),
+                    self.kwargs.get("frontend_path"),
+                    True,
+                    True
+                )
+                if inspect.iscoroutinefunction(process_func):
+                    try:
+                        loop = asyncio.get_event_loop()
+                    except RuntimeError:
+                        loop = asyncio.new_event_loop()
+                        asyncio.set_event_loop(loop)
+                    result = loop.run_until_complete(process_func(*args))
+                else:
+                    result = process_func(*args)
+                results.append(result)
+
+            success_count = sum(1 for r in results if r["success"])
+            self.log_signal.emit(f"\n📊 AI Generation Summary: {success_count}/{total} modules successful")
+
+            if success_count == total:
+                self.finished_signal.emit(True, f"AI generation completed: {success_count}/{total} successful")
+            else:
+                self.finished_signal.emit(False, f"AI generation partial: {success_count}/{total} successful")
+
+        except Exception as e:
+            self.log_signal.emit(f"❌ Business Description AI error: {str(e)}")
+            self.log_signal.emit(traceback.format_exc())
             self.finished_signal.emit(False, str(e))
     
     def ai_clickup_generate(self):
@@ -1413,6 +1470,149 @@ class AIClickUpTab(QWidget):
                 frontend_path=self.frontend_path.text()
             )
 
+class BusinessDescriptionTab(QWidget):
+    """Tab for Business Description -> AI generation"""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.init_ui()
+
+    def init_ui(self):
+        layout = QVBoxLayout()
+
+        # Status
+        status_layout = QHBoxLayout()
+        self.llm_status = QLabel("❌ AI: Not available")
+        if LLM_AVAILABLE:
+            self.llm_status.setText("✅ AI: Available")
+            self.llm_status.setStyleSheet("color: green;")
+        status_layout.addWidget(self.llm_status)
+        layout.addLayout(status_layout)
+
+        # Paths
+        paths_group = QGroupBox("Paths")
+        paths_layout = QGridLayout()
+        paths_layout.addWidget(QLabel("Backend Path:"), 0, 0)
+        self.backend_path = QLineEdit()
+        self.backend_path.setText("../Backend")
+        paths_layout.addWidget(self.backend_path, 0, 1)
+        btn_backend = QPushButton("Browse...")
+        btn_backend.clicked.connect(self.browse_backend)
+        paths_layout.addWidget(btn_backend, 0, 2)
+
+        paths_layout.addWidget(QLabel("Frontend Path:"), 1, 0)
+        self.frontend_path = QLineEdit()
+        self.frontend_path.setText("../Frontend")
+        paths_layout.addWidget(self.frontend_path, 1, 1)
+        btn_frontend = QPushButton("Browse...")
+        btn_frontend.clicked.connect(self.browse_frontend)
+        paths_layout.addWidget(btn_frontend, 1, 2)
+
+        paths_group.setLayout(paths_layout)
+        layout.addWidget(paths_group)
+
+        # Business Description input
+        desc_group = QGroupBox("Business Description")
+        desc_layout = QVBoxLayout()
+        desc_layout.addWidget(QLabel("Enter the business/task description:"))
+        self.business_description = QTextEdit()
+        self.business_description.setMaximumHeight(140)
+        desc_layout.addWidget(self.business_description)
+        desc_group.setLayout(desc_layout)
+        layout.addWidget(desc_group)
+
+        # AI Configuration Preview
+        config_group = QGroupBox("AI Configuration Preview")
+        config_layout = QVBoxLayout()
+        self.config_preview = QTextEdit()
+        self.config_preview.setReadOnly(False)
+        config_layout.addWidget(self.config_preview)
+
+        config_buttons = QHBoxLayout()
+        self.btn_generate_config = QPushButton("🤖 Generate with AI")
+        self.btn_generate_config.clicked.connect(self.generate_ai_config)
+        self.btn_generate_config.setEnabled(LLM_AVAILABLE)
+        config_buttons.addWidget(self.btn_generate_config)
+
+        btn_save_config = QPushButton("💾 Save Config...")
+        btn_save_config.clicked.connect(self.save_config)
+        config_buttons.addWidget(btn_save_config)
+
+        config_group.setLayout(config_layout)
+        config_layout.addLayout(config_buttons)
+        layout.addWidget(config_group)
+
+        # Generate button
+        self.btn_generate = QPushButton("🚀 Generate from AI Configuration")
+        self.btn_generate.clicked.connect(self.generate_from_ai)
+        self.btn_generate.setEnabled(False)
+        layout.addWidget(self.btn_generate)
+
+        self.setLayout(layout)
+
+    def browse_backend(self):
+        path = QFileDialog.getExistingDirectory(self, "Select Backend Directory")
+        if path:
+            self.backend_path.setText(path)
+
+    def browse_frontend(self):
+        path = QFileDialog.getExistingDirectory(self, "Select Frontend Directory")
+        if path:
+            self.frontend_path.setText(path)
+
+    def generate_ai_config(self):
+        desc = self.business_description.toPlainText().strip()
+        if not desc:
+            QMessageBox.warning(self, "Warning", "Please enter a business description first!")
+            return
+
+        LoaderManager.show_loader(self.window(), "Generating AI configuration...")
+        main_window = self.window()
+        if hasattr(main_window, 'log_output'):
+            main_window.log_output.append("🤖 Generating configuration with AI from business description...")
+
+        try:
+            generated_config = generate_schema(desc)
+            parsed = json.loads(generated_config)
+            pretty = json.dumps(parsed, indent=2)
+            self.config_preview.setText(pretty)
+            self.btn_generate.setEnabled(True)
+            if hasattr(main_window, 'log_output'):
+                main_window.log_output.append("✅ AI configuration generated successfully")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"AI generation failed:\n{str(e)}")
+            if hasattr(main_window, 'log_output'):
+                main_window.log_output.append(f"❌ AI generation failed: {str(e)}")
+        LoaderManager.hide_loader()
+
+    def save_config(self):
+        config_text = self.config_preview.toPlainText()
+        if not config_text.strip():
+            QMessageBox.warning(self, "Warning", "No configuration to save!")
+            return
+        file_path, _ = QFileDialog.getSaveFileName(self, "Save AI Configuration", "ai-config.json", "JSON Files (*.json);;All Files (*)")
+        if file_path:
+            try:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(config_text)
+                QMessageBox.information(self, "Success", f"Configuration saved to:\n{file_path}")
+            except Exception as e:
+                QMessageBox.critical(self, "Error", f"Failed to save file:\n{str(e)}")
+
+    def generate_from_ai(self):
+        config_text = self.config_preview.toPlainText()
+        if not config_text.strip():
+            QMessageBox.warning(self, "Warning", "No AI configuration available!")
+            return
+        LoaderManager.show_loader(self.window(), "Starting AI generation...")
+        main_window = self.window()
+        if hasattr(main_window, 'start_generation'):
+            main_window.start_generation(
+                task_type="business_description",
+                config_json=config_text,
+                backend_path=self.backend_path.text(),
+                frontend_path=self.frontend_path.text()
+            )
+
 class DeleteModuleTab(QWidget):
     """Tab for deleting modules"""
     def __init__(self, parent=None):
@@ -1591,6 +1791,7 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(ModuleCreationTab(), "✨ Create Module")
         self.tabs.addTab(BatchModeTab(), "📦 Batch Mode")
         self.tabs.addTab(AIClickUpTab(), "🤖 AI & ClickUp")
+        self.tabs.addTab(BusinessDescriptionTab(), "💼 Business Description")
         self.tabs.addTab(DeleteModuleTab(), "🗑️ Delete Module")
         
         main_layout.addWidget(self.tabs)
