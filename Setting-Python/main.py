@@ -10,7 +10,8 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                              QMessageBox, QFileDialog, QListWidget, QListWidgetItem,
                              QCheckBox, QComboBox, QSpinBox, QTableWidget, 
                              QTableWidgetItem, QHeaderView, QScrollArea, QSplitter,
-                             QDialog, QProgressBar, QDialogButtonBox)
+                             QDialog, QProgressBar, QDialogButtonBox , QRadioButton, 
+                             QTextBrowser)
 from PyQt5.QtCore import Qt, pyqtSignal, QThread, pyqtSlot, QTimer
 from PyQt5.QtGui import QFont, QIcon, QColor, QTextCursor
 import fullstack_generator
@@ -61,14 +62,25 @@ class GenerationThread(QThread):
             
     def create_module(self):
         """Create a single module"""
+        
         self.log_signal.emit("Starting module creation...")
+    
+        # 🔍 DEBUG: اطبع جميع kwargs
+        self.log_signal.emit(f"🔍 [DEBUG] Received kwargs:")
+        for key, value in self.kwargs.items():
+            self.log_signal.emit(f"   {key}: {value}")
+        
+        # تحقق من وجود form_type
+        form_type = self.kwargs.get("form_type", "page")  # Default to "page" if not provided
+        self.log_signal.emit(f"🔍 [DEBUG] Form Type to use: {form_type}")
         
         # Prepare config from GUI data
         config = {
             "modules": [{
                 "name": self.kwargs.get("module_name"),
                 "fields": self.kwargs.get("fields", []),
-                "relationships": self.kwargs.get("relationships", [])
+                "relationships": self.kwargs.get("relationships", []),
+                "formType": form_type
             }]
         }
         
@@ -727,6 +739,7 @@ class ModuleCreationTab(QWidget):
         super().__init__(parent)
         self.fields = []
         self.relationships = []
+        self.form_type = "page"  # Default to regular form
         self.init_ui()
         
     def init_ui(self):
@@ -764,14 +777,51 @@ class ModuleCreationTab(QWidget):
         paths_layout.addWidget(QLabel("Generate:"), 2, 0)
         self.gen_backend = QCheckBox("Backend")
         self.gen_backend.setChecked(True)
+        self.gen_backend.toggled.connect(self.on_generation_changed)
         paths_layout.addWidget(self.gen_backend, 2, 1)
         
         self.gen_frontend = QCheckBox("Frontend")
         self.gen_frontend.setChecked(True)
+        self.gen_frontend.toggled.connect(self.on_generation_changed)
         paths_layout.addWidget(self.gen_frontend, 2, 2)
         
         paths_group.setLayout(paths_layout)
         main_layout.addWidget(paths_group)
+        
+        # Form Type Selection (NEW SECTION)
+        self.form_type_group = QGroupBox("Frontend Form Type")
+        form_type_layout = QVBoxLayout()
+        
+        # Radio buttons for form type
+        self.form_type_regular = QRadioButton("Regular Form (uses isFlipped)")
+        self.form_type_regular.setChecked(True)
+        self.form_type_regular.toggled.connect(self.on_form_type_changed)
+        
+        self.form_type_dialog = QRadioButton("Modal Dialog (uses v-dialog)")
+        self.form_type_dialog.toggled.connect(self.on_form_type_changed)
+        
+        # Group radio buttons
+        radio_group = QHBoxLayout()
+        radio_group.addWidget(self.form_type_regular)
+        radio_group.addWidget(self.form_type_dialog)
+        radio_group.addStretch()
+        
+        form_type_layout.addLayout(radio_group)
+        
+        # Description area
+        self.form_type_description = QTextEdit()
+        self.form_type_description.setMaximumHeight(80)
+        self.form_type_description.setReadOnly(True)
+        self.form_type_description.setHtml("""
+        <div style="padding: 8px; background-color: #f9f9f9; border-radius: 4px; font-size: 11px;">
+        <b>Regular Form:</b> Uses <code>isFlipped</code> property to show/hide form on the same page<br>
+        <b>Modal Dialog:</b> Opens form in a modal dialog using <code>v-dialog</code> component
+        </div>
+        """)
+        form_type_layout.addWidget(self.form_type_description)
+        
+        self.form_type_group.setLayout(form_type_layout)
+        main_layout.addWidget(self.form_type_group)
         
         # Fields section
         fields_group = QGroupBox(f"Fields (0)")
@@ -824,7 +874,7 @@ class ModuleCreationTab(QWidget):
         main_layout.addWidget(rel_group)
         
         # Generate button
-        self.btn_generate = QPushButton("Generate Module")
+        self.btn_generate = QPushButton("🚀 Generate Module")
         self.btn_generate.clicked.connect(self.generate_module)
         self.btn_generate.setEnabled(False)
         self.btn_generate.setStyleSheet("""
@@ -849,11 +899,48 @@ class ModuleCreationTab(QWidget):
         self.fields_group = fields_group
         self.rel_group = rel_group
         
+        # Initial state
+        self.on_generation_changed()
+        
     def on_module_name_changed(self, text):
         """Enable/disable generate button based on module name"""
         has_name = bool(text.strip())
         has_fields = len(self.fields) > 0
         self.btn_generate.setEnabled(has_name and has_fields)
+        
+    def on_generation_changed(self):
+        """Show/hide form type section based on frontend generation"""
+        show_form_type = self.gen_frontend.isChecked()
+        self.form_type_group.setVisible(show_form_type)
+        
+    def on_form_type_changed(self):
+        """Update form type based on selection"""
+        if self.form_type_dialog.isChecked():
+            self.form_type = "page-form-dialog"
+        else:
+            self.form_type = "page"
+        
+        # Update description
+        if self.form_type == "page-form-dialog":
+            self.form_type_description.setHtml("""
+            <div style="padding: 8px; background-color: #e8f5e9; border: 1px solid #4CAF50; border-radius: 4px; font-size: 11px;">
+            <b>Modal Dialog (v-dialog):</b><br>
+            • Opens form in a modal overlay<br>
+            • Uses <code>dialogVisible</code> variable for visibility control<br>
+            • Better for large forms or multi-step workflows<br>
+            • Requires <code>FormDialog</code> component import
+            </div>
+            """)
+        else:
+            self.form_type_description.setHtml("""
+            <div style="padding: 8px; background-color: #e3f2fd; border: 1px solid #2196F3; border-radius: 4px; font-size: 11px;">
+            <b>Regular Form (isFlipped):</b><br>
+            • Uses <code>isFlipped</code> to toggle between table and form<br>
+            • Form appears on the same page<br>
+            • Simpler implementation<br>
+            • Uses standard <code>Form</code> component
+            </div>
+            """)
         
     def browse_backend(self):
         path = QFileDialog.getExistingDirectory(self, "Select Backend Directory")
@@ -952,7 +1039,63 @@ class ModuleCreationTab(QWidget):
             QMessageBox.warning(self, "Warning", "Please add at least one field!")
             return
         
-        LoaderManager.show_loader(self.window(), "Creating module...")   
+        
+        # Get form type
+        if hasattr(self, 'form_type_dialog') and self.form_type_dialog.isChecked():
+            form_type = "page-form-dialog"
+            form_type_name = "Modal Dialog"
+        elif hasattr(self, 'form_type_regular') and self.form_type_regular.isChecked():
+            form_type = "page"
+            form_type_name = "Regular Form"
+        else:
+            # Fallback to combo box if radio buttons don't exist
+            if hasattr(self, 'form_type_combo'):
+                if self.form_type_combo.currentText() == "Modal Dialog":
+                    form_type = "page-form-dialog"
+                    form_type_name = "Modal Dialog"
+                else:
+                    form_type = "page"
+                    form_type_name = "Regular Form"
+            else:
+                form_type = "page"
+                form_type_name = "Regular Form"
+        
+        print(f"\n🔍 [GUI DEBUG] Module Generation Details:")
+        print(f"   Module Name: {self.module_name.text()}")
+        print(f"   Form Type Selected: {form_type} ({form_type_name})")
+        print(f"   Generate Backend: {self.gen_backend.isChecked()}")
+        print(f"   Generate Frontend: {self.gen_frontend.isChecked()}")
+        print(f"   Fields Count: {len(self.fields)}")
+        print(f"   Relationships Count: {len(self.relationships)}")
+        print(f"   Backend Path: {self.backend_path.text()}")
+        print(f"   Frontend Path: {self.frontend_path.text()}")
+        
+        # Confirm with user
+        confirm_msg = f"""
+        Generate module '{self.module_name.text()}'?
+        
+        • Backend: {'Yes' if self.gen_backend.isChecked() else 'No'}
+        • Frontend: {'Yes' if self.gen_frontend.isChecked() else 'No'}
+        • Form Type: {form_type_name}
+        • Fields: {len(self.fields)}
+        • Relationships: {len(self.relationships)}
+        
+        Continue?
+        """
+        
+        reply = QMessageBox.question(
+            self, 
+            "Confirm Generation",
+            confirm_msg,
+            QMessageBox.Yes | QMessageBox.No,
+            QMessageBox.Yes
+        )
+        
+        if reply != QMessageBox.Yes:
+            return
+        
+        LoaderManager.show_loader(self.window(), f"Creating {form_type_name} module...")   
+        
         # Get main window
         main_window = self.window()
         if hasattr(main_window, 'start_generation'):
@@ -964,9 +1107,9 @@ class ModuleCreationTab(QWidget):
                 backend_path=self.backend_path.text(),
                 frontend_path=self.frontend_path.text(),
                 gen_backend=self.gen_backend.isChecked(),
-                gen_frontend=self.gen_frontend.isChecked()
+                gen_frontend=self.gen_frontend.isChecked(),
+                form_type=form_type  # Pass form type
             )
-
 class BatchModeTab(QWidget):
     """Tab for batch mode using JSON configuration"""
     def __init__(self, parent=None):

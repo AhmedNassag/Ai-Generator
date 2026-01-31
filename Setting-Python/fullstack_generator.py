@@ -889,7 +889,8 @@ async def create_frontend_file(
     name: str,
     name_kebab: str,
     name_lower: str,
-    fields: List[Dict] = None
+    fields: List[Dict] = None,
+    form_type: str = "page"
 ) -> None:
     """Create frontend file from template."""
     try:
@@ -910,12 +911,26 @@ async def create_frontend_file(
         ext = ".vue" if file_type == "Page" else ".ts"
         file_path = new_path / f"{name}{ext}"
         
+        # Choose the correct template file for Page type
+        if file_type == "Page":
+            if form_type == "page-form-dialog":
+                template_file = "page-dialog.txt"
+            else:
+                template_file = "page.txt"
+        
+        print(f"\n🔍 [DEBUG] Template Details:")
+        print(f"   File Type: {file_type}")
+        print(f"   Template File: {template_file}")
+        print(f"   Form Type: {form_type}")
+        
         # Read template
         template_path = frontend_path_obj / "generator-setting-frontend" / template_file
+        
         if not template_path.exists():
+            print(f"❌ ERROR: Template not found at {template_path}")
             raise FileNotFoundError(f"Template not found: {template_path}")
         
-        template = template_path.read_text(encoding="utf-8")
+        template = template_path.read_text(encoding='utf-8')
         
         # Replace placeholders
         template = template.replace("@@Name@@", name) \
@@ -932,11 +947,14 @@ async def create_frontend_file(
         
         # Write file
         file_path.write_text(template, encoding="utf-8")
+        print(f"✅ File written to: {file_path}")
+        
+        form_type_display = "Modal Dialog" if form_type == "page-form-dialog" else "Regular Form"
+        print(f"   ✓ {file_type} created ({form_type_display})")
         
     except Exception as err:
-        print(f"❌ Error creating {file_type}: {err}")
+        print(f"❌ Error in create_frontend_file: {err}")
         raise
-
 # ============================================================================
 # HELPER FUNCTIONS - RELATIONSHIP MANAGEMENT
 # ============================================================================
@@ -1433,12 +1451,29 @@ def get_default_inverse_method(rel_type: str, model_name: str) -> str:
         return lower_name + "s"
     return lower_name
 
+def get_form_type_choice() -> str:
+    """Get form type choice from user."""
+    questions = [
+        inquirer.List(
+            "form_type",
+            message="Frontend Form Type:",
+            choices=[
+                ("Regular Form (uses isFlipped)", "page"),
+                ("Modal Dialog (v-dialog)", "page-form-dialog")
+            ],
+            default="page"
+        )
+    ]
+    
+    answers = inquirer.prompt(questions)
+    return answers["form_type"]
 async def process_batch_module(
     module_config: Dict,
     backend_path: str,
     frontend_path: str,
     gen_backend: bool,
-    gen_frontend: bool
+    gen_frontend: bool,
+    form_type: str = "page"
 ) -> Dict:
     """Process a single module from batch config."""
     result = {
@@ -1452,6 +1487,15 @@ async def process_batch_module(
         name = module_config["name"]
         name_kebab = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', name).lower()
         name_lower = name.lower()
+        
+        print(f"\n🔍 [DEBUG] Processing Module: {name}")
+        print(f"   Form Type from config: {module_config.get('formType', 'Not specified')}")
+        print(f"   Form Type passed: {form_type}")
+        print(f"   Generate Frontend: {gen_frontend}")
+        
+        # Override with module-specific form type if provided
+        module_form_type = module_config.get("formType", form_type)
+        print(f"   Using Form Type: {module_form_type}")
         
         # Convert fields
         field_conversion = convert_batch_fields(module_config.get("fields", []), name)
@@ -1637,7 +1681,8 @@ async def process_batch_module(
                         name,
                         name_kebab,
                         name_lower,
-                        frontend_fields if file_type == "Page" else None
+                        frontend_fields if file_type == "Page" else None,
+                        module_form_type  
                     )
                     print(f"   ✓ {file_type} created")
                 
@@ -2439,8 +2484,37 @@ async def wizard():
         name_kebab = re.sub(r'([a-z0-9])([A-Z])', r'\1-\2', name).lower()
         name_lower = name.lower()
         
-        # Step 4: Fields
-        print("\n📝 Step 4: Fields")
+        # Step 4: Frontend Form Type (NEW - Moved up!)
+        print("\n📝 Step 4: Frontend Form Type")
+        print("─────────────────────────────────────────────────────────")
+        print("   📋 Regular Form - Uses isFlipped to show/hide form")
+        print("   🪟 Modal Dialog - Opens form in a modal dialog using v-dialog")
+        print("─────────────────────────────────────────────────────────")
+        
+        # Only ask if frontend is being generated
+        if gen_frontend:
+            questions = [
+                inquirer.List(
+                    "form_type",
+                    message="Choose form type:",
+                    choices=[
+                        ("Regular Form (isFlipped)", "page"),
+                        ("Modal Dialog (v-dialog)", "page-form-dialog")
+                    ],
+                    default="page"
+                )
+            ]
+            
+            answers = inquirer.prompt(questions)
+            form_type = answers["form_type"]
+        else:
+            form_type = "page"  # Default
+        
+        print(f"   ✓ Selected: {'Modal Dialog' if form_type == 'page-form-dialog' else 'Regular Form'}")
+        
+        # Step 5: Fields
+        step_num = 5
+        print(f"\n📝 Step {step_num}: Fields")
         print("─────────────────────────────────────────────────────────")
         
         questions = [
@@ -2500,7 +2574,7 @@ async def wizard():
                 "updateValue": field_info["updateValue"]
             })
             
-            # Frontend field configuration
+            # Frontend field configuration (only if generating frontend)
             if gen_frontend:
                 questions = [
                     inquirer.Confirm(
@@ -2605,12 +2679,13 @@ async def wizard():
             
             print(f"      ✓ Added: {field_name}")
         
-        # Step 5: Relationships
+        # Step 6: Relationships
+        step_num = 6
         relationships = []
         models_to_create = []
         
         if gen_backend:
-            print("\n📝 Step 5: Relationships")
+            print(f"\n📝 Step {step_num}: Relationships")
             print("─────────────────────────────────────────────────────────")
             print("   ✅ belongsTo    - Many-to-One (stores foreign key)")
             print("   ✅ hasOne       - One-to-One (referenced or embedded)")
@@ -2898,9 +2973,10 @@ async def wizard():
                     
                     print(f"      ✓ Added: {method_name} ({relation_type})")
         
-        # Step 6: Create missing models
+        # Step 7: Create missing models
+        step_num = 7
         if models_to_create:
-            print(f"\n📝 Step 6: Creating Related Models")
+            print(f"\n📝 Step {step_num}: Creating Related Models")
             print("─────────────────────────────────────────────────────────")
             
             for model_config in models_to_create:
@@ -2937,8 +3013,8 @@ async def wizard():
                 except Exception as err:
                     print(f"      ❌ Error: {err}")
         
-        # Step 7: Generate main module
-        step_num = 7 if models_to_create else 6
+        # Step 8: Generate main module
+        step_num = 8 if models_to_create else 7
         print(f"\n📝 Step {step_num}: Generating Module")
         print("─────────────────────────────────────────────────────────")
         
@@ -3038,12 +3114,17 @@ async def wizard():
                         name,
                         name_kebab,
                         name_lower,
-                        frontend_fields if file_type == "Page" else None
+                        frontend_fields if file_type == "Page" else None,
+                        form_type  # Pass form type
                     )
-                    print(f"   ✓ {file_type} file created")
                 
                 await update_frontend_router_index(frontend_path, name)
                 print("   ✓ Router index updated")
+                
+                # Special note for FormDialog
+                if form_type == "page-form-dialog":
+                    print("   ℹ️  Note: Using FormDialog component - ensure it's imported in your project")
+                    print("   ℹ️  The generated page uses v-model for dialog visibility")
                 
                 # Generate translations
                 translations = generate_translations(name_lower, frontend_fields)
@@ -3064,6 +3145,7 @@ async def wizard():
             print(f"   Backend Fields: {len(backend_fillable)}")
             print(f"   Relationships: {len(relationships)}")
         if gen_frontend:
+            print(f"   Frontend Form Type: {'Modal Dialog (FormDialog)' if form_type == 'page-form-dialog' else 'Regular Form (isFlipped)'}")
             print(f"   Frontend Fields: {len(frontend_fields)}")
         print("\n")
         
@@ -3085,7 +3167,41 @@ async def wizard():
     except Exception as error:
         print(f"\n❌ Error: {error}")
         sys.exit(1)
-
+        
+def log_generation_details(module_name: str, form_type: str, template_path: str, 
+                          fields_count: int, has_frontend: bool, has_backend: bool):
+    """Log all generation details for debugging."""
+    print("\n" + "="*80)
+    print("🔍 DEBUG LOG - GENERATION DETAILS")
+    print("="*80)
+    print(f"📦 Module Name: {module_name}")
+    print(f"🎯 Form Type: {form_type}")
+    print(f"📁 Template Path: {template_path}")
+    print(f"🔤 Template Exists: {Path(template_path).exists()}")
+    print(f"📊 Fields Count: {fields_count}")
+    print(f"🖥️  Generate Frontend: {has_frontend}")
+    print(f"⚙️  Generate Backend: {has_backend}")
+    
+    # Read and show template content (first 500 chars)
+    try:
+        if Path(template_path).exists():
+            content = Path(template_path).read_text(encoding='utf-8')
+            print(f"\n📄 Template Content Preview (500 chars):")
+            print("-"*40)
+            print(content[:500] + "..." if len(content) > 500 else content)
+            print("-"*40)
+            
+            # Check for key markers
+            print(f"\n🔍 Checking Template Markers:")
+            print(f"   Contains '@@templateChoice@@': {'@@templateChoice@@' in content}")
+            print(f"   Contains 'FormDialog': {'FormDialog' in content}")
+            print(f"   Contains 'v-model=\"dialogVisible\"': {'v-model=\"dialogVisible\"' in content}")
+            print(f"   Contains 'Form': {'Form' in content}")
+        else:
+            print(f"❌ Template file does NOT exist!")
+    except Exception as e:
+        print(f"❌ Error reading template: {e}")
+    print("="*80 + "\n")
 # ============================================================================
 # MAIN MENU
 # ============================================================================
